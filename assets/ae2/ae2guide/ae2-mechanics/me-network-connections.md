@@ -1,123 +1,110 @@
 ---
 navigation:
   parent: ae2-mechanics/ae2-mechanics-index.md
-  title: Network Connections
+  title: Сетевые подключения
   icon: fluix_glass_cable
 ---
 
-# Network Connections
+# Сетевые подключения
 
-## What Does "Network" Mean?
+## Что такое "Сеть"?
 
-A "Network" is a group of [devices](../ae2-mechanics/devices.md) linked by blocks that can pass [channels](../ae2-mechanics/channels.md),
-like [cables](../items-blocks-machines/cables.md) or fullblock machines and [devices](../ae2-mechanics/devices.md). 
-(<ItemLink id="charger" />, <ItemLink id="interface" />, <ItemLink id="drive" />, etc.)
-Technically a single cable is a network, actually.
+"Сеть" — это группа [устройств](../ae2-mechanics/devices.md), соединённых блоками, которые могут передавать [каналы](../ae2-mechanics/channels.md), такие как [кабели](../items-blocks-machines/cables.md) или полноразмерные машины и [устройства](../ae2-mechanics/devices.md). 
+(<ItemLink id="charger" />, <ItemLink id="interface" />, <ItemLink id="drive" /> и т.д.)
+Технически, даже один кабель уже является сетью.
 
-## An Aside On Device Positioning
+## Замечание о расположении устройств
 
-For [devices](../ae2-mechanics/devices.md) which have some specific network function (like an <ItemLink id="interface" />
-pushing to and pulling from [network storage](../ae2-mechanics/import-export-storage.md), a <ItemLink id="level_emitter" />
-reading the contents of network storage, an <ItemLink id="drive" /> being network storage, etc.)
-the physical position of the device does not matter.
+Для [устройств](../ae2-mechanics/devices.md), выполняющих определённые сетевые функции (например, <ItemLink id="interface" />, взаимодействующий с [сетевым хранилищем](../ae2-mechanics/import-export-storage.md), или <ItemLink id="level_emitter" />, читающий содержимое хранилища), физическое расположение устройства не имеет значения.
 
-Again, **the physical position of the device does not matter**. All that matters is that the device is connected to the network
-(and of course which network it's connected to).
+Повторюсь: **физическое расположение устройства не имеет значения**. Важно только, что устройство подключено к сети (и, конечно, к какой именно сети).
 
-## Network Connections
+## Подключение сетей
 
-An easy way of determining what's connected in a network is using a <ItemLink id="network_tool" />. It will show every
-component on the network, so if you see stuff you shouldn't or don't see stuff you should, you have a problem.
+Простой способ определить, что подключено к сети — использовать <ItemLink id="network_tool" />. Он покажет все компоненты сети, поэтому если вы видите лишнее или не видите нужное, у вас проблема.
 
-For example, this is 2 separate networks.
+Например, это две отдельные сети:
 
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/2_networks_1.snbt" />
 
   <BoxAnnotation color="#915dcd" min="0 0 0" max="1 2 2">
-        Network 1
+        Сеть 1
   </BoxAnnotation>
 
 <BoxAnnotation color="#915dcd" min="2 0 0" max="3 2 2">
-        Network 2
+        Сеть 2
   </BoxAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-This is also 2 separate networks, because the <ItemLink id="quartz_fiber" /> shares [energy](../ae2-mechanics/energy.md)
-without providing a network connection.
+Это тоже две отдельные сети, потому что <ItemLink id="quartz_fiber" /> передаёт [энергию](../ae2-mechanics/energy.md), но не обеспечивает сетевое подключение.
 
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/2_networks_2.snbt" />
 
   <BoxAnnotation color="#915dcd" min="0 0 0" max="1 2 2">
-        Network 1
+        Сеть 1
   </BoxAnnotation>
 
   <BoxAnnotation color="#915dcd" min="1.3 0 0" max="3 2 2">
-        Network 2
+        Сеть 2
   </BoxAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-However, this is just 1 network, not 2 separate ones. The [quantum bridge](../items-blocks-machines/quantum_bridge.md) acts like
-a wireless [dense cable](../items-blocks-machines/cables.md#dense-cable), so both ends are on the same network.
+Однако это одна сеть, а не две. [Квантовый мост](../items-blocks-machines/quantum_bridge.md) действует как беспроводной [плотный кабель](../items-blocks-machines/cables.md#dense-cable), поэтому оба конца принадлежат одной сети.
 
 <GameScene zoom="4" background="transparent">
   <ImportStructure src="../assets/assemblies/actually_1_network.snbt" />
 
   <BoxAnnotation color="#915dcd" min="0 0 0" max="7 3 3">
-        All 1 network
+        Одна сеть
   </BoxAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-This is also just 1 network, as [cable](../items-blocks-machines/cables.md) color has nothing to do with network connections other than cables of different colors not
-connecting to each other. All colors connect to fluix (or "uncolored") cables.
+Это тоже одна сеть, так как [цвет кабеля](../items-blocks-machines/cables.md) не влияет на подключение, кроме случаев, когда кабели разных цветов не соединяются друг с другом. Все цвета соединяются с кабелями fluix (или "бесцветными").
 
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/actually_1_network_2.snbt" />
 
   <BoxAnnotation color="#915dcd" min="0 0 0" max="4 2 2">
-        All 1 network
+        Одна сеть
   </BoxAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-## Less Intuitive Connections
+## Менее очевидные подключения
 
-In this case, this is just 1 network, because the <ItemLink id="pattern_provider" />, being a fullblock device, acts like
-a cable, and the <ItemLink id="inscriber" /> does similar. Thus, the network connection passes through
-the provider and inscriber.
+В этом случае это одна сеть, потому что <ItemLink id="pattern_provider" />, будучи полноразмерным устройством, действует как кабель, и <ItemLink id="inscriber" /> ведёт себя аналогично. Таким образом, сетевое подключение проходит через поставщика шаблонов и инскрайбер.
 
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/pattern_provider_network_connection_1.snbt" />
 
   <BoxAnnotation color="#915dcd" min="0 0 0" max="4 2 2">
-        All 1 network
+        Одна сеть
   </BoxAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-To prevent this (useful for many autocrafting setups involving [subnetworks](../ae2-mechanics/subnetworks.md)),
-you can right-click the provider with a <ItemLink id="certus_quartz_wrench" /> to make it directional, in which case it will
-not pass channels through one side.
+Чтобы предотвратить это (что полезно для многих систем автокрафта с [подсетями](../ae2-mechanics/subnetworks.md)), можно нажать ПКМ на поставщика шаблонов с <ItemLink id="certus_quartz_wrench" />, чтобы сделать его направленным — тогда он не будет передавать каналы через одну из сторон.
 
 <Row gap="40">
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/pattern_provider_network_connection_2.snbt" />
 
   <BoxAnnotation color="#915dcd" min="0 0 0" max="2 2 2">
-        Network 1
+        Сеть 1
   </BoxAnnotation>
 
   <BoxAnnotation color="#915dcd" min="2 0 0" max="4 2 2">
-        Network 2
+        Сеть 2
   </BoxAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
@@ -127,16 +114,14 @@ not pass channels through one side.
   <ImportStructure src="../assets/assemblies/pattern_provider_directional_connection.snbt" />
 
   <BoxAnnotation color="#ee3333" min="1 .3 .3" max="1.3 .7 .7">
-        Observe how the cable does not connect
+        Обратите внимание, что кабель не соединяется
   </BoxAnnotation>
 
   <IsometricCamera yaw="255" pitch="30" />
 </GameScene>
 </Row>
 
-Other parts that do not provide directional network connections are most [subpart](../ae2-mechanics/cable-subparts.md)
-[devices](../ae2-mechanics/devices.md) like <ItemLink id="import_bus" />ses, <ItemLink id="storage_bus" />ses, and
-<ItemLink id="cable_interface" />s.
+Другие части, которые не обеспечивают направленных сетевых подключений — это большинство [подчастей](../ae2-mechanics/cable-subparts.md) [устройств](../ae2-mechanics/devices.md), таких как <ItemLink id="import_bus" />, <ItemLink id="storage_bus" /> и <ItemLink id="cable_interface" />.
 
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/subpart_no_connection.snbt" />

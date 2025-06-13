@@ -1,24 +1,23 @@
 ---
 navigation:
   parent: ae2-mechanics/ae2-mechanics-index.md
-  title: Meteorites
+  title: Метеориты
   icon: sky_stone_block
 ---
 
-# Meteorites
+# Метеориты
 
 <GameScene zoom="4" background="transparent">
   <ImportStructure src="../assets/assemblies/meteor_interior.snbt" />
 </GameScene>
 
-Meteorites are the starting point for using AE2. They provide critical materials: [budding certus blocks](../items-blocks-machines/budding_certus.md)
-of various types and a <ItemLink id="mysterious_cube" /> in the center.
+Метеориты — это отправная точка для использования AE2. Они содержат важные материалы: [блоки растущего сертуса](../items-blocks-machines/budding_certus.md) различных типов и <ItemLink id="mysterious_cube" /> в центре.
 
-[Getting Started](../getting-started.md) will provide info on what to do once you find one.
+Раздел [Начало работы](../getting-started.md) расскажет, что делать после их обнаружения.
 
-## Finding Meteorites
+## Поиск метеоритов
 
-Meteorites are fairly common and leave massive holes in the ground, so you may have already found a few. if not, a
-<ItemLink id="meteorite_compass" /> will point toward the nearest mysterious cube.
+Метеориты довольно распространены и оставляют после себя большие кратеры, поэтому вы могли уже найти несколько. Если нет, 
+<ItemLink id="meteorite_compass" /> укажет направление к ближайшему таинственному кубу.
 
-![Meteorite Crater](../assets/assemblies/meteorite-crater.png)
+![Кратер метеорита](../assets/assemblies/meteorite-crater.png)

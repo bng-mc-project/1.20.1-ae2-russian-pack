@@ -1,16 +1,15 @@
 ---
 navigation:
   parent: ae2-mechanics/ae2-mechanics-index.md
-  title: Devices
+  title: Устройства
   icon: interface
 ---
 
-# Devices
+# Устройства
 
-A "Device" refers to an AE2 network component that performs some function related to the network itself. They almost always
-require a channel, with the notable exception of [Level Emitters](../items-blocks-machines/level_emitter.md).
+"Устройство" относится к компоненту сети AE2, который выполняет определённую функцию, связанную с самой сетью. Почти все устройства требуют канал, за исключением <ItemLink id="level_emitter" />.
 
-Some examples include:
+Некоторые примеры устройств:
 
 *   <ItemLink id="interface" />
 *   <ItemLink id="import_bus" />

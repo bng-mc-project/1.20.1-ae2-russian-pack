@@ -1,80 +1,72 @@
 ---
 navigation:
   parent: ae2-mechanics/ae2-mechanics-index.md
-  title: Import, Export, and Storage
+  title: Импорт, экспорт и хранение
 ---
 
-# Import, Export, and Storage
+# Импорт, экспорт и хранение
 
-**your ME system and the world**
+**Ваша ME-система и внешний мир**
 
-An important concept in AE2 is the idea of Network Storage. It is the place in which the contents of a network are stored,
-usually [storage cells](../items-blocks-machines/storage_cells.md) or whatever inventory a <ItemLink id="storage_bus" />
-is connected to. Most AE2 [devices](../ae2-mechanics/devices.md) interact with it in one way or another.
+Важным понятием в AE2 является Сетевое Хранилище. Это место, где хранятся содержимое сети, обычно [ячейки хранения](../items-blocks-machines/storage_cells.md) или инвентарь, к которому подключен <ItemLink id="storage_bus" />. Большинство [устройств](../ae2-mechanics/devices.md) AE2 так или иначе взаимодействуют с ним.
 
-For example,
+Например:
 
-*   <ItemLink id="import_bus" />ses push things into network storage
-*   <ItemLink id="export_bus" />ses pull things from network storage
-*   <ItemLink id="interface" />s both pull from and push to network storage
-*   [Terminals](../items-blocks-machines/terminals.md) both push to and pull from network storage when you insert or take items, or to refill the crafting slots
-*   <ItemLink id="storage_bus" />ses don't really push to or pull from storage, they push to or pull from the connected inventory
-    in order to use it as network storage (so really other devices push to or pull from *them*)
+*   <ItemLink id="import_bus" /> загружает предметы в сетевое хранилище
+*   <ItemLink id="export_bus" /> извлекает предметы из сетевого хранилища
+*   <ItemLink id="interface" /> и загружает, и извлекает предметы из сетевого хранилища
+*   [Терминалы](../items-blocks-machines/terminals.md) взаимодействуют с хранилищем при вставке/извлечении предметов или пополнении слотов крафта
+*   <ItemLink id="storage_bus" /> не загружает/извлекает предметы напрямую, а подключает внешний инвентарь для использования в качестве сетевого хранилища
 
 <GameScene zoom="4" interactive={true}>
   <ImportStructure src="../assets/assemblies/import_export_storage.snbt" />
 
   <BoxAnnotation color="#dddddd" min="8 1 1" max="9 1.3 2">
-        Import Busses import things from inventories they're pointing at into network storage
+        Импортные шины загружают предметы из инвентарей в сетевое хранилище
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="8 2 1" max="9 3 1.3">
-        Inserting something into a terminal from your inventory counts as the network importing it
+        Вставка предметов в терминал из вашего инвентаря считается импортом в сеть
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="7 0 1" max="8 1 2">
-        Interfaces will import from their internal inventories if that slot is not configured to stock anything, or there are more
-        items in that slot than are configured to be stocked, so things can be pushed into them to insert into the network
+        Интерфейсы импортируют из своих внутренних инвентарей, если слот не настроен на хранение или содержит больше предметов, чем указано
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="6 0 1" max="7 1 2">
-        Pattern Providers will import from their internal return slot inventory, so things can be pushed into them to insert into the network
+        Поставщики шаблонов импортируют из своих возвратных слотов, позволяя вставлять предметы в сеть
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="4 1 1" max="5 2 2">
-        Drives provide the inserted cells as network storage
+        Приводы предоставляют ячейки хранения как часть сетевого хранилища
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="3 1 1" max="4 1.3 2">
-        Storage Busses use the inventory they're pointing at as network storage
+        Шины хранения используют подключенный инвентарь как сетевое хранилище
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="1 1 1" max="2 1.3 2">
-        Export Busses export things from network storage into inventories they're pointing at
+        Экспортные шины выгружают предметы из хранилища в подключенные инвентари
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="1 2 1" max="2 3 1.3">
-        Pulling something out of a terminal counts as the network exporting it
+        Извлечение предметов из терминала считается экспортом из сети
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="0 1 1" max="1 2 2">
-        Interfaces will export to their internal inventories if that slot is configured to stock something,
-        so things can be pulled from them to extract from the network
+        Интерфейсы экспортируют в свои внутренние инвентари для хранения предметов
   </BoxAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-The actions/events of pushing to and pulling from network storage are important to keep in mind when designing automation
-and logistics setups.
+Действия по загрузке и извлечению предметов из сетевого хранилища важно учитывать при проектировании систем автоматизации.
 
-## Storage Priority
+## Приоритеты хранения
 
-Priorities can be set by clicking the wrench in the top-right of some GUIs.
-Items entering the network will start at the highest priority storage, as
-their first destination, in the case of two storages have the same priority,
-if one already contains the item, they will prefer that storage over any
-other. Any Whitelisted cells will be treated as already containing the item
-when in the same priority group as other storages. Items being removed from storage will
-be removed from the storage with the lowest priority. This priority system means as items are inserted and removed
-from network storage, higher priority storages will be filled and lower priority storages will be emptied.
+Приоритеты можно настроить, нажав на гаечный ключ в правом верхнем углу некоторых интерфейсов.
+Предметы при попадании в сеть сначала направляются в хранилища с наивысшим приоритетом.
+При равных приоритетах предпочтение отдается хранилищам, уже содержащим данный предмет.
+Ячейки с белым списком считаются содержащими предмет при равных приоритетах.
+Извлечение предметов происходит из хранилищ с наименьшим приоритетом.
+Эта система приводит к заполнению высокоприоритетных хранилищ и опустошению низкоприоритетных.

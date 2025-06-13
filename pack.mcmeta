@@ -1,0 +1,19 @@
+{
+    "pack": {
+        "description": {
+            "fallback": "Русифицирует моды и улучшает их перевод",
+            "translate": "minecraft.resource_pack.modsruae2"
+        },
+        "name": {
+            "fallback": "Русский перевод AE2",
+            "translate": "minecraft.resource_pack.modsruae2.name"
+        },
+        "pack_format": 15,
+        "supported_formats": [
+            15,
+            33
+        ],
+        "автор": "levshx",
+        "версия": "1.20-6"
+    }
+}

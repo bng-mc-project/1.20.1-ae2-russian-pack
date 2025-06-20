@@ -1,0 +1,32 @@
+{
+  "itemGroup.merequester.tab": "ME Запросчик",
+
+  "item.merequester.requester_terminal": "Терминал ME Запросчика",
+  "block.merequester.requester": "ME Запросчик",
+
+  "gui.merequester.requester_terminal": "Терминал ME Запросчика",
+  "gui.merequester.no_requesters": "Не найдено ни одного ME Запросчика!",
+
+  "tooltip.merequester.requester_desc": "Автоматически поддерживает запасы предметов и жидкостей, запрашивая новые изделия по мере необходимости. Должен быть подключен к сети ME и может быть доступен с терминала Запросчика ME. При поломке потеряет свою конфигурацию. Настройки можно скопировать на карту памяти.",
+
+  "tooltip.merequester.shift_for_more": "%s чтобы увидеть подробности",
+  "tooltip.merequester.enter_to_submit": "%s для отправки",
+
+  "tooltip.merequester.whole_number": "Должно быть целым числом!",
+  "tooltip.merequester.locked": "Заблокировано! Запрос в процессе.",
+
+  "tooltip.merequester.toggle": "Переключить запрос",
+  "tooltip.merequester.amount": "Кол-во поддержания",
+  "tooltip.merequester.batch": "Размер партии создания",
+  "tooltip.merequester.submit": "Отправить изменения",
+  "tooltip.merequester.status": "Статус запроса",
+
+  "tooltip.merequester.idle": "Ожидание",
+  "tooltip.merequester.idle_desc": "Запросчик находится в режиме ожидания, когда запрашиваемое количество уже достигнуто или нет схемы крафта для этого предмета или жидкости.",
+  "tooltip.merequester.missing": "Недостающие ингредиенты",
+  "tooltip.merequester.missing_desc": "В системе отсутствуют ингредиенты для создания запрашиваемого предмета или жидкости. Процесс продолжается, когда ингредиенты становятся доступны.",
+  "tooltip.merequester.link": "Создание",
+  "tooltip.merequester.link_desc": "Система в данный момент изготавливает запрашиваемый предмет или жидкость.",
+  "tooltip.merequester.export": "Экспорт",
+  "tooltip.merequester.export_desc": "Запросчик пытается экспортировать результаты крафта в систему. Если у Запросчика этот статус долгое время, нет доступного места для экспорта."
+}

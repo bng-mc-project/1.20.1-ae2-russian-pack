@@ -5,6 +5,7 @@
 </p>
 
 Русификатор Applied Energistics 2 (GuideMe) 1.20.1
+Русификатор ME Requester 1.20.1
 
 Сделано с использованием deepl/ChatGPT/DeepSeek
 

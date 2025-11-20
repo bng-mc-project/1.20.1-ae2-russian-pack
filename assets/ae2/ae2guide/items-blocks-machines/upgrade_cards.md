@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Upgrade Cards
+  title: Карты улучшений
   icon: speed_card
   position: 410
 categories:
@@ -20,7 +20,7 @@ item_ids:
 - ae2:energy_card
 ---
 
-# Upgrade Cards
+# Карты улучшений
 
 <Row>
   <ItemImage id="redstone_card" scale="2" />
@@ -42,10 +42,10 @@ item_ids:
   <ItemImage id="energy_card" scale="2" />
 </Row>
 
-Upgrade cards change the behavior of AE2 [devices](../ae2-mechanics/devices.md) and machines, increasing their speed, improving their
-filter capacity, enabling redstone control, etc.
+Карты улучшения изменяют поведение AE2 [устройств](../ae2-mechanics/devices.md) и машин, увеличивая их скорость, улучшая их
+фильтрующую способность, добавляя управление устройством с помощью редстоун сигнала и т. д.
 
-## Card Components
+## Компоненты карты
 
 <Row>
   <ItemImage id="basic_card" scale="2" />
@@ -53,7 +53,7 @@ filter capacity, enabling redstone control, etc.
   <ItemImage id="advanced_card" scale="2" />
 </Row>
 
-Cards are crafted with either basic or advanced card bases
+Карты изготавливаются на основе, либо "основа карты", либо "продвинутая карта".
 
 <Row>
   <RecipeFor id="basic_card" />
@@ -61,110 +61,109 @@ Cards are crafted with either basic or advanced card bases
   <RecipeFor id="advanced_card" />
 </Row>
 
-## Redstone Card
+## Редстоуновая карта
 
 <ItemImage id="redstone_card" scale="2" />
 
-Redstone cards add redstone control, adding a toggle button in the device's GUI to swap between various redstone conditions.
+Редстоуновые карты добавляют возможность управления устройством с помощью редстоуна, добавляя в графический интерфейс устройства кнопку для переключения между различными редстоуновыми условиями работы устройства.
 
 <RecipeFor id="redstone_card" />
 
-## Capacity Card
+## Карта вместимости
 
 <ItemImage id="capacity_card" scale="2" />
 
-Capacity cards increase the amount of filter slots in import, export, and storage busses, and formation planes.
+Карты вместимости увеличивают количество слотов фильтров в шинах импорта, экспорта и хранения, а также в плоскостях формирования.
 
 <RecipeFor id="capacity_card" />
 
-## Overflow Destruction Card
+## Пустотная карта
 
 <ItemImage id="void_card" scale="2" />
 
-Overflow destruction cards can be applied to [storage cells](storage_cells.md) in a <ItemLink id="cell_workbench" />
-and will delete incoming items if the cell is full. (make sure to [partition](cell_workbench.md) your cells!) Combined with an equal distribution card,
-items will be voided if that specific item's section of the cell is full, even if other items' sections are empty.
+Пустотные карты могут применяться к [ячейкам хранения](storage_cells.md) в <ItemLink id="cell_workbench" />
+и будут удалять входящие предметы, если ячейка заполнена. (не забудьте [разбить на разделы](cell_workbench.md) свои ячейки!) В сочетании с картой равномерного распределения,
+предметы будут уничтожены, если раздел ячейки для этого конкретного предмета заполнена, даже если разделы для других предметов пусты.
 
 <RecipeFor id="void_card" />
 
-## Fuzzy Card
+## Карта размытости
 
 <ItemImage id="fuzzy_card" scale="2" />
 
-Fuzzy cards let devices and tools with filters filter by damage level and/or ignore item NBT, allowing you to export
-all iron axes no matter the damage level and enchantments, or only export damaged diamond swords, not fully repaired ones.
+Карты размытости позволяют устройствам и инструментам с фильтрами фильтровать по уровню повреждения и/или игнорировать NBT предмета, что позволяет экспортировать
+все железные топоры независимо от уровня повреждения и зачарования или экспортировать только поврежденные алмазные мечи, а не полностью отремонтированные.
 
-Below is an example of how Fuzzy Damage comparison mods work, left side is the
-bus config, top is the compared item.
+Ниже приведен пример того, как работают режим размытого сравнения уровня повреждения. Слева — настройка шины, сверху — сравниваемый предмет.
 
-| 25%                    | 10% Damaged Pickaxe | 30% Damaged Pickaxe | 80% Damaged Pickaxe | Full Repair Pickaxe |
+| 25%                    | 10% Поврежд. кирки | 30% Поврежд. кирки | 80% Поврежд. кирки| Полн. почин. кирка |
 | ---------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
-| Nearly Broken Pickaxe  | ✅                   | \*\*\*\*            | \*\*\*\*            | \*\*\*\*            |
-| Fully Repaired Pickaxe | \*\*\*\*            | ✅                   | ✅                   | ✅                   |
+| Почти сломанная кирка  | ✅                   | \*\*\*\*            | \*\*\*\*            | \*\*\*\*              |
+| Полн. отремантир. кирка| \*\*\*\*           | ✅                   | ✅                   | ✅                   |
 
-| 50%                    | 10% Damaged Pickaxe | 30% Damaged Pickaxe | 80% Damaged Pickaxe | Full Repair Pickaxe |
+| 50%                    | 10% Поврежд. кирки | 30% Поврежд. кирки | 80% Поврежд. кирки | Полн. почин. кирка |
 | ---------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
-| Nearly Broken Pickaxe  | ✅                   | ✅                   | \*\*\*\*            | \*\*\*\*            |
-| Fully Repaired Pickaxe | \*\*\*\*            | \*\*\*\*            | ✅                   | ✅                   |
+| Почти сломанная кирка  | ✅                   | ✅                   | \*\*\*\*            | \*\*\*\*            |
+| Полн. отремантир. кирка| \*\*\*\*            | \*\*\*\*            | ✅                   | ✅                   |
 
-| 75%                    | 10% Damaged Pickaxe | 30% Damaged Pickaxe | 80% Damaged Pickaxe | Full Repair Pickaxe |
+| 75%                    | 10% Поврежд. кирки | 30% Поврежд. кирки | 80% Поврежд. кирки | Полн. почин. кирка |
 | ---------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
-| Nearly Broken Pickaxe  | ✅                   | ✅                   | \*\*\*\*            | \*\*\*\*            |
-| Fully Repaired Pickaxe | \*\*\*\*            |                     | ✅                   | ✅                   |
+| Почти сломанная кирка  | ✅                   | ✅                   | \*\*\*\*            | \*\*\*\*            |
+| Полн. отремантир. кирка| \*\*\*\*            |                     | ✅                   | ✅                   |
 
-| 99%                    | 10% Damaged Pickaxe | 30% Damaged Pickaxe | 80% Damaged Pickaxe | Full Repair Pickaxe |
+| 99%                    | 10% Поврежд. кирки | 30% Поврежд. кирки | 80% Поврежд. кирки | Полн. почин. кирка |
 | ---------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
-| Nearly Broken Pickaxe  | ✅                   | ✅                   | ✅                   | \*\*\*\*            |
-| Fully Repaired Pickaxe | \*\*\*\*            | \*\*\*\*            | \*\*\*\*            | ✅                   |
+| Почти сломанная кирка  | ✅                   | ✅                   | ✅                   | \*\*\*\*            |
+| Полн. отремантир. кирка| \*\*\*\*            | \*\*\*\*            | \*\*\*\*            | ✅                   |
 
-| Ignore                 | 10% Damaged Pickaxe | 30% Damaged Pickaxe | 80% Damaged Pickaxe | Full Repair Pickaxe |
+| Игнор                | 10% Поврежд. кирки | 30% Поврежд. кирки| 80% Поврежд. кирки | Полн. почин. кирка |
 | ---------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
-| Nearly Broken Pickaxe  | ✅                   | ✅                   | ✅                   | **✅**               |
-| Fully Repaired Pickaxe | **✅**               | **✅**               | **✅**               | ✅                   |
+| Почти сломанная кирка  | ✅                   | ✅                   | ✅                   | **✅**               |
+| Полн. отремантир. кирка| **✅**               | **✅**               | **✅**               | ✅                   |
 
 <RecipeFor id="fuzzy_card" />
 
-## Acceleration Card
+## Карта ускорения
 
 <ItemImage id="speed_card" scale="2" />
 
-Acceleration cards make stuff go faster, making import and export busses move more items per operation, and making inscribers
-and assemblers work faster.
+Карты ускорения ускоряют работу, позволяя шинам импорта и экспорта перемещать больше предметов за одну операцию, 
+а вырезателям и сборщикам работать быстрее.
 
 <RecipeFor id="speed_card" />
 
-## Inverter Card
+## Карта-инвертер
 
 <ItemImage id="inverter_card" scale="2" />
 
-Inverter cards swap filters in devices and tools from whitelist to blacklist.
+Карты-инверторы переключают фильтры в устройствах и инструментах с белого списка на черный список.
 
 <RecipeFor id="inverter_card" />
 
-## Crafting Card
+## Карта изготовления
 
 <ItemImage id="crafting_card" scale="2" />
 
-Crafting cards let the device send crafting requests to your [autocrafting](../ae2-mechanics/autocrafting.md)
-system to get the items it desires.
+Карты изготовления позволяют устройству отправлять запросы на крафт в вашу систему [автоматического крафта](../ae2-mechanics/autocrafting.md),
+чтобы получить нужные предметы.
 
 <RecipeFor id="crafting_card" />
 
-## Equal Distribution Card
+## Карта равномерного распределения
 
 <ItemImage id="equal_distribution_card" scale="2" />
 
-Equal distribution cards can be applied to [storage cells](storage_cells.md) in a <ItemLink id="cell_workbench" /> and
-split the cell into equally-sized sections based on what the card is [partitioned](cell_workbench.md) to. This prevents one item type from completely
-filling the cell.
+Карты равномерного распределения могут применяться к [ячейкам хранения](storage_cells.md) в <ItemLink id="cell_workbench" /> и
+разбивать ячейку на разделы одинакового размера в зависимости от того, как карта [разбита на разделы](cell_workbench.md). 
+Это предотвращает полное заполнение ячейки одним типом предметов.
 
 <RecipeFor id="equal_distribution_card" />
 
-## Energy Card
+## Энергетическая карта
 
 <ItemImage id="energy_card" scale="2" />
 
-Energy cards add more energy storage to certain tools like portable terminals, and make <ItemLink id="vibration_chamber" />s
-more efficient.
+Энергетические карты увеличивают максимальный объем хранимой энергии в определенных инструментах, таких как портативные терминалы, 
+и повышают эффективность <ItemLink id="vibration_chamber" />.
 
 <RecipeFor id="energy_card" />

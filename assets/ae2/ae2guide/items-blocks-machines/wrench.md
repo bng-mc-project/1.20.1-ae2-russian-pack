@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Wrenches
+  title: Гаечные ключи
   icon: certus_quartz_wrench
   position: 410
 categories:
@@ -11,7 +11,7 @@ item_ids:
 - ae2:nether_quartz_wrench
 ---
 
-# Wrenches
+# Гаечный ключи
 
 <Row>
   <ItemImage id="certus_quartz_wrench" scale="4" />
@@ -19,13 +19,11 @@ item_ids:
   <ItemImage id="nether_quartz_wrench" scale="4" />
 </Row>
 
-Wrenches are used to rotate ae2 devices (right-click), and disassemble ae2 blocks (shift-right-click).
-[Subparts](../ae2-mechanics/cable-subparts.md) can be removed from a cable without breaking everything on the cable
-(or the cable can be removed without breaking the subparts.)
+Гаечные ключи используются для поворота ae2 устройств (right-click) и разрушения ae2 блоков (shift-right-click). [Подразделы](../ae2-mechanics/cable-subparts.md) могут быть убран с кабля без разрушения всего на кабеле (или кабель может быть убран без разрушения подразделов.)
 
-Many ae2 blocks can be rotated, so just because this guide doesn't say you can rotate something doesn't mean you can't.
+Множество ae2 блоков могут быть повернуты, поэтому если в гайде не упомянуты все эти блоки не значит, что они не могут быть повёрнуты.
 
-## Recipes
+## Рецепты
 
 <Row>
   <RecipeFor id="certus_quartz_wrench" />

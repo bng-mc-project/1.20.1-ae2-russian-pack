@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Fluix Pearl
+  title: Флюисовый жемчуг
   icon: fluix_pearl
   position: 010
 categories:
@@ -10,13 +10,12 @@ item_ids:
 - ae2:fluix_pearl
 ---
 
-# Fluix Pearl
+# Флюисовый жемчуг
 
 <ItemImage id="fluix_pearl" scale="4" />
 
-An ender pearl coated in <ItemLink id="fluix_crystal" />, used in the production of
-several AE2 components.
+Эндер-жемчуг, обложенный в <ItemLink id="fluix_crystal" />, используется для производства некоторые AE2 компонентов.
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="fluix_pearl" />

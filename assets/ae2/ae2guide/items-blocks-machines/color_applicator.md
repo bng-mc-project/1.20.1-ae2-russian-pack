@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Color Applicator
+  title: Аппликатор цвета
   icon: color_applicator
   position: 410
 categories:
@@ -10,29 +10,26 @@ item_ids:
 - ae2:color_applicator
 ---
 
-# The Color Applicator
+# Аппликатор цвета
 
 <ItemImage id="color_applicator" scale="4" />
 
-The color applicator is used to paint colorable blocks like [cables](cables.md), wool, terracotta, glass, and concrete. It uses
-[paintballs](paintballs.md) or dyes, and snowballs can be used in order to clean color off of cables and paintball splotches off of blocks.
+Аппликатор цвета используется для покраски блоков, которые имеют различные цветовые разновидности, к примеру [кабели](cables.md), шерсть, терракота, стекло и бетон. В качестве краски оно использует [шарики с краской](paintballs.md) или красители, однако также можно использовать снежки для очистки цвета и пятен краски с блоков.
 
-Its energy can be recharged in a <ItemLink id="charger" />.
+Его ёмкость батареи может быть восполнена с помощью <ItemLink id="charger" />.
 
-Color applicators act like [storage cells](storage_cells.md), and their paint storage can most easily be filled by sticking
-the applicator in the storage cell slot in a <ItemLink id="chest" />
+Аппликатор цвета действует как [ячейка хранения](storage_cells.md) и их хранилище краски может быть легко заполнено, если положить аппликатор в слот, где хранится ячейка хранения в <ItemLink id="chest" />.
 
-To use a color applicator, right click to apply, and shift-scroll to cycle through the stored paintballs and dyes.
+Чтобы использовать аппликатор цвета, ПКМ, чтобы применить цвет и shift-scroll (shift-использование колёсика мыши) для смены применяемого красителя, шарика с краской. 
 
-## Upgrades
+## Улучшения
 
-Color Applicators support the following [upgrades](upgrade_cards.md), inserted via a <ItemLink id="cell_workbench" />:
+Аппликатор цвета поддерживает следующие [улучшения](upgrade_cards.md), вставленные через <ItemLink id="cell_workbench" />:
 
-*   <ItemLink id="equal_distribution_card" /> allocates the same amount of cell byte space to each type, so one type cannot fill up the entire cell
-*   <ItemLink id="void_card" /> voids items inserted if the cell is full (or that specific type's allocated space in the
-    case of an equal distribution card). Be careful to partition this!
-*   <ItemLink id="energy_card" /> in order to increase their battery capacity
+*   <ItemLink id="equal_distribution_card" />  распределяют равный объём хранилища байтов ячейки на каждый тип, так что один тип не может переполнить целую ячейку
+*   <ItemLink id="void_card" /> аннигилирует вставленные предметы, если ячейки полные (или объём отведённый для определённого типа в случае карты равномерного распределения). Будьте осторожны при использовании этого!
+*   <ItemLink id="energy_card" /> увеличивает объём батареи устройства
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="color_applicator" />

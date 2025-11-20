@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Cell Workbench
+  title: Верстак для камер
   icon: cell_workbench
   position: 310
 categories:
@@ -10,26 +10,26 @@ item_ids:
 - ae2:cell_workbench
 ---
 
-# The Cell Workbench
+# Верстак для камер
 
 <BlockImage id="cell_workbench" scale="8" />
 
-The Cell Workbench allows you to configure [storage cells](storage_cells.md) and <ItemLink id="view_cell" />s.
+Верстак для камер позволяет вам настраивать [ячейки хранения](storage_cells.md) и <ItemLink id="view_cell" />.
 
-You can add [upgrade cards](upgrade_cards.md) and configure "partitions" to filter what the cell will store.
+Вы можете добавлять [карты улучшения](upgrade_cards.md) и настраивать "разделы", для фильтрации того, что может хранить ячейка
 
-Items and fluids can be dragged into the slots from JEI/REI even if you don't actually have any of that item.
+Предметы и жидкости могут перетащены в слоты из JEI/REI, даже если у вас на самом деле их нет.
 
-Right-click with a fluid container (like a bucket or fluid tank) to set that fluid as a filter instead of the bucket or tank item.
+ПКМ с контейнером жидкости (к примеру вёдра или резервуары с жидкостью) для установления этой жидкости в фильтр, вместо ведра или резурвуара.
 
-## Settings
+## Настройки
 
-The cell workbench has a few buttons on the top-left:
+У верстаков для камер есть несколько кнопок сверху-слева:
 
-*   You can partition a cell based on its existing contents
-*   You can clear the cell's partitioning
-*   The workbench can be set to retain the partition settings when the cell is removed, allowing you to copy settings between cells.
+*   Вы можете разбивать на разделы ячейку на основе её содержимого
+*   Вы можете очищать разделы ячеек
+*   Верстак для камер оставляет настройки разделов, когда ячейка вытащена, позволяя вам копировать настройки между ячейками.
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="cell_workbench" />

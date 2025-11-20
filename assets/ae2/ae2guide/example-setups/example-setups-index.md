@@ -1,9 +1,9 @@
 ---
 navigation:
-  title: Example Setups
+  title: Примеры установок
   position: 40
 ---
 
-# Example Setups
+# Примеры установок
 
 <SubPages />

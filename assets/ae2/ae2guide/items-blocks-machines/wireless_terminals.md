@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Wireless Terminals
+  title: Беспроводные терминалы
   icon: wireless_crafting_terminal
   position: 410
 categories:
@@ -11,7 +11,7 @@ item_ids:
 - ae2:wireless_crafting_terminal
 ---
 
-# Wireless Terminals
+# Беспроводные терминалы
 
 <Row>
   <ItemImage id="wireless_terminal" scale="4" />
@@ -19,55 +19,50 @@ item_ids:
   <ItemImage id="wireless_crafting_terminal" scale="4" />
 </Row>
 
-Wireless terminals are portable versions of the regular wired [terminals](terminals.md). They have the exact same UIs as their
-wired counterparts, except instead of slots for <ItemLink id="view_cell" />s, they have slots for [upgrade cards](upgrade_cards.md)
+Беспроводные терминалы - портативные версии обычных проводных [терминалов](terminals.md). У них такой же интерфейс как и у проводных аналогов, за исключением того, что слоты для <ItemLink id="view_cell" /> заменены на слоты для [карт улучшения](upgrade_cards.md).
 
-In order to pair them with a network, insert the terminal in the top-right slot of a <ItemLink id="wireless_access_point" />
-connected to that network. (The slot with a picture of a wireless terminal on it and an arrow below it)
+Для сопряжения их с сетью необходимо вставить терминал в правый верхний слот <ItemLink id="wireless_access_point" />, подключённой к необходимой сети. (Слот с картинкой беспроводного терминала на нём и стрелочкой внизу)
 
-They must be within range of a <ItemLink id="wireless_access_point" /> to function.
+Для функционирования необходимо находиться в радиусе действия <ItemLink id="wireless_access_point" />.
 
-Their energy can be recharged in a <ItemLink id="charger" />.
+Для восполнения заряда батерии можно использовать <ItemLink id="charger" />.
 
-# Wireless Terminal
+# Беспроводной терминал
 
 <ItemImage id="wireless_terminal" scale="4" />
 
-Your basic terminal, now portable! View and access the contents of your [network's storage](../ae2-mechanics/import-export-storage.md)
-and request things from your [autocrafting](../ae2-mechanics/autocrafting.md) setup from anywhere within the range of a
-<ItemLink id="wireless_access_point" />.
+Ваш обычный терминал теперь портативный! Просматривайте и получайте доступ к содержимому вашего [сетевого хранилища](../ae2-mechanics/import-export-storage.md), а также отправляйте запросы для ваших установок [автоматического крафта](../ae2-mechanics/autocrafting.md) из любой точки в радиусе действия <ItemLink id="wireless_access_point" />.
 
-## The UI
+## Пользовательский интерфейс
 
-See [terminals](terminals.md)
+Читайте статью о [терминалах](terminals.md)
 
-## Upgrades
+## Улучшения
 
-The Wireless Terminal supports the following [upgrades](upgrade_cards.md):
+Беспроводные терминалы поддерживают следующие [улучшения](upgrade_cards.md):
 
-*   <ItemLink id="energy_card" /> in order to increase the battery capacity
+*   <ItemLink id="energy_card" /> для увеличения ёмкости батареи устройства
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="wireless_terminal" />
 
-# Wireless Crafting Terminal
+# Беспроводные терминалы изготовления
 
 <ItemImage id="wireless_crafting_terminal" scale="4" />
 
-The Wireless Crafting Terminal is similar to a regular wireless terminal, with all the same settings and sections, but with an added crafting grid that will be automatically
-refilled from [network storage](../ae2-mechanics/import-export-storage.md). Be careful when shift-clicking the output!
+Беспроводные терминалы изготовления схожы с обычными беспроводными терминалами, у них те же настройки и разделы, за исключением наличия сетки крафта, который автоматически восполняется из вашего [сетевого хранилища](../ae2-mechanics/import-export-storage.md). **Будьте осторожны, когда нажимаете Shift и щелкаете по выводу!**
 
-## The UI
+## Пользовательский интерфейс
 
-See [terminals](terminals.md)
+Читайте статью о [терминалах](terminals.md)
 
-## Upgrades
+## Улучшения
+ 
+Беспроводные терминалы изготовления поддерживают следующие [улучшения](upgrade_cards.md):
 
-The Wireless Crafting Terminal supports the following [upgrades](upgrade_cards.md):
+*   <ItemLink id="energy_card" /> увеличивают ёмкость батареи устройства
 
-*   <ItemLink id="energy_card" /> in order to increase the battery capacity
-
-## Recipe
+## Рецепт
 
 <RecipeFor id="wireless_crafting_terminal" />

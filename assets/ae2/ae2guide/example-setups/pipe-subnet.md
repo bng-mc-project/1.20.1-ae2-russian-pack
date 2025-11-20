@@ -1,178 +1,178 @@
 ---
 navigation:
   parent: example-setups/example-setups-index.md
-  title: Item/Fluid "Pipe" Subnet
+  title: Предметная/Жидкостная кабельная подсеть
   icon: storage_bus
 ---
 
-# Item/Fluid "Pipe" Subnet
+# Предметная/Жидкостная кабельная подсеть
 
-A simple method of emulating an item and/or fluid pipe with AE2 [devices](../ae2-mechanics/devices.md), useful for, well, anything you'd use an item or fluid pipe for.
-This includes returning the result of a craft to a <ItemLink id="pattern_provider" />.
+Простой способ подражения предметного/жидкостного кабеля/трубы с помощью AE2 [устройств](../ae2-mechanics/devices.md), который можно использовать для любых целей, для которых обычно используются предметные/жидкостные кабели
+Это включает в себя возвращение результата крафта в <ItemLink id="pattern_provider" />.
 
-There are generally two different methods of achieving this:
+Как правило, для достижения этой цели существует два различных метода:
 
-## Import Bus -> Storage Bus
+## Шина импорта -> Шина хранения
 
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/import_storage_pipe.snbt" />
 
 <BoxAnnotation color="#dddddd" min="3.7 0 0" max="4 1 1">
-        (1) Import Bus: Can be filtered.
+        (1) Шина импорта: может быть отфильтрована.
   </BoxAnnotation>
 
 <BoxAnnotation color="#dddddd" min="1 0 0" max="1.3 1 1">
-        (2) Storage Bus: Can be filtered. This (and other storage busses you want to be a destination)
-        must be the only storage on the network.
+        (2) Шина хранения: может быть отфильтрована. Это (и другие шины хранения, которые вы хотите использовать в качестве пункта назначения)
+        должно быть единственным хранилищем в сети.
   </BoxAnnotation>
 
 <DiamondAnnotation pos="4.5 0.5 0.5" color="#00ff00">
-        Source
+        Источник
     </DiamondAnnotation>
 
 <DiamondAnnotation pos="0.5 0.5 0.5" color="#00ff00">
-        Destination
+        Место назначения
     </DiamondAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-The <ItemLink id="import_bus" /> (1) on the source inventory imports the items or fluid, and attempts to store them in [network storage](../ae2-mechanics/import-export-storage.md).
-Since the only storage on the network is the <ItemLink id="storage_bus" /> (2) (which is why this is a subnet and not on your main network), the items or fluid
-are placed in the destination inventory, thus being transferred. Energy is provided through a <ItemLink id="quartz_fiber" />.
-Both the import bus and storage bus can be filtered, but the setup will transfer everything it can access if no filters are applied.
-This setup also works with multiple import busses and multiple storage busses.
+<ItemLink id="import_bus" /> (1) в инвентаре источника импортирует предметы или жидкость и пытается сохранить их в [сетевом хранилище](../ae2-mechanics/import-export-storage.md).
+Поскольку единственным хранилищем в сети является <ItemLink id="storage_bus" /> (2) (поэтому это подсеть, а не ваша основная сеть), предметы или жидкость
+размещаются в инвентаре места назначения, таким образом переносясь. Энергия поставляется через <ItemLink id="quartz_fiber" />.
+Как шина импорта, так и шина хранения могут быть отфильтрованы, но при отсутствии фильтров установка будет передавать все, к чему она имеет доступ.
+Эта установка также работает с несколькими шинами импорта и несколькими шинами хранения.
 
-## Storage Bus -> Export Bus
+## Шина хранения -> Шина экспорта
 
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/storage_export_pipe.snbt" />
 
 <BoxAnnotation color="#dddddd" min="3.7 0 0" max="4 1 1">
-        (1) Storage Bus: Can be filtered. This (and other storage busses you want to be a source)
-        must be the only storage on the network.
+        (1) Шина хранения: может быть отфильтрована. Эта (и другие шины хранения, которые вы хотите использовать в качестве источника)
+        должно быть единственным хранилищем в сети.
   </BoxAnnotation>
 
 <BoxAnnotation color="#dddddd" min="1 0 0" max="1.3 1 1">
-        (2) Export Bus: Must be filtered.
+        (2) Шина импорта: должна быть отфильтрована.
   </BoxAnnotation>
 
 <DiamondAnnotation pos="4.5 0.5 0.5" color="#00ff00">
-        Source
+        Источник
     </DiamondAnnotation>
 
 <DiamondAnnotation pos="0.5 0.5 0.5" color="#00ff00">
-        Destination
+        Место назначения
     </DiamondAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-The <ItemLink id="export_bus" /> on the destination inventory attempts to pull items in its filter from [network storage](../ae2-mechanics/import-export-storage.md).
-Since the only storage on the network is the <ItemLink id="storage_bus" /> (which is why this is a subnet and not on your main network), the items or fluid
-are pulled from the source inventory, thus being transferred. Energy is provided through a <ItemLink id="quartz_fiber" />.
-Because export busses must be filtered to function, this setup only operates if you filter the export bus.
-This setup also works with multiple storage busses and multiple export busses.
+<ItemLink id="export_bus" /> в инвентаре назначения пытается извлечь предметы из своего фильтра из [сетевого хранилища](../ae2-mechanics/import-export-storage.md).
+Поскольку единственным хранилищем в сети является <ItemLink id="storage_bus" /> (поэтому это подсеть, а не ваша основная сеть), предметы или жидкость
+извлекаются из инвентаря источника и таким образом передаются. Энергия поставляется через <ItemLink id="quartz_fiber" />.
+Поскольку для работы шины эспорта должны быть отфильтрованы, эта установка работает только в том случае, если вы фильтруете шину экспорта.
+Эта установка также работает с несколькими шинами хранения и несколькими шинами экспорта.
 
-## A Setup That Does Not Work (Import Bus -> Export Bus)
+## Установка, которая не работает (Шина импорта -> Шина экспорта)
 
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/import_export_pipe.snbt" />
 
 <BoxAnnotation color="#dd3333" min="3.7 0 0" max="4 1 1">
-        Import Bus: Since the network has no storage, there is nowhere for it to import to.
+        Шина импорта: Поскольку сеть не имеет хранилища, ей некуда импортировать данные.
   </BoxAnnotation>
 
 <BoxAnnotation color="#dd3333" min="1 0 0" max="1.3 1 1">
-        (2) Export Bus: Since the network has no storage, there is nothing for it to export.
+        (2) Шина экспорта: поскольку сеть не имеет хранилища, ей нечего экспортировать.
   </BoxAnnotation>
 
 <DiamondAnnotation pos="4.5 0.5 0.5" color="#ff0000">
-        Source
+        Источник
     </DiamondAnnotation>
 
 <DiamondAnnotation pos="0.5 0.5 0.5" color="#ff0000">
-        Destination
+        Место назначения
     </DiamondAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-A setup with just an import and export bus will not work. The import bus will attempt to pull from the source inventory
-and store the items or fluid in network storage. The export bus will attempt to pull from network storage and put the
-items or fluid in the destination inventory. However since this network **has no storage**, the import bus can't import
-and the export bus can't export, so nothing happens.
+Установка, состоящая только из шины импорта и экспорта, не будет работать. Шина импорта будет пытаться извлечь из инвентаря источника
+и сохранить предметы или жидкость в сетевом хранилище. Шина экспорта будет пытаться извлечь из сетевого хранилища и поместить
+предметы или жидкость в инвентарь назначения. Однако, поскольку эта сеть **не имеет хранилища**, шина импорта не может импортировать,
+а шина экспорта не может экспортировать, поэтому ничего не происходит.
 
-## Inputting And Outputting Through 1 Face
+## Ввод и вывод через 1 сторону
 
-Say you have some machine that can receive input and have its output pulled through 1 face. (Like a <ItemLink id="charger" />)
-You can both push in the ingredients and pull out the result, by combining the 2 pipe subnet methods:
+Предположим, у вас есть устройство, которое может принимать входные данные и выводить результаты через одно отверстие (например, <ItemLink id="charger" />).
+Вы можете как вводить ингредиенты, так и извлекать результат, комбинируя два метода подсети кабелей:
 
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/import_storage_export_pipe.snbt" />
 
 <BoxAnnotation color="#dddddd" min="4 1 1" max="5 1.3 2">
-        (1) Import Bus: Can be filtered.
+        (1) Шина импорта: можно отфильтровать
   </BoxAnnotation>
 
 <BoxAnnotation color="#dddddd" min="2 1 1" max="3 1.3 2">
-        (2) Storage Bus: Can be filtered. This (and other storage busses you want to push and pull items)
-        must be the only storage on the network.
+        (2) Шина хранения: может быть отфильтрована. Это (и другие шины хранения, которые вы хотите использовать для отправки и получения предметов)
+        должно быть единственным хранилищем в сети.
   </BoxAnnotation>
 
 <BoxAnnotation color="#dddddd" min="2 0 1" max="3 1 2">
-        (3) Thing You Want To Push To And Pull From: In this case a Charger.
+        (3) Вещь в которую вы хотите помещать и извлекать: в данном случае — Зарядник.
   </BoxAnnotation>
 
 <BoxAnnotation color="#dddddd" min="0 1 1" max="1 1.3 2">
-        (4) Export Bus: Must be filtered.
+        (4) Шина экспорта: должна быть отфильтрована.
   </BoxAnnotation>
 
 <DiamondAnnotation pos="4.5 0.5 1.5" color="#00ff00">
-        Source
+        Источник
     </DiamondAnnotation>
 
 <DiamondAnnotation pos="0.5 0.5 1.5" color="#00ff00">
-        Destination
+        Место назначения
     </DiamondAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-## Interfaces
+## Интерфейсы
 
-It turns out there are [devices](../ae2-mechanics/devices.md) besides import busses and export busses that push items into
-and pull items out of [network storage](../ae2-mechanics/import-export-storage.md)!
-Of relevance here is the <ItemLink id="interface" />. If an item is inserted that the interface is not set to stock, the interface will
-push it to network storage, which we can exploit similarly to the import bus -> storage bus pipe. Setting an interface to
-stock some item will pull it from network storage, similar to the storage bus -> export bus pipe. Interfaces can be set to
-stock some things and not stock others, allowing you to remotely push and pull through storage busses, if you for some reason want to do that.
+Оказывается, помимо шин импорта и экспорта, существуют [устройства](../ae2-mechanics/devices.md), которые заносят вещи в
+[сетевое хранилище](../ae2-mechanics/import-export-storage.md) и извлекают их оттуда!
+Здесь актуален <ItemLink id="interface" />. Если вставлен предмет, для которого интерфейс не настроен на хранение, интерфейс
+передаст его в сетевое хранилище, которое мы можем использовать аналогично кабелю шина импорта -> шина хранения. Настройка интерфейса на
+хранение какого-либо предмета извлечет его из сетевого хранилища, аналогично кабелю шины хранения -> шины экспорта. Интерфейсы могут быть настроены на
+хранение одних предметов и не хранение других, что позволяет вам удаленно перемещать предметы через шины хранения, если вы по какой-то причине хотите это сделать.
 
 <GameScene zoom="6" background="transparent">
 <ImportStructure src="../assets/assemblies/interface_pipes.snbt" />
 
 <BoxAnnotation color="#dddddd" min="3.7 0 0" max="4 1 1">
-        Interface
+        Интерфейс
   </BoxAnnotation>
 
 <BoxAnnotation color="#dddddd" min="1 0 0" max="1.3 1 1">
-        Storage Bus
+        Шина хранения
   </BoxAnnotation>
 
 <BoxAnnotation color="#dddddd" min="3.7 0 2" max="4 1 3">
-        Storage Bus
+        Шина хранения
   </BoxAnnotation>
 
 <BoxAnnotation color="#dddddd" min="0 1 2" max="1 1.3 3">
-        Storage Bus
+        Шина хранения
   </BoxAnnotation>
 
 <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-## One-To-Many and Many-To One (and many-to-many)
+## Один-ко-многим и многие-ко-одному (и многие-ко-многим)
 
-Of course, you don't have to use just one <ItemLink id="import_bus" /> or <ItemLink id="export_bus" /> or <ItemLink id="storage_bus" />
+Конечно, вам не обязательно использовать только одну <ItemLink id="import_bus" /> или <ItemLink id="export_bus" /> или <ItemLink id="storage_bus" />
 
 <GameScene zoom="3" background="transparent">
 <ImportStructure src="../assets/assemblies/many_to_many_pipe.snbt" />
@@ -180,32 +180,32 @@ Of course, you don't have to use just one <ItemLink id="import_bus" /> or <ItemL
 <IsometricCamera yaw="185" pitch="30" />
 </GameScene>
 
-## Providing To Multiple Places
+## Поставка в несколько мест
 
-From all this, we can derive a method to send ingredients from one <ItemLink id="pattern_provider" /> face to many different
-locations, like an array of machines, or several different faces of one machine.
+Из всего этого мы можем вывести метод отправки ингредиентов с одной стороны <ItemLink id="pattern_provider" /> во многие разные
+места, например, в массив машин или на несколько разных сторон одной машины.
 
-We don't want an import -> storage pipe or a storage -> export pipe because the <ItemLink id="pattern_provider" /> never
-actually contains the ingredients. Instead, providers *push* the ingredients to adjacent inventories, so we need some 
-adjacent inventory that can also import items.
+Мы не хотим кабель импорт -> хранение или кабель хранение -> экспорт, потому что <ItemLink id="pattern_provider" /> на самом деле никогда 
+не содержит ингредиенты. Вместо этого поставщики *передают* ингредиенты в соседние инвентари, поэтому нам нужен какой-то 
+соседний инвентарь, который также может импортировать предметы.
 
-This sounds like... an <ItemLink id="interface" />!
-Make sure the provider is in directional or flat subpart mode and/or the interface is in flat subpart mode, so the two don't form a network
-connection.
+Это похоже на... <ItemLink id="interface" />!
+Убедитесь, что поставщик находится в режиме направленного или плоского подраздела и/или интерфейс находится в режиме плоского подраздела, чтобы эти два предмета не формировали сетевое
+соединение.
 
 <GameScene zoom="6" background="transparent">
 <ImportStructure src="../assets/assemblies/provider_interface_storage.snbt" />
 
 <BoxAnnotation color="#dddddd" min="2.7 0 1" max="3 1 2">
-        Interface (must be flat, not fullblock)
+        Интерфейс (должен быть плоским, не полноблочным)
   </BoxAnnotation>
 
 <BoxAnnotation color="#dddddd" min="1 0 0" max="1.3 1 4">
-        Storage Busses
+        Шины хранения
   </BoxAnnotation>
 
 <BoxAnnotation color="#dddddd" min="0 0 0" max="1 1 4">
-        Places you want to pattern-provide to (multiple machines, or multiple faces of 1 machine)
+        Места, для которых вы хотите создать шаблон (несколько машин или несколько сторон одной машины)
   </BoxAnnotation>
 
 <IsometricCamera yaw="185" pitch="30" />

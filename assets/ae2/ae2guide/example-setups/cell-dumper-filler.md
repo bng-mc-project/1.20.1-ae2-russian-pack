@@ -1,66 +1,66 @@
 ---
 navigation:
   parent: example-setups/example-setups-index.md
-  title: Cell Dumper or Filler
+  title: Извлечение и заполнение содержимого ячейки
   icon: io_port
 ---
 
-# Cell Dumper Or Filler
+# Извлечение и заполнение содержимого ячейки
 
-One might ask "How do I quickly empty a cell into a chest or drawer array or backpack, or, inversely, fill a cell from the same?"
+Можно задать вопрос: "Как быстро опустошить ячейку в сундуке, ящике или рюкзаке или, наоборот, наполнить ячейку из них?"
 
-The answer is use of an <ItemLink id="io_port" /> and some subnetting to restrict where it can put the items, or pull items from.
+Ответ заключается в использовании <ItemLink id="io_port" /> и некоторого подсетевого разделения для ограничения мест, куда можно помещать предметы или из которых можно извлекать предметы.
 
 <GameScene zoom="6" interactive={true}>
   <ImportStructure src="../assets/assemblies/cell_dumper_filler.snbt" />
 
 <BoxAnnotation color="#dddddd" min="1 1 0" max="2 2 1">
-        (1) IO Port: Can be set to either "Transfer data to Network" or "Transfer data to Storage Cell" using the arrow button
-        in the middle of the GUI. Has 3 Acceleration Cards.
+        (1) Порт ввода/вывода: Может быть настроен на "Передачу данных в сеть" или "Передачу данных в ячейку хранения" с помощью кнопки со стрелкой
+        в центре графического интерфейса. Имеет 3 карты ускорения.
         <ItemImage id="speed_card" scale="2" />
   </BoxAnnotation>
 
 <BoxAnnotation color="#dddddd" min="0 0.7 0" max="1 1 1">
-        (2) Storage Bus: In its default configuration.
+        (2) Шина хранения: настройка по умолчанию.
   </BoxAnnotation>
 
 <BoxAnnotation color="#33dd33" min="0 1 0" max="1 2 1">
-        Place whatever you want to fill or empty here.
+        Поместите сюда все, что хотите заполнить или опустошить.
   </BoxAnnotation>
 
 <BoxAnnotation color="#dddddd" min="2 0.35 0.35" max="2.3 0.65 0.65">
-        Quartz Fiber: Only needed if the energy source is another network.
+        Кварцевое волокно: Требуется только в том случае, если источником энергии является другая сеть.
   </BoxAnnotation>
 
 <DiamondAnnotation pos="3 0.5 0.5" color="#00ff00">
-        To some energy source, like another network, or an energy acceptor.
+        К какому-либо источнику энергии, например, к другой сети или к приемнику энергии.
     </DiamondAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-## Configurations
+## Настройки
 
-* The <ItemLink id="io_port" /> (1) can be set to either "Transfer data to Network" or "Transfer data to Storage Cell" using the arrow button
-  in the middle of the GUI. It has 3 acceleration cards for maximum speed.
-* The <ItemLink id="storage_bus" /> (2) is in its default configuration.
+* <ItemLink id="io_port" /> (1) можно установить на "Передачу данных в сеть" или «Передачу данных в ячейку хранения» с помощью кнопки со стрелкой
+  в середине графического интерфейса. Он имеет 3 карты ускорения  для максимальной скорости.
+* <ItemLink id="storage_bus" /> (2) находится в настройке по умолчанию.
 
-## How It Works
+## Как это работает
 
-### In "Transfer To Network" Mode
+### В режиме "Передача в сеть"
 
-1. The <ItemLink id="io_port" /> attempts to dump the contents of the inserted [storage cell](../items-blocks-machines/storage_cells.md).
-    into [network storage](../ae2-mechanics/import-export-storage.md).
-2. The only storage on the subnet is the <ItemLink id="storage_bus" />, which stores the items or fluids or etc. in whatever
-    you put in front of it.
-* The <ItemLink id="energy_cell" /> provides a large enough buffer of [energy](../ae2-mechanics/energy.md) that the network does
-    not run out from the power draw of transferring so many items per gametick.
+1. <ItemLink id="io_port" /> пытается выгрузить содержимое вставленной [ячейки хранения](../items-blocks-machines/storage_cells.md).
+    в [сетевое хранилище](../ae2-mechanics/import-export-storage.md).
+2. Единственным хранилищем в подсети является <ItemLink id="storage_bus" />, в котором хранятся предметы, жидкости и т. д., в зависимости от того, что
+    вы помещаете перед ним.
+* <ItemLink id="energy_cell" /> обеспечивает достаточно большой запас [энергии](../ae2-mechanics/energy.md), чтобы сеть
+    не исчерпала свой запас энергии при передаче такого количества предметов за один игровой тик.
 
-### In "Transfer To Storage Cell" Mode
+### В режиме "Перенос в ячейку хранения"
 
-1. The <ItemLink id="io_port" /> attempts to dump the contents of the [network's storage](../ae2-mechanics/import-export-storage.md)
-   into the inserted [storage cell](../items-blocks-machines/storage_cells.md).
-2. The only storage on the subnet is the <ItemLink id="storage_bus" />, which pulls the items or fluids or etc. out of whatever
-   you put in front of it.
-* The <ItemLink id="energy_cell" /> provides a large enough buffer of [energy](../ae2-mechanics/energy.md) that the network does
-  not run out from the power draw of transferring so many items per gametick.
+1. <ItemLink id="io_port" /> пытается выгрузить содержимое [сетевого хранилища](../ae2-mechanics/import-export-storage.md)
+   в вставленную [ячейку хранения](../items-blocks-machines/storage_cells.md).
+2. Единственное хранилище в подсети — это <ItemLink id="storage_bus" />, которое извлекает предметы, жидкости и т. д. из того, что
+   вы помещаете перед ним.
+* <ItemLink id="energy_cell" /> обеспечивает достаточно большой запас [энергии](../ae2-mechanics/energy.md), чтобы сеть
+  не исчерпала свой запас энергии при передаче такого количества предметов за каждый игровой тик.

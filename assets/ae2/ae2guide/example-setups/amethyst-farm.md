@@ -1,76 +1,73 @@
 ---
 navigation:
   parent: example-setups/example-setups-index.md
-  title: Amethyst Farm
+  title: Ферма аметистов
   icon: minecraft:amethyst_shard
 ---
 
-# Farming of Amethyst
+# Ферма аметистов
 
-While the <ItemLink id="growth_accelerator" /> works on amethyst, the usual methods of filtering [certus buds](../items-blocks-machines/budding_certus.md)
-with an <ItemLink id="annihilation_plane" /> do not work on amethyst buds. Unlike non-mature certus buds which drop
-<ItemLink id="certus_quartz_dust" />, non-mature amethyst buds drop nothing, so an annihilation plane will always break them
-because a network can always store "nothing".
+В то время как <ItemLink id="growth_accelerator" /> работает с аметистом, обычные методы фильтрации [бутонов истинного кварца](../items-blocks-machines/budding_certus.md) с помощью <ItemLink id="annihilation_plane" /> не работают с бутонами аметистами. В отличие от незрелых бутонов истинного кварца из которых выпадают <ItemLink id="certus_quartz_dust" />, из незрелых аметистовых бутонов ничего не выпадает, поэтому плоскость уничтожения всегда будет их ломать, поскольку сеть всегда может хранить "ничего".
 
-The way around this is to enchant the annihilation plane with silk touch. Then the non-mature amethyst buds *do* drop something
-(the various stages of the physical bud blocks), and thus can be filtered.
+Обходной путь заключается в том, чтобы зачаровать плоскость уничтожения шелковым касанием. Тогда незрелые аметистовые бутоны *действительно* роняют что-то
+(различные стадии физических аметистовых бутонов) и, таким образом, могут быть отфильтрованы.
 
-The <ItemLink id="minecraft:amethyst_cluster" /> must then be placed again by a <ItemLink id="formation_plane" />, to then be
-re-broken by an <ItemLink id="annihilation_plane" /> without silk touch, in order to get <ItemLink id="minecraft:amethyst_shard" />s.
+Затем <ItemLink id="minecraft:amethyst_cluster" /> необходимо снова разместить с помощью <ItemLink id="formation_plane" />, чтобы затем
+снова разбить с помощью <ItemLink id="annihilation_plane" /> без шелкового касания, чтобы получить <ItemLink id="minecraft:amethyst_shard" />.
 
-Note that due to the directionality of the cluster, there must be a solid block face directly opposite of the formation plane.
+Обратите внимание, что из-за направленности кластера непосредственно напротив плоскости формирования должен находиться сплошной блок.
 
 <GameScene zoom="6" interactive={true}>
   <ImportStructure src="../assets/assemblies/amethyst_farm.snbt" />
 
   <BoxAnnotation color="#dddddd" min="2.7 1 1" max="3 2 2">
-        (1) Annihilation Plane #1: No GUI to configure, but enchanted with Silk Touch.
+        (1) МЭ плоскость уничтожения № 1: нет графического интерфейса для настройки, но зачарован Шелковым касанием.
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="2 1 1" max="2.3 2 2">
-        (2) Formation Plane: Filtered to Amethyst Cluster.
+        (2) МЭ плоскость формирования: отфильтровано на аметистовую друзу.
         <ItemImage id="minecraft:amethyst_cluster" scale="2" />
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="1.3 0.7 1" max="2 1 2">
-        (3) Annihilation Plane #2: No GUI to configure, but can be enchanted with Fortune.
+        (3) МЭ плоскость уничтожения № 2: нет графического интерфейса для настройки, но может быть зачарована с помощью Удачи.
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="1 0 1" max="1.3 1 2">
-        (4) Storage Bus #1: Filtered to Amethyst Shard.
+        (4) Шина хранения № 1: фильтруется на аметистовый осколок
         <ItemImage id="minecraft:amethyst_shard" scale="2" />
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="0 0 .7" max="1 1 1">
-        (5) Storage Bus #2: Filtered to Amethyst Shard. Has priority set higher than your main storage.
+        (5) Шина хранения № 2: фильтруется на аметистовый осколок. Имеет приоритет выше, чем ваше основное хранилище.
         <ItemImage id="minecraft:amethyst_shard" scale="2" />
   </BoxAnnotation>
 
 <DiamondAnnotation pos="0 0.5 0.5" color="#00ff00">
-        To Main Network
+        В основную сеть
     </DiamondAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-## Configurations
+## Настройки
 
-* The first <ItemLink id="annihilation_plane" /> (1) has no GUI and cannot be configured, but must be enchanted with silk touch.
-* The <ItemLink id="formation_plane" /> (2) is filtered to <ItemLink id="minecraft:amethyst_cluster" />.
-* The second <ItemLink id="annihilation_plane" /> (3) has no GUI and cannot be configured, but can be enchanted with fortune.
-* The first <ItemLink id="storage_bus" /> (4) is filtered to <ItemLink id="minecraft:amethyst_shard" />.
-* The second <ItemLink id="storage_bus" /> (5) is filtered to <ItemLink id="minecraft:amethyst_shard" />, and has its
-  [priority](../ae2-mechanics/import-export-storage.md#storage-priority) set higher than your main storage.
+* Первая <ItemLink id="annihilation_plane" /> (1) не имеет графического интерфейса и не может быть настроена, но должна быть зачарована на шёлковое касание.
+* <ItemLink id="formation_plane" /> (2) отфильтровывается на <ItemLink id="minecraft:amethyst_cluster" />.
+* Вторая <ItemLink id="annihilation_plane" /> (3) не имеет графического интерфейса и не может быть настроена, но может быть зачарована на удачу.
+* Первая <ItemLink id="storage_bus" /> (4) фильтруется на <ItemLink id="minecraft:amethyst_shard" />.
+* Вторая <ItemLink id="storage_bus" /> (5) фильтруется на <ItemLink id="minecraft:amethyst_shard" />, и его
+  [приоритет](../ae2-mechanics/import-export-storage.md#приоритет-хранения) установлен выше, чем у вашего основного хранилища.
 
-## How It Works
+## Как это работает
 
-1. The first <ItemLink id="annihilation_plane" /> attempts to break what is in front of it, but can only break <ItemLink id="minecraft:amethyst_cluster" />
-    because the only storage on the subnet is the <ItemLink id="formation_plane" />, filtered to amethyst cluster. This only works because
-the plane is enchanted with silk touch, otherwise it would be able to break the non-mature buds because they drop nothing.
-2. The <ItemLink id="formation_plane" /> places the cluster on the block opposing it.
-3. The second <ItemLink id="annihilation_plane" /> breaks the cluster, producing <ItemLink id="minecraft:amethyst_shard" />.
-4. The first <ItemLink id="storage_bus" /> stores the shards in the barrel. This technically doesn't need to be filtered because the only
-thing the second annihilation plane should be encountering is fully-grown clusters.
-5. The second <ItemLink id="storage_bus" /> gives the main network access to all of the amethyst shards in the barrel. It is set to
-high [priority](../ae2-mechanics/import-export-storage.md#storage-priority) so that amethyst shards are preferentially
-put back in the barrel instead of in your main storage.
+1. Первая <ItemLink id="annihilation_plane" /> пытается разрушить то, что находится перед ним, но может разрушить только <ItemLink id="minecraft:amethyst_cluster" />,
+поскольку единственным хранилищем в подсети является <ItemLink id="formation_plane" />, отфильтрованный на аметистовую друзу. Это работает только потому, что
+плоскость зачарована шелковым касанием, иначе она могла бы сломать незрелые бутоны, потому что они ничего не роняют.
+2. <ItemLink id="formation_plane" /> ставит друзу на блок, противоположный ему.
+3. Вторая <ItemLink id="annihilation_plane" /> разбивает друзу, производя <ItemLink id="minecraft:amethyst_shard" />.
+4. Первая <ItemLink id="storage_bus" /> хранит осколки в бочке. Технически это не требует фильтрации, поскольку единственное,
+с чем должна сталкиваться вторая плоскость уничтожения, — это полностью сформировавшиеся друзу.
+5. Вторая <ItemLink id="storage_bus" /> предоставляет основной сети доступ ко всем осколкам аметиста в бочке. Он установлен на
+высокий [приоритет](../ae2-mechanics/import-export-storage.md#приоритет-хранения), чтобы осколки аметиста предпочтительно
+возвращались в бочку, а не в ваше основное хранилище.

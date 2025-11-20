@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Decorative Fluix
+  title: Декоративный флюис
   icon: fluix_stairs
   position: 010
 categories:
@@ -12,16 +12,16 @@ item_ids:
 - ae2:fluix_slab
 ---
 
-# Decorative Fluix
+# Декоративный флюис
 
 <GameScene zoom="4" background="transparent">
 <ImportStructure src="../assets/assemblies/decorative_fluix.snbt" />
 <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-<ItemLink id="fluix_block" />s can be crafted and stonecut into some decorative building blocks.
+<ItemLink id="fluix_block" /> может быть преобразован в различные декоративные строительные блоки.
 
-## Recipes
+## Рецепты
 
 <Row>
   <RecipeFor id="fluix_stairs" />

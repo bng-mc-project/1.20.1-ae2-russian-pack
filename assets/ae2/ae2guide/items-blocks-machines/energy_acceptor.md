@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Energy Acceptor
+  title: Приёмщик энергии
   icon: energy_acceptor
   position: 110
 categories:
@@ -10,7 +10,7 @@ item_ids:
 - ae2:energy_acceptor
 ---
 
-# The Energy Acceptor
+# Приёмщик энергии
 
 <Row gap="20">
 <BlockImage id="energy_acceptor" scale="8" /> 
@@ -20,25 +20,22 @@ item_ids:
 </GameScene>
 </Row>
 
-The energy acceptor converts common forms of energy from other tech mods into AE2's internal form of [energy](../ae2-mechanics/energy.md),
-AE. While the <ItemLink id="controller" /> can also do this, controller faces are valuable so it's often better to use an energy
-acceptor instead.
+Приёмщик энергии конвертирует обычные формы энергии с других технических модов во внутренюю форму [энергии](../ae2-mechanics/energy.md) AE2 - AE. <ItemLink id="controller" /> может также делать это, однако стороны МЭ-регуляторов более востребованы в сети, поэтому всё же лучше использовать приёмщики энергии.
 
-The ratios for conversion of Forge Energy and Techreborn Energy are
+Соотношения конвертации Forge Energy и Techreborn Energy таковы:
 
 *   2 FE = 1 AE (Forge)
 *   1 E  = 2 AE (Fabric)
 
-The speed of conversion is entirely dependent on how much AE your network can store, for reasons that are explained on
-[this page](../ae2-mechanics/energy.md).
+Скорость конвертации полностью зависит от того, сколько AE ваша сеть можеть хранить, это объясняется [здесь](../ae2-mechanics/energy.md)
 
-## Variants
+## Вариации
 
-Energy acceptors come in 2 different variants: normal and flat/[subpart](../ae2-mechanics/cable-subparts.md). This allows you to make some setups more compact.
+Приёмщики энергии имеют 2 различных вариации: нормальная и плоская/[подраздел](../ae2-mechanics/cable-subparts.md). Это позволяет делать некоторые установки более компактными.
 
-Energy acceptors can be swapped between normal and flat in a crafting grid.
+Приёмщик энергии может быть преобразован с нормальной в плоскую вариацию и наоборот в сетке крафта.
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="energy_acceptor" />
 

@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: P2P Tunnels
+  title: P2P Туннели
   icon: me_p2p_tunnel
   position: 210
 categories:
@@ -15,114 +15,114 @@ item_ids:
 - ae2:light_p2p_tunnel
 ---
 
-# Point To Point Tunnels
+# Туннели "Точка-Точка"
 
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/p2p_tunnels.snbt" />
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-P2P tunnels are a way to move things like items, fluids, redstone signals, power, light, and [channels](../ae2-mechanics/channels.md)
-around a network without them directly interacting with the network. There are many variants of P2P tunnel but each
-only transports its specific type of thing. They essentially act like portals that directly connect
-two block faces at range. They are not bi-directional, there are defined inputs and outputs.
+P2P туннели — это способ перемещения таких вещей, как предметы, жидкости, сигналы редстоуна, энергия, свет и [каналы](../ae2-mechanics/channels.md)
+по сети без их прямого взаимодействия с сетью. Существует много вариантов P2P туннелей, но каждый из них
+передает только определенный тип данных. По сути, они действуют как порталы, которые напрямую соединяют
+две грани блоков на расстоянии. Они не являются двунаправленными, у них есть определенные входы и выходы.
 
-![Portal](../assets/assemblies/p2p_portal.png)
+![Портал](../assets/assemblies/p2p_portal.png)
 
-For example, the hopper facing the Item P2P will act as if it is directly connected to the barrel, and items will flow.
+Например, воронка, обращенная к предметному P2P, будет действовать так, как если бы он был напрямую подключен к бочке, и предметы будут идти.
 
 <GameScene zoom="4" background="transparent">
   <ImportStructure src="../assets/assemblies/p2p_hopper_barrel.snbt" />
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-However, two barrels next to each other will not transfer items between each other.
+Однако две бочки, расположенные рядом друг с другом, не будут передавать предметы между собой.
 
 <GameScene zoom="4" background="transparent">
   <ImportStructure src="../assets/assemblies/p2p_barrel_barrel.snbt" />
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-There are also other variants like Redstone P2P.
+Существуют также другие варианты, такие как редстоун P2P.
 
 <GameScene zoom="4" background="transparent">
   <ImportStructure src="../assets/assemblies/p2p_redstone.snbt" />
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-## Types Of P2P Tunnel And Attunement
+## Типы P2P туннелей и настройка
 
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/p2p_tunnels.snbt" />
   <IsometricCamera yaw="180" pitch="90" />
 </GameScene>
 
-There are many types of P2P tunnel. Only the ME P2P tunnel is directly craftable, the others are made by right-clicking other
-P2P tunnels with certain items:
-- ME P2P tunnels are selected by right-clicking with any [cable](../items-blocks-machines/cables.md).
-- Redstone P2P tunnels are selected by right-clicking with a variety of redstone components.
-- Item P2P tunnels are selected by right-clicking with a chest or hopper.
-- Fluid P2P tunnels are selected by right-clicking with a bucket or bottle.
-- Energy P2P tunnels are selected by right-clicking with almost any energy-containing item.
-- Light P2P tunnels are selected by right-clicking with a torch or glowstone
+Существует много типов P2P туннелей. Только МЭ P2P туннель можно создать напрямую, остальные создаются правой кнопкой мыши.
 
-Some tunnel types have quirks. For instance, ME P2P tunnels' channels cannot pass through other ME P2P tunnels, and
-Energy P2P tunnels indirectly extract a 5% tax on FE or E flowing through themselves by increasing their
-[energy](../ae2-mechanics/energy.md) draw.
+P2P туннели с определенными предметами:
+- МЭ P2P туннели выбираются щелчком правой кнопкой мыши по любому [кабелю](../items-blocks-machines/cables.md).
+- Редстоун P2P выбираются щелчком правой кнопкой мыши с различными редстоун компонентами.
+- Предметные P2P туннели выбираются щелчком правой кнопкой мыши с сундуком или воронкой.
+- Жидкостные P2P туннели выбираются щелчком правой кнопкой мыши с ведром или бутыльком.
+- Энергетические P2P туннели выбираются щелчком правой кнопкой мыши с практически любым предметом, содержащем энергию.
+- Светлые P2P туннели выбираются щелчком правой кнопкой мыши с факелом или светящимся камнем
 
-## The Most-Used Form of P2P
+Некоторые типы туннелей имеют особенности. Например, каналы МЭ P2P туннелей не могут проходить через другие МЭ P2P туннели, а
+Энергетические туннели P2P косвенно взимают налог в размере 2,5% с FE, проходящего через них, путем увеличения своего
+потребления [энергии](../ae2-mechanics/energy.md).
 
-The most common use case of P2P tunnels is using a ME P2P tunnel to compact the density of [channel](../ae2-mechanics/channels.md) transport.
-Instead of a bundle of dense cable, a single dense cable can be used to carry many channels around.
+## Наиболее используемая форма P2P
 
-In this example, 8 ME P2P inputs take 256 channels (8*32) from the main network's <ItemLink id="controller" /> and 8 ME P2P outputs 
-output them somewhere else. Observe how each P2P tunnel input or output takes 1 channel. We can thus run many channels 
-through a thin cable. And since our P2P tunnels are on a dedicated [subnetwork](../ae2-mechanics/subnetworks.md), we're not
-even using up any channels from the main network to do this! Also observe how while the P2P tunnels can be placed directly
-against a controller, a [dense smart cable](../items-blocks-machines/cables.md#smart-cable) can be placed in between to more easily visualize the channels.
+Наиболее распространенным случаем использования P2P туннелей является использование MЭ P2P туннели для уплотнения плотности транспорта [канала](../ae2-mechanics/channels.md).
+Вместо пучка непрозрачных кабелей можно использовать один непрозрачный кабель для передачи многих каналов.
+
+В этом примере 8 входов MЭ P2P принимают 256 каналов (8*32) от <ItemLink id="controller" /> основной сети, а 8 выходов MЭ P2P 
+выводят их в другое место. Обратите внимание, что каждый вход или выход P2P туннеля занимает 1 канал. Таким образом, мы можем пропустить много каналов 
+через тонкий кабель. А поскольку наши P2P туннели находятся в выделенной [подсети](../ae2-mechanics/subnetworks.md), мы даже не
+используем для этого каналы основной сети! Также обратите внимание, что хотя P2P туннели могут быть размещены непосредственно
+рядом с контроллером, между ними можно разместить [непрозрачный умный кабель](../items-blocks-machines/cables.md#smart-cable), чтобы легче визуализировать каналы.
 
 <GameScene zoom="4" interactive={true}>
   <ImportStructure src="../assets/assemblies/p2p_compact_channels.snbt" />
 
   <BoxAnnotation color="#dddddd" min="1.3 1.3 6.3" max="2 2.7 6.7">
-        Quartz Fiber shares energy between main network and p2p subnetwork.
+        Кварцевое волокно распределяет энергию между основной сетью и подсетью P2P.
   </BoxAnnotation>
 
   <IsometricCamera yaw="225" pitch="30" />
 </GameScene>
 
-For another example (including its use with [Quantum Bridges](quantum_bridge.md)) see this MS Paint diagram I can't be bothered
-to touch up:
+Другой пример (включая его с использованием [Квантовых мостов](quantum_bridge.md)) см. на этой схеме, нарисованной в MS Paint, которую я не хочу
+дорабатывать:
+![P2P и квантовые мосты](../assets/diagrams/p2p_quantum_network_ru.png)
 
-![P2P and quantum bridges](../assets/diagrams/p2p_quantum_network.png)
+## Вложение
 
-## Nesting
-
-However, you cannot use this to send infinite channels through a single cable. The channel for a ME P2P tunnel will not
-pass through another ME P2P tunnel, so you cannot recursively nest them. Observe how the outer layer of ME P2P tunnels
-on the red cables are offline. Note that this only applies to ME P2P tunnels, other P2P tunnel types can pass through a ME P2P tunnel,
-as seen by the Redstone P2P tunnels working fine.
+Однако вы не можете использовать это для передачи бесконечного количества каналов по одному кабелю. Канал для МЭ P2P туннеля не будет
+проходить через другой MЭ P2P туннель, поэтому вы не можете вкладывать их друг в друга рекурсивно. Обратите внимание, что внешний слой МЭ P2P туннелей
+на красных кабелях находится в автономном режиме. Обратите внимание, что это относится только к MЭ P2P туннелям, другие типы P2P туннелей могут проходить через MЭ P2P туннель,
+как видно из нормальной работы Редстоун P2P туннелей.
 
 <GameScene zoom="4" background="transparent">
   <ImportStructure src="../assets/assemblies/p2p_nesting.snbt" />
   <IsometricCamera yaw="225" pitch="30" />
 </GameScene>
 
-## Linking
+## Связывание
 
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/p2p_linking_frequency.snbt" />
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-The ends of a P2P tunnel connection can be linked using a <ItemLink id="memory_card" />. The frequency will be displayed
-as a 2x2 array of colors on the back of the tunnel.
-- Shift-right-click to generate a new P2P linking frequency.
-- Right-click to paste the settings, upgrade cards, or linking frequency.
+Концы P2P туннельного соединения можно соединить с помощью <ItemLink id="memory_card" />. Частота будет отображаться
+в виде массива цветов 2x2 на задней стороне туннеля.
+- Нажмите Shift + правую кнопку мыши, чтобы сгенерировать новую частоту P2P связи.
+- Нажмите правую кнопку мыши, чтобы вставить настройки, карты улучшения или частоту связи.
 
-The tunnel you shift-right-click will be the input and the tunnel you right-click will be the output. You can have multiple outputs,
-but with ME P2P tunnels, the channels flowing in the input will be split between the outputs, so you can't duplicate channels.
+Туннель, на который вы щелкнули правой кнопкой мыши с нажатой клавишей Shift, будет входом, а туннель, на который вы щелкнули правой кнопкой мыши, будет выходом. Вы можете иметь несколько выходов,
+но в МЭ P2P туннелях  каналы, проходящие через вход, будут разделены между выходами, поэтому вы не можете дублировать каналы.
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="me_p2p_tunnel" />

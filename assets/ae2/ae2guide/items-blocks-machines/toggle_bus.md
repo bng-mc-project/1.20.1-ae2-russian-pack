@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Toggle Bus
+  title: Шина переключения
   icon: toggle_bus
   position: 110
 categories:
@@ -11,25 +11,22 @@ item_ids:
 - ae2:inverted_toggle_bus
 ---
 
-# The Toggle Bus
+# Шина переключения
 
 <GameScene zoom="8" background="transparent">
 <ImportStructure src="../assets/assemblies/toggle_bus.snbt" />
 <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-A bus which functions similarly to <ItemLink id="fluix_glass_cable" /> or other cables, but it
-allows its connection state to be toggled via redstone. This allows you to cut
-off a section of a [ME Network](../ae2-mechanics/me-network-connections.md).
+Шина, которая функционирует похоже на <ItemLink id="fluix_glass_cable" /> или на другие кабели. но позволяет контролировать состояние соединения, путём переключения через редстоун. Это позволяет вам отрезать определённые секции [МЭ сети](../ae2-mechanics/me-network-connections.md).
 
-When redstone signal supplied the part enables the connection, <ItemLink id="inverted_toggle_bus" /> provides the reverse
-behavior by disabling the connection instead.
+Когда к шине подключен редстоун сигнал, то соединение не предотвращается, <ItemLink id="inverted_toggle_bus" /> имеет же противоположное поведение, при подаче сигнала он предотвращает соединение.
 
-Of note, toggling these may cause the network to reboot and recalculate the connected devices.
+Обратите внимание, переключение может привести к перезапуску сети или перерасчёту подключённых устройств.
 
-They are [cable subparts](../ae2-mechanics/cable-subparts.md).
+Шина переключения является [подразделом кабеля](../ae2-mechanics/cable-subparts.md).
 
-## Recipes
+## Рецепты
 
 <RecipeFor id="toggle_bus" />
 

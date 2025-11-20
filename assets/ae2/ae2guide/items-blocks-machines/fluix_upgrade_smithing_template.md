@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Fluix Smithing Template
+  title: Флюисовый Кузнечный шаблон
   icon: fluix_upgrade_smithing_template
   position: 410
 categories:
@@ -12,12 +12,12 @@ item_ids:
 
 <ItemImage id="fluix_upgrade_smithing_template" scale="8" />
 
-# Fluix Smithing Template
+# Флюисовый Кузнечный шаблон
 
-Unlike the vanilla smithing template, you can make this one from scratch.
+В отличие от ванильного кузнечного шаблона, этот вы можете сделать с нуля.
 
-Required for [fluix tools](fluix_tools.md)
+Необходимо для [флюисовых инструментов](fluix_tools.md)
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="fluix_upgrade_smithing_template" />

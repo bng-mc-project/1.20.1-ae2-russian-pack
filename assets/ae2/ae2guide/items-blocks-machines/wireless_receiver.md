@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Wireless Receiver
+  title: Беспроводной приёмник
   icon: wireless_receiver
   position: 010
 categories:
@@ -10,12 +10,12 @@ item_ids:
 - ae2:wireless_receiver
 ---
 
-# Wireless Receiver
+# Беспроводной приёмник
 
 <ItemImage id="wireless_receiver" scale="4" />
 
-A <ItemLink id="fluix_pearl" /> in a reflector dish, a component of short-range wireless ME technology.
+<ItemLink id="fluix_pearl" /> в отражающей оболочке, компонент для мало-радиусной беспроводной МЭ технологии.
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="wireless_receiver" />

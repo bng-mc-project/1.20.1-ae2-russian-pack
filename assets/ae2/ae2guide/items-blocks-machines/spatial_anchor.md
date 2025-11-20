@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Spatial Anchor
+  title: Пространственный якорь
   icon: spatial_anchor
   position: 110
 categories:
@@ -10,34 +10,34 @@ item_ids:
 - ae2:spatial_anchor
 ---
 
-# The Spatial Anchor
+# Пространственный якорь
 
 <BlockImage id="spatial_anchor" p:powered="true" scale="8"/>
 
-An AE2 network needs to be chunkloaded for any of its [devices](../ae2-mechanics/devices.md) to be able to function, and if only some of it is loaded,
-it may not function correctly. The Spatial Anchor solves this problem. It forceloads the chunks that its network occupies.
-A single cable extending across a chunk border is enough to load that new chunk.
+Сеть AE2 должна быть прогружена, чтобы любое из ее [устройств](../ae2-mechanics/devices.md) могло функционировать, и если загружена только часть сети,
+она может работать некорректно. Пространственный якорь решает эту проблему. Он принудительно загружает части, которые занимает его сеть.
+Одного кабеля, проходящего через границу чанка, достаточно для загрузки нового чанка.
 
-It will propagate its "loading" across [quantum bridges](quantum_bridge.md), but not cross-dimensionally, so if you
-have a quantum bridge to the nether, you need a spatial anchor on the network in your base and on the network in the nether.
+Он будет распространять свою «загрузку» через [квантовые мосты](quantum_bridge.md), но не между измерениями, поэтому, если у вас
+есть квантовый мост в Нижний мир, вам понадобится пространственный якорь в сети вашей базы и в сети Нижнего мира.
 
-By default it will also enable random ticks in its loaded chunks, this can be turned off in the ae2 config.
+По умолчанию он также включает случайные тики (типо когда игрок должен быть рядом) в загруженных чанках, это можно отключить в конфигах AE2.
 
-It can be rotated with a <ItemLink id="certus_quartz_wrench" /> if for some reason you want to do that.
+Его можно повернуть с помощью <ItemLink id="certus_quartz_wrench" />, если по какой-то причине вам это нужно.
 
-## Settings
+## Настройки
 
-*   The spatial anchor provides access to the global setting to view energy in AE or E/FE.
-*   An in-world hologram can be displayed showing the chunks being loaded.
+*   Пространственный якорь обеспечивает доступ к глобальной настройке для просмотра энергии в AE или E/FE.
+*   В игровом мире может отображаться голограмма, показывающая загружаемые чанки.
 
-## Energy
+## Энергия
 
-The spatial anchor will use [energy](../ae2-mechanics/energy.md) according to this equation:
+Пространственный якорь будет использовать [энергию](../ae2-mechanics/energy.md) в соответствии с этим уравнением:
 
 e = 80 + (x\*(x+1))/2
 
-where x is the number of chunks being loaded
+где x — количество загружаемых чанков
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="spatial_anchor" />

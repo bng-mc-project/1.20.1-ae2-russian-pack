@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: ME Import Bus
+  title: МЭ шина импорта
   icon: import_bus
   position: 220
 categories:
@@ -10,42 +10,40 @@ item_ids:
 - ae2:import_bus
 ---
 
-# The Import Bus
+# Шина импорта
 
 <GameScene zoom="8" background="transparent">
 <ImportStructure src="../assets/blocks/import_bus.snbt" />
 </GameScene>
 
-The import bus pulls items and fluids (and whatever else, given addons) from the inventory it's touching and pushes them into
-[network storage](../ae2-mechanics/import-export-storage.md).
+Шина импорта извлекает предметы и жидкости (и всё другое из аддонов) из инвентаря к которому она примыкает и перемещает их в  
+[сетевое хранилище](../ae2-mechanics/import-export-storage.md).
 
-For purposes of lag reduction, if the import bus has not imported something recently, it goes into a sort of
-"sleep mode" where it operates slowly, and wakes up and accelerates to full speed (4 operations per second) when it successfully imports something.
+Для уменьшение лагов, если шина импорта недавно ничего не импортировало, то она переходит в своего рода "сонный режим", где проводит операции медленее и "просыпается" и ускоряется до полной скорости (4 операции за секунду), когда успешно импортирует что-либо.
 
-They are [cable subparts](../ae2-mechanics/cable-subparts.md).
+Является [подразделом кабеля](../ae2-mechanics/cable-subparts.md).
 
-## Filtering
+## Фильтрация
 
-By default the bus will import anything it has access to. Items inserted into its filter slots will act as a whitelist, only
-allowing those specific items to be imported.
+По умолчанию шина будет импортировать всё к чему у неё есть доступ. Предметы вставленные в слоты фильтра будут действовать как белый список, позволяя импортировать только эти, выбранные, предметы.
 
-Items and fluids can be dragged into the slots from JEI/REI even if you don't actually have any of that item.
+Предметы и жидкости могут быть перетащены в слоты из JEI/REI, даже если у вас на самом деле их нет.
 
-Right-click with a fluid container (like a bucket or fluid tank) to set that fluid as a filter instead of the bucket or tank item.
+Щелкните правой кнопкой мыши с контейнером с жидкостью (например, ведру или резервуару), чтобы установить эту жидкость в качестве фильтра вместо ведра или резервуара.
 
-## Upgrades
+## Улучшения
 
-The import bus supports the following [upgrades](upgrade_cards.md):
+Шина импорта поддерживает следующие [улучшения](upgrade_cards.md):
 
-*   <ItemLink id="capacity_card" /> increases the amount of filter slots
-*   <ItemLink id="speed_card" /> increases the amount of stuff moved per operation
-*   <ItemLink id="fuzzy_card" /> lets the bus filter by damage level and/or ignore item NBT
-*   <ItemLink id="inverter_card" /> switches the filter from a whitelist to a blacklist
-*   <ItemLink id="redstone_card" /> adds redstone control, allowing active on high signal, low signal, or once per pulse
+*   <ItemLink id="capacity_card" /> увеличевает количество слотов фильтра
+*   <ItemLink id="speed_card" /> увеличевает объём перемещаемых предметов за операцию
+*   <ItemLink id="fuzzy_card" /> позволяет шине фильтровать по уровню повреждений и/или игнорировать NBT предмета
+*   <ItemLink id="inverter_card" /> переключает фильтр с белого списка на чёрный список
+*   <ItemLink id="redstone_card" /> добавляет управление устройством с помощью редстоуна
 
-## Speeds
+## Скорость
 
-| Acceleration Cards | Items Moved per Operation |
+| Кол-во карт ускорения | Кол-во предметов, перемещаемых за одну операцию |
 |:-------------------|:--------------------------|
 | 0                  | 1                         |
 | 1                  | 8                         |
@@ -53,6 +51,6 @@ The import bus supports the following [upgrades](upgrade_cards.md):
 | 3                  | 64                        |
 | 4                  | 96                        |
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="import_bus" />

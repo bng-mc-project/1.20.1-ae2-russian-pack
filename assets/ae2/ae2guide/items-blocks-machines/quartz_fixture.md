@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Quartz Fixtures
+  title: Арматура из заряженного кварца
   icon: quartz_fixture
   position: 010
 categories:
@@ -11,7 +11,7 @@ item_ids:
 - ae2:light_detector
 ---
 
-# Quartz Fixtures
+# Арматуры из заряженного кварца
 
 <Row>
 <BlockImage id="quartz_fixture" scale="8" />
@@ -19,11 +19,11 @@ item_ids:
 <BlockImage id="light_detector" scale="8" />
 </Row>
 
-The charged quartz fixture is a little greeble that emits light.
+Арматура из заряженного кварца это маленькая штучка, которая излучает свет.
 
-The light detecting fixture instead emits a redstone signal according to the light level of its block.
+Осветительная арматура обнаружения света вместо излучения света, даёт редстоун сигнал в зависимости от уровня освещения. 
 
-## Recipes
+## Рецепты
 
 <RecipeFor id="quartz_fixture" />
 

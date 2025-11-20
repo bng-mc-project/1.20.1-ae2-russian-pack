@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Quantum Bridge
+  title: Квантовый мост
   icon: quantum_ring
   position: 110
 categories:
@@ -11,13 +11,11 @@ item_ids:
 - ae2:quantum_ring
 ---
 
-# The Quantum Network Bridge
+# Квантовый сетевой мост
 
 ![A formed Quantum Network Bridge](../assets/diagrams/quantum_bridge_demonstration.png)
 
-Quantum Network Bridges can extend a [network](../ae2-mechanics/me-network-connections.md) over infinite distances and even between dimensions.
-They can carry 32 channels in total (regardless of how cables are connected to each face), essentially
-acting like a wireless [dense cable](cables.md#dense-cable).
+Квантовые сетевые мосты могут расширять [сеть](../ae2-mechanics/me-network-connections.md) на бесконечные расстояния и даже между измерениями. Они могут передавать в общей сложности 32 канала (независимо от того, как кабели подключены к каждой грани), действуя по сути как беспроводной [плотный кабель](cables.md#dense-cable).
 
 <GameScene zoom="4" background="transparent">
   <ImportStructure src="../assets/assemblies/quantum_bridge_internal_structure_1.snbt" />
@@ -28,39 +26,32 @@ acting like a wireless [dense cable](cables.md#dense-cable).
   <ImportStructure src="../assets/assemblies/quantum_bridge_internal_structure_2.snbt" />
 
   <BoxAnnotation color="#33dd33" min="1 1 1" max="6 2 3">
-        An imaginary cable between the two endpoints
+        Вымышленный кабель между двумя конечными точками
   </BoxAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-Of note, **both sides must be chunkloaded** so a <ItemLink id="spatial_anchor" /> or other chunkloader must be used
-if the 2 sides are far apart.
+Обратите внимание, что **чанки обоих сторон должны быть загружены**, поэтому необходимо использовать <ItemLink id="spatial_anchor" /> или другой загрузчик чанков, если две стороны находятся далеко друг от друга.
 
-# Quantum Ring
+# Квантовое кольцо
 
 <BlockImage id="quantum_ring" scale="8" />
 
-Eight of these blocks placed around a <ItemLink id="quantum_link" /> will create a
-Quantum Network Bridge. Only the 4 <ItemLink id="quantum_ring" /> blocks adjacent to
-the <ItemLink id="quantum_link" /> will accept network connections,
-the 4 corner blocks cannot connect to cables.
+Восемь таких блоков, расположенных вокруг <ItemLink id="quantum_link" />, создадут мост Квантовой сети. Только 4 блока <ItemLink id="quantum_ring" />, прилегающие к <ItemLink id="quantum_link" />, будут принимать сетевые соединения, 4 угловых блока не могут подключаться к кабелям.
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="quantum_ring" />
 
-# Quantum Link Chamber
+# Камера квантовой связи
 
 <BlockImage id="quantum_link" scale="8" />
 
-One of these blocks surrounded by a <ItemLink id="quantum_ring" />
-will create a Quantum Network Bridge. This block doesn't connect to any cables and only registers
-as part of the network with the full bridge is made.
+Один из этих блоков, окруженный <ItemLink id="quantum_ring" />, создаст Квантовый сетевой мост. Этот блок не подключается ни к каким кабелям и становится частью сети только после создания полного моста.
 
-This block's inventory can only hold a single <ItemLink id="quantum_entangled_singularity" /> and is
-automation accessible.
+Инвентарь этого блока может содержать только один <ItemLink id="quantum_entangled_singularity" /> и доступен для автоматизации.
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="quantum_link" />

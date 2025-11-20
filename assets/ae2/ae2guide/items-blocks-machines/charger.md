@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Charger
+  title: Зарядник
   icon: charger
   position: 310
 categories:
@@ -10,34 +10,29 @@ item_ids:
 - ae2:charger
 ---
 
-# The Charger
+# Зарядник
 
 <BlockImage id="charger" scale="8" />
 
-The Charger provides a way to charge
-supported tools, and <ItemLink id="certus_quartz_crystal" />.
+Зарядник позволяет заряжать поддерживаемые инструменты и <ItemLink id="certus_quartz_crystal" />.
 
-Power can be provided via the top or bottom, via either AE2's [cables](cables.md), or other mod power cables. It can
-accept either AE2's power (AE) or Forge Energy (FE). Items can be inserted or removed from any side. Only the results can
-be removed, so no need for filters to prevent removing certus crystals instead of charged certus. Can be rotated with a
-<ItemLink id="certus_quartz_wrench" /> in order to facilitate automation.
+Энергия может быть подана через верхнюю или нижнюю часть, с помощью любых AE2 [кабелей](cables.md) или любых кабелей для передачи энергии из других модов. Может принимать как AE2 Энергию (AE), так и Forge Energy (FE). Предметы могут быть вставлены или вытащены с любой стороны. Однако, лишь результаты могут быть вытащены, поэтому вам не придётся ставить фильтры для предотвращения случайного изымания кристаллов истинного кварца, вместо заряженных кристаллов истинного кварца. Может быть повёрнут с помощью <ItemLink id="certus_quartz_wrench" /> для облегчения автоматизации.
 
-Can be used to create <ItemLink id="charged_certus_quartz_crystal" />
-from <ItemLink id="certus_quartz_crystal" />, and <ItemLink id="meteorite_compass" /> from <ItemLink id="minecraft:compass" />.
+Может быть использован для изготовления <ItemLink id="charged_certus_quartz_crystal" /> из <ItemLink id="certus_quartz_crystal" /> и <ItemLink id="meteorite_compass" /> из <ItemLink id="minecraft:compass" />.
 
-To power it manually, place a <ItemLink id="crank" /> on the top or bottom and right-click it until the item is charged.
+Для питания его в ручном режиме, расположите <ItemLink id="crank" /> на верхней или нижней части и удерживайте ПКМ пока предмет не зарядится.
 
-It also acts as the workstation for the AE2 villager.
+Оно также является рабочим местом для AE2 жителя.
 
-## Simple Automation
+## Простая автоматизация
 
-As an example, the rotateability lets you semi-automate chargers like so:
+Как пример, возможность лёгкого поворота позволяет полу-автоматизировать зарядники. К примеру так:
 
 <GameScene zoom="4" background="transparent">
   <ImportStructure src="../assets/assemblies/charger_hopper.snbt" />
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="charger" />

@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: ME Chest
+  title: МЭ сундук
   icon: chest
   position: 210
 categories:
@@ -10,64 +10,52 @@ item_ids:
 - ae2:chest
 ---
 
-# The ME Chest
+# МЭ сундук
 
 <GameScene zoom="8" background="transparent">
 <ImportStructure src="../assets/blocks/chest.snbt" />
 </GameScene>
 
-The ME Chest acts like a miniature network with a <ItemLink id="terminal" />, <ItemLink id="drive" />, and <ItemLink id="energy_acceptor" />.
-While it can be used as a tiny storage network, its capacity for just one single [storage cell](../items-blocks-machines/storage_cells.md)
-means it has limited utility as such.
+МЭ сундук работает как миниатюрная сеть с <ItemLink id="terminal" />, <ItemLink id="drive" /> и <ItemLink id="energy_acceptor" />.
+В то время, как он может быть использован как крошечное сетевое хранилище, его внутренне хранилище может содержать лишь одну единственную [ячейку хранения](../items-blocks-machines/storage_cells.md) за раз, это обозначает, что он имеет крайне лимитированное использование.
 
-Instead, it is useful for interacting with specifically the storage cell mounted inside it. Its integrated terminal can only see and access
-the items in the mounted drive, while [devices](../ae2-mechanics/devices.md) on the general network can access items in any [network storage](../ae2-mechanics/import-export-storage.md),
-including ME chests.
+Вместо этого, он полезен для взаимодействия со специфическими ячейками хранения, установленные в него. В МЭ сундук встроен терминал, который только позволяет видеть и взаимодействовать с предметами в вставленной ячейке хранения, пока у [устройств](../ae2-mechanics/devices.md) в главной сети есть доступ к предметам в любом [сетевом хранилище](../ae2-mechanics/import-export-storage.md),
+включая МЭ сундуки.
 
-It has 2 different GUIs and is sided for item transport. Interacting with the top terminal opens the integrated terminal. Items can be inserted into
-the mounted storage cell through this face, but not extracted. Interacting with any other face opens the GUI with the slot for the storage cell
-and the priority settings. The cell can be inserted and removed by item logistics only through the face with the cell slot.
+У него есть 2 различных графических интерфейса и у него опр. стороны выполняют опр. функции. Взаимодействие с верхним терминалом открывает встроенный терминал. Предметы могут быть перемещены внутрь вставленной ячейки хранения через верхний терминал, однако они не могут быть извлечены от туда. Взаимодействие с любыми иными сторонами открывает графический интерфейс для взаимодействия с содержимым ячейки хранения и настройки приоритета. Ячейка может быть вставлена или извлечена с помощью блоков для логистики предметов только через сторону с слотом для ячейки.
 
-It can be rotated with a <ItemLink id="certus_quartz_wrench" />.
+Может быть повёрнут с помощью <ItemLink id="certus_quartz_wrench" />.
 
-It has a small AE energy storage buffer, so if not on a network with an [energy cell](../items-blocks-machines/energy_cells.md),
-inserting or extracting too many items at once may cause it to brown out.
+У МЭ сундука маленький буфферное хранилище энергии, поэтому если у сети нет энергохранилища, то вставка или извлечение большого объёма предметов за раз может привести к кратковременному отключению электричества.
 
-The terminal can be colored with a <ItemLink id="color_applicator" />.
+Терминал в верхней часте сундука может быть покрашен с помощью <ItemLink id="color_applicator" />.
 
 <GameScene zoom="6" background="transparent">
 <ImportStructure src="../assets/assemblies/chest_color.snbt" />
 <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-## Settings
+## Настройки
 
-The ME Chest has all the same settings as a <ItemLink id="terminal" /> or <ItemLink id="crafting_terminal" />.
-It, however, does not support <ItemLink id="view_cell" />s.
+У МЭ сундука всё те же настройки, что и у  <ItemLink id="terminal" /> или <ItemLink id="crafting_terminal" />.
+Однако оно не поддерживает <ItemLink id="view_cell" />.
 
-## Cell Status LEDs
+## Светодиодные индикаторы состояния ячеек
 
-The cells in the chest have an LED on them which shows their status:
+Ячейки на сундуке оснащены светодиодными индикаторами, которые показывают их состояние:
 
-| Color  | Status                                                                           |
-| :----- | :------------------------------------------------------------------------------- |
-| Green  | Empty                                                                            |
-| Blue   | Has some contents                                                                |
-| Orange | [Types](../ae2-mechanics/bytes-and-types.md) full, no new types can be added     |
-| Red    | [Bytes](../ae2-mechanics/bytes-and-types.md) full, no more items can be inserted |
-| Black  | No power or drive has no [channel](../ae2-mechanics/channels.md)                 |
+| Цвет      | Статус                                                                           |
+| :-----    | :------------------------------------------------------------------------------- |
+| Зелёный   | Пусто                                                                            |
+| Синий     | Имеет некоторое содержание                                                                |
+| Оранжевый | [Типы](../ae2-mechanics/bytes-and-types.md) переполнены, новые типы не могут быть добавлены     |
+| Красный   | [Байты](../ae2-mechanics/bytes-and-types.md) переполнены, больше предметы не могут быть вставлены |
+| Чёрный    | Нет питания или сундук не имеет [канала](../ae2-mechanics/channels.md)                 |
 
-## Priority
+## Приоритет
 
-Priorities can be set by clicking the wrench in the top-right of the cell slot GUI.
-Items entering the network will start at the highest priority storage as
-their first destination. In the case of two storages or cells have the same priority,
-if one already contains the item, they will prefer that storage over any
-other. Any [partitioned](cell_workbench.md) cells will be treated as already containing the item
-when in the same priority group as other storages. Items being removed from storage will
-be removed from the storage with the lowest priority. This priority system means as items are inserted and removed
-from network storage, higher priority storages will be filled and lower priority storages will be emptied.
+Приоритеты можно установить, нажав на гаечный ключ в правом верхнем углу графического интерфейса слота для ячеек. Предметы, попадающие в сеть, в качестве первого адресата начнут использовать хранилище с наивысшим приоритетом. В случае если два хранилища или ячейки имеют одинаковый приоритет, если одно из них уже содержит предмет, он предпочтет это хранилище любому другому. Любые [разбитые на разделы](cell_workbench.md) ячейки будут рассматриваться как уже содержащие предмет, если они находятся в той же группе приоритетов, что и другие хранилища. Предметы, удаляемые из хранилища, будут удаляться из хранилища с наименьшим приоритетом. Такая система приоритетов означает, что по мере вставки и удаления элементов из сетевого хранилища хранилища с более высоким приоритетом будут заполняться, а хранилища с более низким приоритетом - опустошаться.
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="chest" />

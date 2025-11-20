@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Annihilation Plane
+  title: МЭ плоскость уничтожения
   icon: annihilation_plane
   position: 210
 categories:
@@ -10,49 +10,46 @@ item_ids:
 - ae2:annihilation_plane
 ---
 
-# The Annihilation Plane
+# МЭ плоскость уничтожения
 
 <GameScene zoom="8" background="transparent">
 <ImportStructure src="../assets/blocks/annihilation_plane.snbt" />
 </GameScene>
 
-The Annihilation Plane breaks blocks and picks up items. It works similarly to an <ItemLink id="import_bus" />, pushing things
-into [network storage](../ae2-mechanics/import-export-storage.md). For items to be picked up, they must collide with the
-face of the plane, it does not pick up in an area.
+МЭ плоскость уничтожения ломает блоки и подбирает предметы. Она работает аналогично <ItemLink id="import_bus" />, перемещая предметы
+в [сетевое хранилище](../ae2-mechanics/import-export-storage.md). Чтобы предметы были подняты, они должны столкнуться с
+поверхностью плоскости, она не подбирает предметы в определенной области.
 
-Annihilation planes can be enchanted with any pickaxe enchantment, so yes, you can put crazy levels of fortune on a few and
-[automate ore processing](../example-setups/ore-fortuner.md) if your modpack allows it. In addition, silk touch does what
-you'd expect it to, efficiency reduces the energy cost of breaking a block, and unbreaking gives a chance of not using any energy.
+МЭ плоскости уничтожения могут быть зачарованы любым зачарованием кирки, так что да, вы можете поставить сумасшедшие уровни удачи на несколько из них и
+[автоматизировать обработку руды](../example-setups/ore-fortuner.md), если ваш модпак это позволяет. Кроме того, шелковое касание делает то, что
+вы от него ожидаете, эффективность снижает энергозатраты на разрушение блока, а неразрушимость дает шанс не использовать энергию.
 
-They are [cable subparts](../ae2-mechanics/cable-subparts.md).
+Является [подразделом кабеля](../ae2-mechanics/cable-subparts.md).
 
-**REMEMBER TO ENABLE FAKE PLAYERS IN YOUR CHUNK CLAIM**
+**НЕ ЗАБУДЬТЕ ВКЛЮЧИТЬ ФАЛЬШИВЫХ ИГРОКОВ В СВОЕМ ЧАНКЕ**
 
-## Filtering
+## Фильтрация
 
-The annihilation plane will only break a block or pick up an item if it can store the resulting drops/items
-in its network. this means to filter one, *you must restrict what can be stored on its network*, most likely by putting
-it on a [subnetwork](../ae2-mechanics/subnetworks.md). A <ItemLink id="storage_bus" /> or [cell](../items-blocks-machines/storage_cells.md)
-can be [partitioned](cell_workbench.md) to achieve this.
+Плоскость уничтожения будет разрушать блок или подбирать предмет только в том случае, если она может хранить полученные предметы/предметы
+в своей сети. Это означает, что для фильтрации одного, *вы должны ограничить то, что может храниться в его сети*, скорее всего, поместив
+его в [подсеть](../ae2-mechanics/subnetworks.md). Для этого можно [разбить на разделы](cell_workbench.md) <ItemLink id="storage_bus" /> или [ячейку](../items-blocks-machines/storage_cells.md).
 
 <GameScene zoom="6" interactive={true}>
   <ImportStructure src="../assets/assemblies/annihilation_filtering.snbt" />
 
   <DiamondAnnotation pos="1 0.5 0.5" color="#00ff00">
-        Filtered to whatever drops from the thing you want to break.
+        Фильтруется по тому, что выпадает из того, что вы хотите разбить.
   </DiamondAnnotation>
 
   <DiamondAnnotation pos=".5 0.5 2.5" color="#00ff00">
-        Partitioned to whatever drops from the thing you want to break.
+        Разбитый на разделы по тому, что выпадают из того, что вы хотите разбить.
   </DiamondAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-Again, it filters *by the item drops* so, for example, if you want to filter breaking of <ItemLink id="minecraft:amethyst_cluster" />s,
-you need a plane enchanted with silk touch, otherwise every previous growth stage drops nothing and so the plane will break them no matter
-what, as the network can always store "nothing".
+Опять же, он фильтрует *по предметам полученных при добыче*, поэтому, например, если вы хотите отфильтровать разрушение <ItemLink id="minecraft:amethyst_cluster" />, вам понадобится плоскость, зачарованная шелковым касанием, иначе на каждой предыдущей стадии роста ничего не будет падать, и плоскость будет разрушать их в любом случае, поскольку сеть всегда может хранить "ничего".
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="annihilation_plane" />

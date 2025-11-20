@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Fluix Crystal
+  title: Флюисовый кристалл
   icon: fluix_crystal
   position: 010
 categories:
@@ -10,19 +10,18 @@ item_ids:
 - ae2:fluix_crystal
 ---
 
-# The Fluix Crystal
+# Флюисовый кристалл
 
 <ItemImage id="fluix_crystal" scale="4" />
 
-*"Fluix Crystals possess the unique ability to absorb and convert energy from one form to another, and are the foundation of
-all Matter Energy technology"*
+*"Флюисовые кристаллы обладают уникальной способность поглощать и конвертировать энергию с одной формы в другую, а также они являются фундаментальной частью всей технологии Материя Энегрия"*
 
-One of the primary ingredients for AE2 blocks, [devices](../ae2-mechanics/devices.md), and items. Made by throwing nether quartz, redstone, and
-<ItemLink id="charged_certus_quartz_crystal" /> in water.
+Один из основных ингредиентов для AE2 блоков, [устройств](../ae2-mechanics/devices.md), и предметов. Создаётся при выбрасывании незер кварца, редстоуновой пыли и
+<ItemLink id="charged_certus_quartz_crystal" /> в воду.
 
-It can be [automated](../example-setups/throw-in-water-automation.md) using a <ItemLink id="formation_plane" /> and <ItemLink id="annihilation_plane" />.
+Он может быть [автоматизирован](../example-setups/throw-in-water-automation.md) используя <ItemLink id="formation_plane" /> и <ItemLink id="annihilation_plane" />.
 
-## Recipes
+## Рецепты
 
 <Row>
   <Recipe id="transform/fluix_crystals" />

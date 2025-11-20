@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Growth Accelerator
+  title: Ускоритель роста
   icon: growth_accelerator
   position: 310
 categories:
@@ -10,28 +10,29 @@ item_ids:
 - ae2:growth_accelerator
 ---
 
-# The Growth Accelerator
+# Ускоритель роста
 
 <BlockImage id="growth_accelerator" p:powered="true" scale="8"/>
 
-The Growth Accelerator massively accelerates [the growth of](../ae2-mechanics/certus-growth.md) certus or amethyst when placed adjacent to the budding block.
+Ускоритель роста позволяет значительно ускорить [рост](../ae2-mechanics/certus-growth.md) истинного кварца или аметиста, когда поставлен прилегающе к цветущему блоку.
 
-Curiously, it can *also* accelerate the growth of various plants.
+Интересно, что оно может *также* ускорять рост иных растений.
 
 <GameScene zoom="6" interactive={true}>
   <ImportStructure src="../assets/assemblies/growth_accelerator.snbt" />
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-To power it manually, place a <ItemLink id="crank" /> on the top or bottom and right-click it.
+Для питания в ручном режиме, поставьте <ItemLink id="crank" /> сверху или снизу и удерживайте ПКМ.
 
-It only connects to cables on its ends where the pink fluix greebles are.
+Оно соединяется к кабелю только с той стороны, где расположена розовая флюисовая точка.
+
 
 <GameScene zoom="6" background="transparent">
 <ImportStructure src="../assets/assemblies/accelerator_connections.snbt" />
 <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="growth_accelerator" />

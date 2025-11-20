@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Energy Cells
+  title: Энергохранилища
   icon: energy_cell
   position: 110
 categories:
@@ -12,7 +12,7 @@ item_ids:
 - ae2:creative_energy_cell
 ---
 
-# Energy Cells
+# Энергохранилища
 
 <Row gap="20">
   <BlockImage id="energy_cell" scale="8" p:fullness="4" />
@@ -22,12 +22,9 @@ item_ids:
   <BlockImage id="creative_energy_cell" scale="8" />
 </Row>
 
-Energy cells give a network more [energy](../ae2-mechanics/energy.md) storage. Some amount of energy buffer helps to smooth
-out spikes in energy draw when large amounts of items are inserted or extracted, and larger amounts of energy storage
-allow the network to run while energy isn't being generated (like at night with solar panels) or handle the massive instantaneous
-energy draw of [spatial storage](../ae2-mechanics/spatial-io.md).
+Энергохранилища дают сети возможность хранить больший объём [энергии](../ae2-mechanics/energy.md). Некоторое кол-во буффера энергии позволяет смягчить скачки в потреблении энергии, когда к примеру, большой объём предметов перемещается из или в сеть, также больший объём хранимой энергии позволяет сети быть активной, пока энергии не генерируется (к примеру, когда у вас солнечные панели, а на улице ночь) или выдерживать гигантские скачки потребления энергии, к примеру из-за [пространственного хранения](../ae2-mechanics/spatial-io.md).
 
-## Fill Bars
+## Шкала заполнения
 
 <Row>
 <BlockImage id="energy_cell" scale="4" p:fullness="0" />
@@ -37,23 +34,21 @@ energy draw of [spatial storage](../ae2-mechanics/spatial-io.md).
 <BlockImage id="energy_cell" scale="4" p:fullness="4" />
 </Row>
 
-The bars on the side of a cell correspond to how much energy it has.
+Шкалы заполнения на сторонах энергохранилищ показывают сколько энергии в нём хранится.
 
-*   0 when below 25% charge
-*   1 when between 25% and 50% charge
-*   2 when between 50% and 75% charge
-*   3 when between 75% and 99% charge
-*   4 when above 99% charge
+*   0, когда ниже 25% заряда
+*   1, когда между 25% и 50% заряда
+*   2, когда между 50% и 75% заряда
+*   3, когда между 75% и 99% заряда
+*   4, когда свыше  99% заряда
 
-## Types Of Cell
+## Виды энергохранилищ
 
-*   The <ItemLink id="energy_cell" /> can store 200k AE, and just one should be sufficient for most use cases, handling the power surges
-    of normal network use with ease.
-*   The <ItemLink id="dense_energy_cell" /> can store 1.6M AE and is for when you want to run a network off of stored power, or
-    handle the massive instantaneous energy draw of large [spatial storage](../ae2-mechanics/spatial-io.md) setups.
-*   The <ItemLink id="creative_energy_cell" /> is a creative item for testing, providing UNLIMITED POWAHHHH or whatever.
+*   <ItemLink id="energy_cell" /> могут хранить 200k AE и всего лишь 1 должно хватить для минимизации отключений из-за высокого разового потребления энергии у обычных сетей. 
+*   <ItemLink id="dense_energy_cell" /> может хранить 1.6M AE, она может понадобится если вам необходимо запустить сеть с сверхвысоким разовым потребление энергии или ради хранения энергии для массивных установок [пространственного хранения](../ae2-mechanics/spatial-io.md) с астрономическим разовым потреблением энергии.
+*   <ItemLink id="creative_energy_cell" /> это творческий предмет для тестирования, хранящий ***ВСЮ МОЩЬ ВСЕЛЕННОЙ!*** Ну... или нескончаемую энергию, какая разница. 
 
-## Recipes
+## Рецепты
 
 <Row>
   <RecipeFor id="energy_cell" />

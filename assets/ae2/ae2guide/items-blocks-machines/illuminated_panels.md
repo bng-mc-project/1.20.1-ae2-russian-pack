@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Illuminated Panels
+  title: Освещённые панели
   icon: semi_dark_monitor
   position: 010
 categories:
@@ -12,18 +12,18 @@ item_ids:
 - ae2:dark_monitor
 ---
 
-# Illuminated Panels
+# Освещённые панели
 
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/illuminated_panels.snbt" />
   <IsometricCamera yaw="-75" pitch="30" />
 </GameScene>
 
-Illuminated panels are a decorative light source that is also used in the production of [terminals](terminals.md).
+Освещённые панели это декоративные источники света, которые также могут быть использованы для изготовления [терминалов](terminals.md).
 
-They are [cable subparts](../ae2-mechanics/cable-subparts.md).
+Они также являются [подразделами кабеля](../ae2-mechanics/cable-subparts.md).
 
-## Recipes
+## Рецепты
 
 <Row>
   <RecipeFor id="monitor" />

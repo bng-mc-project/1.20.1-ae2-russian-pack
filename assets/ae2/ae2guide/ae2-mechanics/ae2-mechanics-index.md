@@ -1,9 +1,9 @@
 ---
 navigation:
-  title: Механики AE2
+  title: AE2 Механики
   position: 30
 ---
 
-# Механики AE2
+# AE2 Mechanics
 
 <SubPages />

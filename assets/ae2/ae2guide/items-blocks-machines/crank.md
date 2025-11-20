@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Crank
+  title: Деревянная рукоять
   icon: crank
   position: 310
 categories:
@@ -10,15 +10,15 @@ item_ids:
 - ae2:crank
 ---
 
-# The Crank
+# Деревянная рукоять
 
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/crank_on_stuff.snbt" />
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-The crank is used to power machines when you don't otherwise have access to power (or an <ItemLink id="energy_acceptor" />). Early-game struggles, am I right?
+Деревянная рукоять используется для питания машин, когда у вас нет другого доступа к энергии (или <ItemLink id="energy_acceptor" />). Рукоблудим в самом начале игры, я прав?
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="crank" />

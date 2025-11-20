@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Spatial IO Port
+  title: Пространственный порт ввода/вывода
   icon: spatial_io_port
   position: 210
 categories:
@@ -10,15 +10,14 @@ item_ids:
 - ae2:spatial_io_port
 ---
 
-# The Spatial IO Port
+# Пространственный порт ввода/вывода
 
 <BlockImage id="spatial_io_port" p:powered="true" scale="8" />
 
-The Spatial IO Port is used in [spatial IO](../ae2-mechanics/spatial-io.md) to hold the [spatial cell](spatial_cells.md)
-and control the spatial IO operation.
+Пространственный порт ввода/вывода используется в [пространственном вводе/выводе](../ae2-mechanics/spatial-io.md) для содержания [пространственных ячеек](spatial_cells.md) и управления операцией пространственного ввода/вывода.
 
-The cell can be inserted and extracted by any item logistics like hoppers or ae2 busses, if you want to automate it.
+Ячейка может быть вставлена или извлечена с помощью любого блока для логистики предметов, к примеру воронки и ae2 шины, если вы хотите автоматизировать данный процесс.
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="spatial_io_port" />

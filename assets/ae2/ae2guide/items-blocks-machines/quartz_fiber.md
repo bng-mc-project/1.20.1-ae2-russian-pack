@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Quartz Fiber
+  title: Кварцевое волокно
   icon: quartz_fiber
   position: 110
 categories:
@@ -10,20 +10,17 @@ item_ids:
 - ae2:quartz_fiber
 ---
 
-# The Quartz Fiber
+# Кварцевое волокно
 
 <GameScene zoom="8" background="transparent">
 <ImportStructure src="../assets/assemblies/quartz_fiber.snbt" />
 <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-The quartz fiber is used to share power between [networks](../ae2-mechanics/me-network-connections.md), while keeping them separate. This allows you to power
-[subnetworks](../ae2-mechanics/subnetworks.md)
-without needing to put energy acceptors and power cables everywhere. It can also be used to keep cables from connecting,
-although using cables of differing colors, or using <ItemLink id="cable_anchor" /> is cheaper and more effective.
+Кварцевое волокно используется для передачи энергии между [сетями](../ae2-mechanics/me-network-connections.md), при этом оставляя их отдельными сетями. Позволяет питать [подсети](../ae2-mechanics/subnetworks.md) без необходимости ставить приёмщики энергии и кабели питания везде. Кварцевое волокно также используется для предотвращения кабелей от соединения, хотя использование кабелей разных цветов или использование <ItemLink id="cable_anchor" /> дешевле и более эффективно.
 
-They are [cable subparts](../ae2-mechanics/cable-subparts.md).
+Является [подразделом кабеля](../ae2-mechanics/cable-subparts.md).
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="quartz_fiber" />

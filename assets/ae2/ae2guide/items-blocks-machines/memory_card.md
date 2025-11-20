@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Memory Card
+  title: Карта памяти
   icon: memory_card
   position: 410
 categories:
@@ -10,16 +10,15 @@ item_ids:
 - ae2:memory_card
 ---
 
-# The Memory Card
+# Карта памяти
 
 <ItemImage id="memory_card" scale="4" />
 
-The Memory Card is used to copy-and paste settings between AE2 [devices](../ae2-mechanics/devices.md), and link
-[P2P tunnels](p2p_tunnels.md). It can also paste [upgrade cards](upgrade_cards.md) into devices.
+Карта памяти используются для копирования и вставки настроек между AE2 [устройствами](../ae2-mechanics/devices.md) и для связки [P2P туннелей](p2p_tunnels.md). Оно также может вставлять [карты улучшения](upgrade_cards.md) в устройства.
 
-- Shift-right-click to copy settings or generate a new P2P linking frequency.
-- Right-click to paste the settings, upgrade cards, or linking frequency.
+- Shift-ПКМ, чтобы скопировать настройки или для генерации новой P2P связующей частоты.
+- ПКМ, чтобы вставить настройки, карты улучшения или связующую частоты.
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="memory_card" />

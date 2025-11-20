@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Spatial Pylon
+  title: Пространственный пилон
   icon: spatial_pylon
   position: 210
 categories:
@@ -10,17 +10,16 @@ item_ids:
 - ae2:spatial_pylon
 ---
 
-# The Spatial Pylon
+# Пространственный пилон
 
 <BlockImage id="spatial_pylon" p:powered_on="true" scale="8" />
 
-The Spatial Pylon is used in [spatial IO](../ae2-mechanics/spatial-io.md) to generate the spatial field and define the volume
-to be affected.
+Пространственный пилон используется в [пространственном вводе/выводе](../ae2-mechanics/spatial-io.md) для создания пространственного поля и для определения задейственного объёма.
 
-Each continuous line of pylons uses 1 [channel](../ae2-mechanics/channels.md)
+Каждая непрерывная линия пилонов использует 1 [канал](../ae2-mechanics/channels.md)
 
-Lines of pylons must be at least 2 blocks long to function.
+Линия пилонов должна быть минимум 2 блока длиной для функционирования
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="spatial_pylon" />

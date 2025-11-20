@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Fluix Dust
+  title: Флюисовая пыль
   icon: fluix_dust
   position: 010
 categories:
@@ -12,13 +12,12 @@ item_ids:
 - ae2:fluix_dust
 ---
 
-# Fluix Dust
+# Флюисовая пыль
 
 <ItemImage id="fluix_dust" scale="4" />
 
-A <ItemLink id="fluix_crystal" /> that has been crushed by an <ItemLink id="inscriber" />. Used in the production of
-several AE2 machines and components.
+<ItemLink id="fluix_crystal" />, который был передроблен в <ItemLink id="inscriber" />. Используется для производства некоторых AE2 машин и компонентов.
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="fluix_dust" />

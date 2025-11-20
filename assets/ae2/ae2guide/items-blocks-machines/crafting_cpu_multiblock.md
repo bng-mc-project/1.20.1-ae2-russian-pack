@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Crafting CPU Multiblock (Storage, Coprocessor, Monitor, Unit)
+  title: Мультиблочная структура процессора изготовления
   icon: 1k_crafting_storage
   position: 210
 categories:
@@ -17,7 +17,7 @@ item_ids:
 - ae2:crafting_unit
 ---
 
-# The Crafting CPU
+# Процессор изготовления
 
 <GameScene zoom="4" background="transparent">
   <ImportStructure src="../assets/assemblies/crafting_cpus.snbt" />
@@ -34,37 +34,36 @@ item_ids:
   <BlockImage id="crafting_unit" scale="4" />
 </Row>
 
-Crafting CPUs manage crafting requests/jobs. They store the intermediate ingredients while crafting jobs with multiple steps are
-being carried out, and affect how big jobs can be, and to some degree how fast they are completed. See [autocrafting](../ae2-mechanics/autocrafting.md)
-for more details.
+Процессоры изготовления управляют запросами/задачами изготовления. Они хранят промежуточные ингредиенты во время выполнения многоэтапных задач изготовления
+и влияют на размер задач, а также, в некоторой степени, на скорость их выполнения. Подробнее см. [автокрафт](../ae2-mechanics/autocrafting.md). 
 
-Each crafting CPU handles 1 request or job, so if you want to request both a calculation processor and 256 smooth stone at once, you need 2 CPU multiblocks.
+Процессоры изготовления управляют запросами или заданиями на изготовление. 
 
-They can be set to handle requests from players, automation (export busses and interfaces), or both.
+Каждый процессор обрабатывает 1 запрос или задание, поэтому, если вы хотите одновременно запросить вычислительный процессор и 256 гладких камней за раз, вам понадобятся 2 мультиблочных структуры процессора.
 
-Right-clicking one brings up a crafting status UI where you can check the progress on the crafting job the CPU is handling.
+Их можно настроить для обработки запросов от игроков, автоматизации (экспорт шин и интерфейсов) или для обоих случаев.
 
-## Settings
+Щелкнув ПКМ, вы откроете интерфейс состояния изготовления, где можно проверить ход выполнения задания, над которым работает процессор.
 
-*   The CPU can be set to accept requests from just players, just automation (like <ItemLink id="export_bus" />ses with
-    <ItemLink id="crafting_card" />s), or both.
+## Настройки
 
-## Construction
+*   Процессор может быть настроен на принятие запросов только от игроков, только от автоматизации (к примеру <ItemLink id="export_bus" /> с <ItemLink id="crafting_card" />) или от обоих.
 
-Crafting CPUs are multiblocks, and must be solid rectangular prisms with no gaps. They are made out of several components.
+## Конструкция
 
-Each CPU must contain at least 1 crafting storage block (and the minimum viable CPU is in fact just a single 1k crafting storage).
+Процессоры изготовления являются мультиблочной структура, она должна состоят из плотных прямоугольных призм без зазоров. Они состоят из нескольких компонентов.
 
-# Crafting Unit
+У каждого процессора должен быть хотя бы 1 хранилище для изготовления (и минимальный возможный процессор на самом деле просто единственное хранилище для изготовления на 1К)
+
+# Блок создания
 
 <BlockImage id="crafting_unit" scale="4" />
 
-(Optional) Crafting units simply fill space in a CPU in order to make it a solid rectangular prism, if you don't have enough
-of the other components. They are also a base ingredient in the other components.
+(Необязательно) Блоки создания просто заполняют пространство в процессоре, это необходимо для того, чтобы сделать его плотной прямоугольной призмой, если у вас не хватает иных компонентов. Также является базовым ингредиентом для других компонентов. 
 
 <RecipeFor id="crafting_unit" />
 
-# Crafting Storage
+# Хранилище для изготовления
 
 <Row>
   <BlockImage id="1k_crafting_storage" scale="4" />
@@ -78,9 +77,7 @@ of the other components. They are also a base ingredient in the other components
   <BlockImage id="256k_crafting_storage" scale="4" />
 </Row>
 
-(Required) Crafting storages are available in all the standard cell sizes (1k, 4k, 16k, 64k, 256k). They store the ingredients and
-intermediate ingredients involved in a craft, so larger or more storages are required for the CPU to handle crafting jobs
-with more ingredients.
+(Обязательно) Хранилища для изготовления доступна во всех стандартных для ячеек размеров (1K, 4K, 16K, 64K, 256K). Они
 
 <Column>
   <Row>
@@ -98,22 +95,19 @@ with more ingredients.
   </Row>
 </Column>
 
-# Crafting Co-Processing Unit
+# Блок совместной обработки изготовления
 
 <BlockImage id="crafting_accelerator" scale="4" />
 
-(Optional) Crafting co-processors make the system send out ingredient batches from <ItemLink id="pattern_provider" />s more often.
-This allows them to keep up with machines that process quickly. An example of this is a pattern provider surrounded by
-<ItemLink id="molecular_assembler" />s being able to push ingredients faster than a single assembler can process, and thus
-distributing the ingredient batches between the surrounding assemblers.
+(Необязательно) Блоки совместной обработки изготовления заставляют систему чаще отправлять партии ингредиентов из <ItemLink id="pattern_provider" />. Это позволяет им не отставать от быстро работающих машин. Примером этого может служить поставщик шаблонов, окруженный несколькими <ItemLink id="molecular_assembler" />, который может поставлять ингредиенты быстрее, чем может обработать один сборщик, и таким образом распределять партии ингредиентов между окружающими сборщиками.
 
 <RecipeFor id="crafting_accelerator" />
 
-# Crafting Monitor
+# Монитор изготовления
 
 <BlockImage id="crafting_monitor" scale="4" />
 
-(Optional) The crafting monitor displays the job the CPU is handling at the moment.
-The screen can be colored with a <ItemLink id="color_applicator" />.
+(Необязательно) Монитор изготовления показывает задание, которое в данный момент обрабатывает процессор.
+Экран может быть покрашен с помощью <ItemLink id="color_applicator" />.
 
 <RecipeFor id="crafting_monitor" />

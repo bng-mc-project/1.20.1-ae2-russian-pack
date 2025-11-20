@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Presses
+  title: Печати
   icon: silicon_press
   position: 010
 categories:
@@ -14,9 +14,9 @@ item_ids:
 - ae2:name_press
 ---
 
-# Presses
+# Печати
 
-There are 5 different presses used in the <ItemLink id="inscriber" />.
+Всего существует 5 различных печатей, используемых в  <ItemLink id="inscriber" />.
 
 <Row>
   <ItemImage id="silicon_press" scale="4" />
@@ -30,11 +30,11 @@ There are 5 different presses used in the <ItemLink id="inscriber" />.
 
 <ItemImage id="name_press" scale="4" />
 
-## Processor Presses
+## Печати для изготовления процессоров
 
-The Silicon, Logic, Calculation, and Engineering presses are used in the production of [processors](processors.md).
-These 4 presses are obtained by breaking a <ItemLink id="mysterious_cube" /> in a [meteorite](../ae2-mechanics/meteorites.md).
-They can also be duplicated in an <ItemLink id="inscriber" />.
+Кремниевые, Логические, Вычислительные, Инженерные печати используются для изготовления [процессоров](processors.md).
+Все эти 4 печати могут быть добыты при разрушении <ItemLink id="mysterious_cube" /> внутри [метеорита](../ae2-mechanics/meteorites.md).
+Их также можно дублировать в <ItemLink id="inscriber" />.
 
 <Column>
   <Row>
@@ -50,11 +50,8 @@ They can also be duplicated in an <ItemLink id="inscriber" />.
   </Row>
 </Column>
 
-## Name Press
+## Именующая печать
 
-The Name Press can be used in an inscriber to name items, similar to an anvil.
+Именующая печать используются в вырезателе для выдачи названий предметам, похоже с наковальней.
 
-To craft, right click the <ItemLink id="certus_quartz_cutting_knife" /> or <ItemLink id="nether_quartz_cutting_knife" />
-and insert an ingot of metal, you will then have to type the name you
-wish to write onto the plate then simply extract the finished plate. You can use one or two plates at a time in the inscriber,
-if you use two plates, it will print the name using the combination of both names, top slot, then bottom slot.
+Для изготовления, кликните ПКМ, держа в руках <ItemLink id="certus_quartz_cutting_knife" /> или <ItemLink id="nether_quartz_cutting_knife" /> и вставьте слиток металла, после пишите название, которое вы пожелаете видеть на печате, а в конце просто достаёте получившиюся именующую печать. Теперь вы можете использовать одну или две печати одновременно в вырезателе. Если вы используете две печати, то получившиеся название на предмете будет комбинацией обоих имён, сначало печать из верхнего слота, а после из нижнего. 

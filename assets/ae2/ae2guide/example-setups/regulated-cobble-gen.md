@@ -1,77 +1,76 @@
 ---
 navigation:
   parent: example-setups/example-setups-index.md
-  title: Auto-Regulated Cobblestone Generator
+  title: Авторегулируемый генератор булыжника
   icon: minecraft:cobblestone
 ---
 
-# Auto-Regulated Cobblestone Generator
+# Авторегулируемый генератор булыжника
 
-Automation of a cobblestone generator is simple, just face an <ItemLink id="annihilation_plane" /> into a standard vanilla
-manual cobblestone generator. However, doing this will eventually jam your network full of cobblestone, so some regulation
-is desired.
+Автоматизация генератора булыжника проста: просто обратите <ItemLink id="annihilation_plane" /> в стандартный ванильный
+ручной генератор булыжника. Однако в результате этого ваша сеть в конечном итоге забивается булыжником, поэтому необходимо ввести некоторые ограничения
 
-Due to how annihilation planes work (they act like <ItemLink id="import_bus" />ses), we cannot simply put a <ItemLink id="level_emitter" />
-facing an <ItemLink id="export_bus" /> with a <ItemLink id="redstone_card" /> (since you cannot go directly import to export
-with no storage in between). We have to be a bit more roundabout.
+Из-за того, как работают плоскости уничтожения (они действуют как <ItemLink id="import_bus" />), мы не можем просто поместить <ItemLink id="level_emitter" />
+напротив <ItemLink id="export_bus" /> с <ItemLink id="redstone_card" /> (поскольку нельзя напрямую переходить от импорта к экспорту
+без промежуточного хранения). Нам нужно пойти немного более окольным путем.
 
-<ItemLink id="toggle_bus" />ses allow you to connect and disconnect parts of your network with redstone signals, but they cause
-the network to reboot whenever they do this. There is a simple workaround: put the toggle bus on a [subnetwork](../ae2-mechanics/subnetworks.md)
-such that it only reboots the subnet.
+<ItemLink id="toggle_bus" /> позволяют подключать и отключать части вашей сети с помощью сигналов редстоуна, но при этом
+сеть перезагружается. Есть простой способ обойти эту проблему: поместите шину переключения в [подсеть](../ae2-mechanics/subnetworks.md),
+ чтобы перезагружалась только подсеть.
 
-We can have a self-contained <ItemLink id="annihilation_plane" /> and <ItemLink id="storage_bus" /> [subnetwork](../ae2-mechanics/subnetworks.md)
-push into an <ItemLink id="interface" /> on the main network. The toggle bus will connect and disconnect the subnet from a
-<ItemLink id="quartz_fiber" />, cutting power to the planes.
+Мы можем иметь автономные <ItemLink id="annihilation_plane" /> и <ItemLink id="storage_bus" /> [подсети](../ae2-mechanics/subnetworks.md),
+ подключенные к <ItemLink id="interface" /> в основной сети. Шина переключения будет подключать и отключать подсеть от
+<ItemLink id="quartz_fiber" />, отключая питание плоскостей.
 
 <GameScene zoom="4" interactive={true}>
   <ImportStructure src="../assets/assemblies/regulated_cobble_gen.snbt" />
 
 <BoxAnnotation color="#dddddd" min="3 2 2" max="7 2.3 3">
-        (1) Annihilation Planes: No GUI to configure, but can be enchanted with Efficiency and Unbreaking to reduce power draw.
+        (1) Плоскости уничтожения: нет графического интерфейса для настройки, но можно зачаровать на "Эффективность" и "Прочность", чтобы снизить потребление энергии.
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="2 2 2" max="2.3 3 3">
-        (2) Storage Bus: In its default configuration.
+        (2) Шина хранения: с настройкой по умолчанию.
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="2.3 2.3 2" max="2.7 2.7 2.3">
-        (3) Toggle Bus: Very important that the toggle bus is on the
-        subnetwork, and not the main network.
+        (3) Шина переключения: Очень важно, чтобы шина переключения находилась в
+        подсети, а не в основной сети.
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="2.3 3 2.3" max="2.7 3.3 2.7">
-        (4) Level Emitter: Configured with cobblestone and the desired quantity, set to "Emit when levels are below limit".
+        (4) Излучатель уровня: настроен на булыжник и нужное количество, установлен режим "Излучать при уровне ниже лимита".
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="1 2 3" max="2 3 2">
-        (5) Interface: In its default configuration.
+        (5) Интерфейс: с настройкой по умолчанию
   </BoxAnnotation>
 
 <DiamondAnnotation pos="0 2.5 1.5" color="#00ff00">
-        To Main Network
+        В основную сеть
     </DiamondAnnotation>
 
 <DiamondAnnotation pos="5 1.5 3.5" color="#00ff00">
-        Waterlogged stairs keep the water from flowing and turning the lava into obsidian.
+        Затопленные ступеньки не дают воде стекать и превращать лаву в обсидиан.
     </DiamondAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-## Configurations
+## Настройки
 
-* The <ItemLink id="annihilation_plane" />s (1) Have no GUI to configure, but can be enchanted with Efficiency and Unbreaking to reduce power draw.
-* The <ItemLink id="storage_bus" /> (2) is in its default configuration.
-* The <ItemLink id="toggle_bus" /> (3) must be on the subnetwork side of the quartz fiber, not the main network, or the main
-  network will reboot every time it toggles.
-* The <ItemLink id="level_emitter" /> (4) is configured with the desired item and quantity, and set to "Emit when levels are below limit".
-* The <ItemLink id="interface" /> (5) is in its default configuration.
+* <ItemLink id="annihilation_plane" /> (1) Не имеют графического интерфейса для настройки, но могут быть зачарованы на "Эффективность" и "Прочность" для снижения энергопотребления.
+* <ItemLink id="storage_bus" /> (2) находятся в своей настройке по умолчанию.
+* <ItemLink id="toggle_bus" /> (3) должен находиться на стороне подсети кварцевого волокна, а не на стороне основной сети или основная
+   сеть будет перезагружаться при каждом переключении.
+* <ItemLink id="level_emitter" /> (4) настроен на нужный предмет и количество, установлен режим "Излучать при уровне ниже лимита".
+*  <ItemLink id="interface" /> (5) находится в своей настройке по умолчанию.
 
-## How It Works
+## Как это работает
 
-1. The cobblestone generator makes some cobblestone.
-2. The <ItemLink id="annihilation_plane" />s break the cobblestone. 
-3. The <ItemLink id="storage_bus" /> stores the cobblestone in the <ItemLink id="interface" />, sending it into the main network.
-4. When the amount of cobblestone in the main network exceeds the set amount, the <ItemLink id="level_emitter" /> stops
-   sending a signal, turning off the <ItemLink id="toggle_bus" />.
-5. This cuts power to the subnetwork, stopping the annihilation planes from working.
+1. Генератор булыжника создает некоторое количество булыжников.
+2. <ItemLink id="annihilation_plane" /> разбивают булыжник. 
+3. <ItemLink id="storage_bus" /> хранит булыжник в <ItemLink id="interface" />, отправляя его в основную сеть.
+4. Когда количество булыжника в основной сети превышает установленное количество, <ItemLink id="level_emitter" /> перестает
+   посылать сигнал, отключая <ItemLink id="toggle_bus" />.
+5. Это отключает питание подсети, останавливая работу плоскостей уничтожения.

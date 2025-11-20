@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Paintballs
+  title: Шарики с краской
   icon: green_lumen_paint_ball
   position: 410
 categories:
@@ -41,7 +41,7 @@ item_ids:
 - ae2:black_lumen_paint_ball
 ---
 
-# Paintballs
+# Шарики с краской
 
 <Row gap="-8">
   <ItemImage id="white_paint_ball" scale="4" />
@@ -55,12 +55,12 @@ item_ids:
   <ItemImage id="red_paint_ball" scale="4" />
 </Row>
 
-Paintballs are used in a <ItemLink id="color_applicator" /> in order to paint colorable blocks like [cables](cables.md),
-wool, terracotta, glass, and concrete. They can also be used in a <ItemLink id="matter_cannon" /> to shoot little splotches of paint.
+Шарики с краской используются в <ItemLink id="color_applicator" /> для окрашивания цветных блоков на подобие [кабелей](cables.md),
+шерсти, терракоты, стёкл, and бетона. Они также могут быть использованы в <ItemLink id="matter_cannon" /> для стрельбы маленькими пятнами краски.
 
-## Recipes
+## Рецепты
 
-8 matter balls around a dye
+8 шариков материи вокруг красителя
 
 <Column>
   <Row>
@@ -82,7 +82,7 @@ wool, terracotta, glass, and concrete. They can also be used in a <ItemLink id="
   <br />
 </Column>
 
-# Lumen Paintballs
+# Шарики-люмен с краской
 
 <Row gap="-8">
   <ItemImage id="white_lumen_paint_ball" scale="4" />
@@ -96,12 +96,12 @@ wool, terracotta, glass, and concrete. They can also be used in a <ItemLink id="
   <ItemImage id="red_lumen_paint_ball" scale="4" />
 </Row>
 
-They act identically to regular paintballs but the splotches emit light when shot out of a <ItemLink id="matter_cannon" />.
-Useful as a sort of flaregun I guess.
+Они работают абсолютно также как и обычные шарики с краской, однако пятна излучает свет, когда шарики выстреливают из <ItemLink id="matter_cannon" />.
+Полезно для своего рода сигнального пистолета, ну, я так думаю.
 
-## Recipes
+## Рецепты
 
-8 paintballs around a glowstone dust
+8 шариков с краской вокруг светокаменной пыли
 
 <Column>
   <Row>

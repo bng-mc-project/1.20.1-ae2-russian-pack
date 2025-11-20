@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Storage Cells
+  title: Ячейки хранения
   icon: item_storage_cell_1k
   position: 410
 categories:
@@ -26,8 +26,7 @@ item_ids:
 - ae2:fluid_storage_cell_256k
 ---
 
-# Storage Cells
-
+# Ячейки хранения
 <Column>
   <Row>
     <ItemImage id="item_storage_cell_1k" scale="4" />
@@ -54,18 +53,18 @@ item_ids:
   </Row>
 </Column>
 
-Storage Cells are one of the primary methods of storage in Applied Energistics. They go in <ItemLink id="drive" />s
-or <ItemLink id="chest" />s.
+Ячейки хранения являются одними из основных методов хранения чего-либо в Applied Energistics. Они вставляются в <ItemLink id="drive" /> или <ItemLink id="chest" />.
+или <ItemLink id="chest" />.
 
-See [Bytes and Types](../ae2-mechanics/bytes-and-types.md) for an explanation of their capacities in bytes and types.
+См. раздел [Байты и типы](../ae2-mechanics/bytes-and-types.md) для объяснения их емкости в байтах и типах.
 
-Storage components can be removed from the housing if the cell is empty by shift-right clicking with the cell in your hand.
+Компоненты хранения можно удалить из корпуса, если ячейка пуста. Для этого необходимо зажать Shift и кликнуть ПКМ, держа в руках саму ячейку.
 
-## Storage Capacity with Varying Type Count
+## Емкость хранения с различным количеством типов
 
-The [upfront cost of types](../ae2-mechanics/bytes-and-types.md) is such that a cell holding 1 type can hold 2x as much as a cell with all 63 types in use.
+[Первоначальная стоимость типов](../ae2-mechanics/bytes-and-types.md) такова, что ячейка, содержащая 1 тип, может вместить в 2 раза больше, чем ячейка, в которой используются все 63 типа.
 
-| Cell                                     | Total Capacity of Cell With 1 Type In Use | Total Capacity of Cell With 63 Types In Use |
+| Ячейка                                   | Общая емкость ячейки с 1 использ. типом   | Общая емкость ячейки с 63 типами в использ. |
 | ---------------------------------------- | ----------------------------------------: | ------------------------------------------: |
 | <ItemLink id="item_storage_cell_1k" />   |                                     8,128 |                                       4,160 |
 | <ItemLink id="item_storage_cell_4k" />   |                                    32,512 |                                      16,640 |
@@ -74,31 +73,30 @@ The [upfront cost of types](../ae2-mechanics/bytes-and-types.md) is such that a 
 | <ItemLink id="item_storage_cell_256k" /> |                                 2,080,768 |                                   1,064,960 |
 
 
-## Partitioning
+## Разбитие на разделы
 
-Cells can be filtered to only accept certain items, similar to how <ItemLink id="storage_bus" />ses can be filtered. This is
-done in a <ItemLink id="cell_workbench" />.
+Ячейки можно фильтровать, чтобы они принимали только определенные предметы, аналогично тому, как можно фильтровать <ItemLink id="storage_bus" />. Это
+делается в <ItemLink id="cell_workbench" />.
 
-Items can be dragged into the slots from JEI/REI even if you don't actually have any of that item.
+Предметы можно перетаскивать в слоты из JEI/REI, даже если у вас на самом деле нет ни одного такого предмета.
 
-## Upgrades
+## Улучшения
 
-Storage cells support the following [upgrades](upgrade_cards.md), inserted via a <ItemLink id="cell_workbench" />:
+Ячейки хранения поддерживают следующие [улучшения](upgrade_cards.md), вставленные через <ItemLink id="cell_workbench" />:
 
-*   <ItemLink id="fuzzy_card" /> (not available on fluid cells) lets the cell be partitioned by damage level and/or ignore item NBT
-*   <ItemLink id="inverter_card" /> switches the filter from a whitelist to a blacklist
-*   <ItemLink id="equal_distribution_card" /> allocates the same amount of cell byte space to each type, so one type cannot fill up the entire cell
-*   <ItemLink id="void_card" /> voids items inserted if the cell is full (or that specific type's allocated space in the
-    case of an equal distribution card), useful for stopping farms from backing up. Be careful to partition this!
-*   Portable cells can accept <ItemLink id="energy_card" /> in order to increase their battery capacity
+*   <ItemLink id="fuzzy_card" /> (недоступно на жидких ячейках) позволяет разделить ячейку по уровню повреждения и/или игнорировать NBT элемента.
+*   <ItemLink id="inverter_card" /> переключает фильтр с белого списка на черный список.
+*   <ItemLink id="equal_distribution_card" /> распределяет одинаковое количество байтового пространства ячейки для каждого типа, поэтому один тип не может заполнить всю ячейку.
+*   <ItemLink id="void_card" /> аннулирует вставленные элементы, если ячейка заполнена (или выделенное место для этого конкретного типа в случае карты равномерного распределения), полезно для предотвращения заполнения хранилищ ферм. Будьте осторожны при разбиении на разделы!
+*   Переносные ячейки могут принимать <ItemLink id="energy_card" /> для увеличения емкости аккумулятора.
 
-## Coloring
+## Окрашивание
 
-Portable item and fluid cells can be colored similar to leather armor, by crafting them together with dyes.
+Переносные предметные и жидкостные ячейки хранения можно окрашивать так же, как кожаную броню, создавая их вместе с красителями.
 
-# Housings
+# Корпуса
 
-Cells can be made with a storage component and a housing or with the housing recipe around a storage component:
+Ячейки могут быть изготовлены с компонентом хранения и корпусом или с рецептом изготовления корпуса вокруг компонента хранения:
 
 <Row>
   <Recipe id="network/cells/item_storage_cell_1k" />
@@ -106,7 +104,7 @@ Cells can be made with a storage component and a housing or with the housing rec
   <Recipe id="network/cells/item_storage_cell_1k_storage" />
 </Row>
 
-Housings by themselves are crafted like so:
+Сами корпуса изготавливаются следующим образом:
 
 <Row>
   <RecipeFor id="item_cell_housing" />
@@ -114,10 +112,9 @@ Housings by themselves are crafted like so:
   <RecipeFor id="fluid_cell_housing" />
 </Row>
 
-# Storage Components
+# Компоненты хранения
 
-Storage Components are the core of all AE2 cells, determining the capacity of the cells. Each tier increases the capacity
-by 4x and costs 3 of the previous tier.
+Компоненты хранения являются ядром всех ячеек AE2, определяя ёмкость ячеек. Каждый уровень увеличивает ёмкость в 4 раза и стоит 3 компонента предыдущих уровня.
 
 <Column>
   <Row>
@@ -135,9 +132,9 @@ by 4x and costs 3 of the previous tier.
   </Row>
 </Column>
 
-# Item Storage Cells
+# Предметные ячейки хранения
 
-Item storage cells can hold up to 63 distinct types of items, and are available in all the standard capacities.
+Предметные ячейки хранения могут содержать до 63 различных типов предметов и доступны во всех стандартных емкостях.
 
 <Column>
   <Row>
@@ -155,14 +152,13 @@ Item storage cells can hold up to 63 distinct types of items, and are available 
   </Row>
 </Column>
 
-## Portable Item Storage
+## Переносные предметные ячейки хранения
 
-These act as a tiny <ItemLink id="chest" /> in your pocket, or like a form of backpack. They can be charged in a <ItemLink id="charger" />
+Они действуют как крошечный <ItemLink id="chest" /> в вашем кармане или как своего рода рюкзак. Их можно заряжать в <ItemLink id="charger" />.
 
-Unlike standard storage cells, these actually *reduce* in type capacity as their byte capacity increases, and have half the
-total byte capacity.
+В отличие от стандартных ячеек хранения, эти ячейки фактически *уменьшают* ёмкость в типах по мере увеличения ёмкости в байтах и имеют половину общей емкости в байтах.
 
-In addition to the upgrade cards all cells can receive, these also accept <ItemLink id="energy_card" />s to upgrade their internal batteries.
+В дополнение к картам улучшений, которые могут получить все ячейки, они также принимают <ItemLink id="energy_card" /> для улучшения своих внутренних аккумуляторов.
 
 <Column>
   <Row>
@@ -180,9 +176,9 @@ In addition to the upgrade cards all cells can receive, these also accept <ItemL
   </Row>
 </Column>
 
-# Fluid Storage Cells
+# Жидкостные ячейки хранения
 
-Fluid storage cells can hold up to 5 distinct types of fluids, and are available in all the standard capacities.
+Жидкостные ячейки хранения могут содержать до 5 различных типов жидкостей и доступны во всех стандартных объемах.
 
 <Column>
   <Row>
@@ -200,14 +196,13 @@ Fluid storage cells can hold up to 5 distinct types of fluids, and are available
   </Row>
 </Column>
 
-## Portable Fluid Storage
+## Перененосные жидкостные ячейки хранения
 
-These act as a tiny <ItemLink id="chest" /> in your pocket, or like a form of backpack. They can be charged in a <ItemLink id="charger" />
+Они действуют как крошечный <ItemLink id="chest" /> в вашем кармане или как своего рода рюкзак. Их можно заряжать в <ItemLink id="charger" />.
 
-Unlike standard storage cells, these actually *reduce* in type capacity as their byte capacity increases, and have half the
-total byte capacity.
+В отличие от стандартных ячеек хранения, эти ячейки фактически *уменьшают* ёмкость в типах по мере увеличения ёмкости в байтах и имеют половину общей емкости в байтах.
 
-In addition to the upgrade cards all cells can receive, these also accept <ItemLink id="energy_card" />s to upgrade their internal batteries.
+В дополнение к картам улучшений, которые могут получить все ячейки, они также принимают <ItemLink id="energy_card" /> для улучшения своих внутренних аккумуляторов.
 
 <Column>
   <Row>
@@ -225,7 +220,7 @@ In addition to the upgrade cards all cells can receive, these also accept <ItemL
   </Row>
 </Column>
 
-# Creative Item and Fluid Cells
+# Творческие предметные и жидкостные ячейки хранения
 
 <Row>
   <ItemImage id="creative_item_cell" scale="2" />
@@ -233,5 +228,4 @@ In addition to the upgrade cards all cells can receive, these also accept <ItemL
   <ItemImage id="creative_fluid_cell" scale="2" />
 </Row>
 
-Creative item and fluid cells **do not provide infinite storage**. Instead, they act as infinite sources and sinks of whatever
-item or fluid you [partition](cell_workbench.md) them to.
+Творческие предметные и жидкостные ячейки хранения **не обеспечивают бесконечное хранение**. Вместо этого, они действуют как бесконечные источники и поглотители любого предмета или жидкости, которые вы [разделяете](cell_workbench.md) на них.

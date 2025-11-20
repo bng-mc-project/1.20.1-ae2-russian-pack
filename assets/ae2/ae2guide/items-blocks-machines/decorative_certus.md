@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Decorative Certus Blocks
+  title: Декоративные блоки истинного кварца
   icon: quartz_stairs
   position: 010
 categories:
@@ -32,16 +32,16 @@ item_ids:
 - ae2:chiseled_quartz_slab
 ---
 
-# Decorative Certus Blocks
+# Декоративные блоки истинного кварца
 
 <GameScene zoom="3" background="transparent">
   <ImportStructure src="../assets/assemblies/decorative_certus.snbt" />
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-<ItemLink id="quartz_block" />s can be crafted, smelted, and stonecut into some decorative building blocks
+<ItemLink id="quartz_block" /> может быть преобразован в различные декоративные строительные блоки.
 
-## Recipes
+## Рецепты
 
 <Column>
   <Row gap="0">

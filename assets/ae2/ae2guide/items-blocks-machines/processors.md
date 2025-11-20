@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Processors
+  title: Процессоры
   icon: logic_processor
   position: 010
 categories:
@@ -17,7 +17,7 @@ item_ids:
 - ae2:silicon
 ---
 
-# Processors
+# Процессоры
 
 <Row>
   <ItemImage id="logic_processor" scale="4" />
@@ -27,21 +27,18 @@ item_ids:
   <ItemImage id="engineering_processor" scale="4" />
 </Row>
 
-Processors are one of the primary ingredients in AE2 [devices](../ae2-mechanics/devices.md) and machines. They are also one of your first
-big automation challenges. There are three types of processor, made with gold, <ItemLink id="certus_quartz_crystal" />,
-and diamond respectively. They are made using [presses](presses.md) in an <ItemLink id="inscriber" />, in a multi-step
-process (usually achieved via a series of inscribers and filtered piping).
+Процессоры являются одними из основных компонентов AE2 [устройств](../ae2-mechanics/devices.md) и машин. Они также являются одним из ваших первых трудных для автоматизации предметов. Всего существует 3 вида процессоров, сделанные из золота, <ItemLink id="certus_quartz_crystal" /> и алмазов. Они создаются при помощи [печатей](presses.md) в <ItemLink id="inscriber" />, с многоступенчатым процессом (обычно достигается через создание серии вырезателей и отфильтрованных линий передачи предметов)
 
-## Production Steps
+## Шаги изготовления
 
 <Column gap="5">
-  1.  Gather/make the required ingredients: silicon, redstone, gold, <ItemLink id="certus_quartz_crystal" />, diamond.
+  1.  Создайте/добудьте следующие ингредиенты: кремний, редстоуновая пыль, золото, <ItemLink id="certus_quartz_crystal" />, алмаз.
 
   <RecipeFor id="silicon" />
 
   <br />
 
-  2.  Press the prerequisite printed circuit components
+  2.  Спрессуйте необходимые компоненты печатной платы
 
   <Row>
     <RecipeFor id="printed_silicon" />
@@ -57,7 +54,7 @@ process (usually achieved via a series of inscribers and filtered piping).
 
   <br />
 
-  3.  Final assembly
+  3.  Финальная сборка
 
   <Row>
     <RecipeFor id="logic_processor" />

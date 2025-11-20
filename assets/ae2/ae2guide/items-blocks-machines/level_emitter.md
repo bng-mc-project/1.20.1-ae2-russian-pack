@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Level Emitter
+  title: МЭ излучатель уровня
   icon: level_emitter
   position: 220
 categories:
@@ -11,62 +11,54 @@ item_ids:
 - ae2:energy_level_emitter
 ---
 
-# The Level Emitter
+# Излучатель уровня
 
 <GameScene zoom="8" background="transparent">
   <ImportStructure src="../assets/blocks/level_emitter.snbt" />
 </GameScene>
 
-The Level Emitter emits a redstone signal depending on the quantity of an item in
-[network storage](../ae2-mechanics/import-export-storage.md).
+Излучатель уровня, как ни странно, излучает редстоун сигнал в зависимости от количества предмета в [сетевом хранилище](../ae2-mechanics/import-export-storage.md).
 
-There is also a version that emits a redstone signal depending on the [energy](../ae2-mechanics/energy.md) stored
-in your network.
+Существует также вариация, которая излучает редстоун сигнал, в зависимости от объёма [энергии](../ae2-mechanics/energy.md), хранимой в вашей сети.
 
-Items and fluids can be dragged into the slot from JEI/REI even if you don't actually have any of that item.
+Предметы и жидкости могут быть перетащены в слоты фильтра из JEI/REI, даже если у вас на самом деле нет этого предмета.
 
-Right-click with a fluid container (like a bucket or fluid tank) to set that fluid as a filter instead of the bucket or tank item.
+ПКМ с контейнером с жидкостью (ведро или жидкостный бак), чтобы выбрать эту жидкость в фильтре, вместо ведра или бака.
 
-They are [cable subparts](../ae2-mechanics/cable-subparts.md).
+Является [подразделом кабеля](../ae2-mechanics/cable-subparts.md).
 
-Unlike other [devices](../ae2-mechanics/devices.md), level emitters *do not* require a [channel](../ae2-mechanics/channels.md).
+В отличие от других [устройств](../ae2-mechanics/devices.md), излучатель уровня *не* требует [канал](../ae2-mechanics/channels.md).
 
-## Settings
+## Настройки
 
-*   The Level Emitter can be set to either "greater than/equal to" or "less than" mode
-*   When a <ItemLink id="crafting_card" /> is inserted, it can be set to "emit redstone while item is crafting" or
-    "emit redstone to craft item"
+*   Излучатель уровня может быть установлен в режимы "больше/равно" или "меньше"
+*   Когда <ItemLink id="crafting_card" /> установлена, излучатель может быть настроен на "излучать редстоун сигнал при изготовлении предмета" или "излучать сигнал, чтобы изготовить предмет"
 
-## Upgrades
+## Улучшения
 
-The level emitter supports the following [upgrades](upgrade_cards.md):
+Излучатель уровня поддерживает следующие [улучшения](upgrade_cards.md):
 
-*   <ItemLink id="fuzzy_card" /> lets the emitter filter by damage level and/or ignore item NBT
-*   <ItemLink id="crafting_card" /> enables the crafting functionality
+*   <ItemLink id="fuzzy_card" /> позволяет уровню по уровню повреждении и/или игнорировать NBT предмета
+*   <ItemLink id="crafting_card" /> включает функциональность изготовления
 
-## Crafting Functionality
+## Функциональность изготовления
 
-If a <ItemLink id="crafting_card" /> is inserted, the emitter will be switched into crafting mode.
+Если <ItemLink id="crafting_card" /> установлена, то излучатель переключается в режим изготовления
 
-This enables two options:
+Это включает два параметра:
 
-The first option, "emit redstone while item is crafting", makes the emitter emit a redstone signal while your [autocrafting](../ae2-mechanics/autocrafting.md)
-is crafting some specific item through <ItemLink id="pattern_provider" />s. This is useful for only turning on specific
-power-hungry automation setups while they are actually being used.
+Первый параметр, "излучать редстоун сигнал, при изготовлении предмета" заставляет излучатель излучать редстоун сигнал, в то время как ваша установка [автокрафта](../ae2-mechanics/autocrafting.md) изготовляет какой-то специфический предмет через <ItemLink id="pattern_provider" />. Это может быть полезно для включения специфических пожирающих огромное количество энергии автоматических установок только в момент, когда они на самом деле используются.
 
-The second option, "emit redstone to craft item", is extremely useful for specific use cases like infinite farms and
-automation setups that only have a chance of making an output, instead of a guranteed output.
-This setting creates a virtual [pattern](patterns.md) for [autocrafting](../ae2-mechanics/autocrafting.md) to use, for whatever item
-is in the emitter's filter slot.
-(For correct functionality, an actual pattern for the same item **should not exist** in your <ItemLink id="pattern_provider" />s)
+Второй параметр, "излучать сигнал, чтобы изготовить предмет" крайне полезен для определённых случаев, такие как бесконечные фермы и автоматических установок, у которых есть лишь шанс на создание выводного предмета, вместо гарантированного результата.
+Эта настройка создаёт виртуальный [шаблон](patterns.md) для установки [автокрафта](../ae2-mechanics/autocrafting.md) для использования для какого-либо предмета, который находится в слоте фильтра излучателя (Для более корректного функционирования, настоящий шаблон для этого же предмета **не должен быть установлен** в вашем <ItemLink id="pattern_provider" />)
 
-This "pattern" does not define, or even care about ingredients.
-All it says is "If you emit redstone from this level emitter, the ME system will recieve this item at some point in the
-near or distant future". This is usually used to activate and deactivate infinite farms which require no input ingredients,
-or to activate a system that handles recursive recipes (which standard autocafting cannot understand) like, for example, "1 cobblestone = 2 cobblestone"
-if you have a machine that duplicates cobblestone.
+Этот "шаблон" не определяет и даже не учитывает ингредиенты.
+Все, что он говорит: "Если вы излучаете редстоун из этого излучателя уровня, МЭ система получит этот предмет в какой-то момент в
+ближайшем или отдаленном будущем". Обычно это используется для активации и деактивации бесконечных ферм, которые не требуют ввода ингредиентов,
+или для активации системы, которая обрабатывает рекурсивные рецепты (которые стандартный автокрафт не может понять), например, "1 булыжник = 2 булыжника",
+если у вас есть машина, которая дублирует булыжники.
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="level_emitter" />
 

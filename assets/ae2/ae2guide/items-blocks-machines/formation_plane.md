@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Formation Plane
+  title: МЭ плоскость формирования
   icon: formation_plane
   position: 210
 categories:
@@ -10,54 +10,49 @@ item_ids:
 - ae2:formation_plane
 ---
 
-# The Formation Plane
+# МЭ плоскость формирования
 
 <GameScene zoom="8" background="transparent">
   <ImportStructure src="../assets/blocks/formation_plane.snbt" />
 </GameScene>
 
-The Formation Plane places blocks and drops items. It works similarly to an insert-only <ItemLink id="storage_bus" />,
-placing/dropping when things are "stored" in it by [devices](../ae2-mechanics/devices.md) inserting into [network storage](../ae2-mechanics/import-export-storage.md),
-like <ItemLink id="import_bus" />ses and <ItemLink id="interface" />s.
+Плоскость формирования размещает предметы и выкидывает предметы. Работает похоже на <ItemLink id="storage_bus" /> только для ввода, размещает/выбрасывает, когда вещи, "хранимые" в нём из-за [устройств](../ae2-mechanics/devices.md), перемещаются в [сетевое хранилище](../ae2-mechanics/import-export-storage.md), как <ItemLink id="import_bus" /> и <ItemLink id="interface" />.
 
 <GameScene zoom="6" interactive={true}>
   <ImportStructure src="../assets/assemblies/formation_plane_demonstration.snbt" />
   <IsometricCamera yaw="255" pitch="30" />
 </GameScene>
 
-This [device](../ae2-mechanics/devices.md) makes use of the mechanics used by storage busses in things like [pipe subnets](../example-setups/pipe-subnet.md),
-and can replace storage busses in those setups if you want to drop items/place blocks instead of transport items.
+Это устройство использует механику, которую также используют шины хранения в вещах типа [кабельные подсети](../example-setups/pipe-subnet.md), плоскости формирования может заменить шины хранения в таких установках, если вы захотите выбрасывать предметы/ставить блоки, вместо того, чтобы перемещать их.
 
-They are [cable subparts](../ae2-mechanics/cable-subparts.md).
+Является [подразделом кабеля](../ae2-mechanics/cable-subparts.md).
 
-**REMEMBER TO ENABLE FAKE PLAYERS IN YOUR CHUNK CLAIM**
+**НЕ ЗАБУДЬТЕ ВКЛЮЧИТЬ ФЕЙКОВЫХ ИГРОКОВ В НЕОБХОДИМЫХ ЧАНКАХ**
 
-## Filtering
+## Фильтрация
 
-By default the plane will place/drop anything. Items inserted into its filter slots will act as a whitelist, only
-allowing those specific items to be placed.
+По умолчанию плоскость будет размещать/выбрасывать всё. Предметы вставленные в слоты фильтра будут действовать как белый список, позволяя использовать только эти, выбранные, предметы.
 
-Items and fluids can be dragged into the slots from JEI/REI even if you don't actually have any of that item.
+Предметы и жидкости могут быть перетащены в слоты из JEI/REI, даже если у вас на самом деле их нет.
 
-Right-click with a fluid container (like a bucket or fluid tank) to set that fluid as a filter instead of the bucket or tank item.
+Щелкните правой кнопкой мыши с контейнером с жидкостью (например, ведру или резервуару), чтобы установить эту жидкость в качестве фильтра вместо ведра или резервуара.
 
-## Priority
+## Приоритет
 
-Priorities can be set by clicking the wrench in the top-right of the GUI.
-Items entering the network will start at the highest priority storage.
+Приоритеты можно установить, нажав на гаечный ключ в правом верхнем углу графического интерфейса. Предметы входящие в сети начинают заполнять хранилище с высшим приоритетом.
 
-## Settings
+## Настройки
 
-*   The plane can be set to place blocks in-world or drop items
+*   Плоскость может быть настроена на: размещение блоков, либо на выбрасывание предметов
 
-## Upgrades
+## Улучшения
 
-The formation plane supports the following [upgrades](upgrade_cards.md):
+МЭ плоскость формирования поддерживает следующие [улучшения](upgrade_cards.md):
 
-*   <ItemLink id="capacity_card" /> increases the amount of filter slots
-*   <ItemLink id="fuzzy_card" /> lets the plane filter by damage level and/or ignore item NBT
-*   <ItemLink id="inverter_card" /> switches the filter from a whitelist to a blacklist
+*   <ItemLink id="capacity_card" /> увеличивает количество слотов фильтра
+*   <ItemLink id="fuzzy_card" /> позволяет плоскости фильтровать по уровню повреждений и/или игнорировать NBT предмета
+*   <ItemLink id="inverter_card" /> переключает фильтр с белого списка на чёрный список
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="formation_plane" />

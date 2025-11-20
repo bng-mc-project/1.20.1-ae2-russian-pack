@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Meteorite Compass
+  title: Метеоритный компас
   icon: meteorite_compass
   position: 410
 categories:
@@ -10,13 +10,12 @@ item_ids:
 - ae2:meteorite_compass
 ---
 
-# The Meteorite Compass
+# Метеоритный компас
 
 <ItemImage id="meteorite_compass" scale="4" />
 
-The Meteorite Compass points at the nearest <ItemLink id="mysterious_cube" />, which thus points it at the nearest
-[meteorite](../ae2-mechanics/meteorites.md). It's one of the first AE2 items you should make.
+Метеоритный компас показывает на близжайший <ItemLink id="mysterious_cube" />, который находится в центре [метеорита](../ae2-mechanics/meteorites.md). Это один из первых AE2 предметов, которые вам необходимо сделать.
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="meteorite_compass" />

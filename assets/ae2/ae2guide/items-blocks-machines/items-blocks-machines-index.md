@@ -1,29 +1,29 @@
 ---
 navigation:
-  title: Items, Blocks, and Machines
+  title: Предметы, Блоки и Машины
   position: 50
 ---
 
-# Items, Blocks, and Machines
+# Предметы, Блоки и Машины
 
-A list of stuff in the mod for other pages to link to, and a description of their function.
+Список вещей в моде для других страниц, на которые можно ссылаться, и описание их функций.
 
-## Misc. Ingredients and Blocks
+## Различные ингредиенты и блоки
 
 <CategoryIndex category="misc ingredients blocks" />
 
-## Network Infrastructure
+## Сетевая инфраструктура
 
 <CategoryIndex category="network infrastructure" />
 
-## Devices
+## Устройства
 
 <CategoryIndex category="devices" />
 
-## Machines
+## Машины
 
 <CategoryIndex category="machines" />
 
-## Tools
+## Инструменты
 
 <CategoryIndex category="tools" />

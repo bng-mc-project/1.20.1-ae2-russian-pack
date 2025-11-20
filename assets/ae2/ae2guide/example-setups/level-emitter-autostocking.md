@@ -1,53 +1,53 @@
 ---
 navigation:
   parent: example-setups/example-setups-index.md
-  title: Level Emitter Autostocking
+  title: Автозаполнение излучателя уровня
   icon: level_emitter
 ---
 
-# Level Emitter Autostocking
+# Автозаполнение излучателя уровня
 
-One might ask "How do I keep a certain amount of an item in stock, crafting more as needed?"
+Можно задаться вопросом: "Как поддерживать определённое количество предмета на складе, автоматически создавая больше по мере необходимости?"
 
-One solution is use of an <ItemLink id="export_bus" />, <ItemLink id="level_emitter" />, and <ItemLink id="crafting_card" /> to automatically request new items
-from your network's [autocrafting](../ae2-mechanics/autocrafting.md). This setup is for maintaining a large quantity of one item.
+Одним из решений является использование <ItemLink id="export_bus" />, <ItemLink id="level_emitter" /> и <ItemLink id="crafting_card" /> для автоматического запроса новых предметов
+из установки [автоматического крафта](../ae2-mechanics/autocrafting.md) вашей сети. Эта установка предназначена для поддержания большого количества одного предмета.
 
 <GameScene zoom="6" interactive={true}>
   <ImportStructure src="../assets/assemblies/level_emitter_autostocking.snbt" />
 
   <BoxAnnotation color="#dddddd" min="1 1 0" max="2 1.3 1">
-        (1) Export Bus: Filtered to the desired item. Has a Redstone Card and Crafting Card. Redstone mode set to
-        "Active with signal", Crafting behavior set to "Do not use stocked items".
+        (1) Шина экспорта: отфильтрована на нужный предмет. Имеет редстоуновую карту и карту изготовления. Режим редстоуна установлен на
+        "Активна при сигнале", Поведение крафта установлено на "Не использовать запасённые предметы".
         <Row><ItemImage id="redstone_card" scale="2" /> <ItemImage id="crafting_card" scale="2" /></Row>
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="0.7 1 0" max="1 2 1">
-        (2) Level Emitter: Configured with the desired item and quantity, set to "Emit when levels are below limit".
+        (2) Излучатель уровня: настроен на нужный предмет и количество, установлен режим "Излучать при уровне ниже лимита".
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="1 0 0" max="2 1 1">
-        (3) Interface: In its default configuration.
+        (3) Интерфейс: в настройке по умолчанию.
   </BoxAnnotation>
 
 <DiamondAnnotation pos="4 0.5 0.5" color="#00ff00">
-        To Main Network
+        В основной сети
     </DiamondAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-## Configurations
+## Настройки
 
-* The <ItemLink id="export_bus" /> (1) is filtered to the desired item. It has a <ItemLink id="redstone_card" /> and <ItemLink id="crafting_card" />.
-  The "Redstone Mode" is set to "Active with signal", The "Crafting Behavior" is set to "Do not use stocked items".
-* The <ItemLink id="level_emitter" /> (2) is configured with the desired item and quantity, and set to "Emit when levels are below limit".
-* The <ItemLink id="interface" /> (3) is in its default configuration.
+* <ItemLink id="export_bus" /> (1) отфильтрован на нужный предмет. В него вставлены <ItemLink id="redstone_card" /> и <ItemLink id="crafting_card" />.
+  Режим редстоуна установлен на "Активна при сигнале", поведение крафта установлено на "Не использовать запасённые предметы".
+* <ItemLink id="level_emitter" /> (2) настроен на нужный предмет и количество, установлен режим "Излучать при уровне ниже лимита".
+* <ItemLink id="interface" /> (3) находится в настройке по умолчанию.
 
-## How It Works
+## Как это работает
 
-1. If the amount of the desired item in [network storage](../ae2-mechanics/import-export-storage.md) is below the quantity specified in the
-   <ItemLink id="level_emitter" />, it will emit a redstone signal.
-2. Upon recieving a redstone signal (and due to the <ItemLink id="crafting_card" /> and being set to not use stocked items),
-   the <ItemLink id="export_bus" /> will request that the network's [autocrafting](../ae2-mechanics/autocrafting.md) craft
-   more of the desired item, then export it.
-3. Upon having an item pushed into it (and not being configured to have anything in its internal inventory), the <ItemLink id="interface" /> will push that item into network storage.
+1. Если количество нужного предмета в [сетевом хранилище](../ae2-mechanics/import-export-storage.md) ниже значения, указанного в 
+   <ItemLink id="level_emitter" />, излучатель уровня выдаст сигнал редстоуна.
+2. При получении сигнала редстоуна (и благодаря <ItemLink id="crafting_card" /> и настройке "Не использовать запасённые предметы")
+   <ItemLink id="export_bus" /> запросит, чтобы установка [автоматического крафта](../ae2-mechanics/autocrafting.md) сети создала
+   большее количество нужного предмета, а затем экспортировала его.
+3. При поступлении предмета (и если внутренний инвентарь не настроен на хранение), <ItemLink id="interface" /> отправит этот предмет в сетевое хранилище.

@@ -7,4 +7,4 @@ navigation:
 
 # P2P Туннели
 
-См. [P2P Туннели](../items-blocks-machines/p2p_tunnels.md)
+Посмотреть [P2P Туннели](../items-blocks-machines/p2p_tunnels.md)

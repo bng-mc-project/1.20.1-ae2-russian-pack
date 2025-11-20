@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Fluix Block
+  title: Блок флюиса
   icon: fluix_block
   position: 010
 categories:
@@ -10,12 +10,12 @@ item_ids:
 - ae2:fluix_block
 ---
 
-# The Fluix Block
+# Блок флюиса
 
 <BlockImage id="fluix_block" scale="8" />
 
-The storage block for <ItemLink id="fluix_crystal" />. It is also used in the recipes for a few machines.
+Блок, для компактного хранения <ItemLink id="fluix_crystal" />. Он также требуется для изготовления нескольких машин.
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="fluix_block" />

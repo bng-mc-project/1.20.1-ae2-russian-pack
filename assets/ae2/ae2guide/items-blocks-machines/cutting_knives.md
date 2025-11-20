@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Cutting Knives
+  title: Режущие ножи
   icon: certus_quartz_cutting_knife
   position: 410
 categories:
@@ -11,7 +11,7 @@ item_ids:
 - ae2:nether_quartz_cutting_knife
 ---
 
-# Quartz Tools
+# Режущие ножи
 
 <Row>
   <ItemImage id="certus_quartz_cutting_knife" scale="4" />
@@ -19,12 +19,11 @@ item_ids:
   <ItemImage id="nether_quartz_cutting_knife" scale="4" />
 </Row>
 
-Cutting knives are used to make <ItemLink id="name_press" />es and <ItemLink id="cable_anchor" />s.
+Режущие ножи используются для создания <ItemLink id="name_press" /> и <ItemLink id="cable_anchor" />.
 
-To craft a name press, right click the cutting knife and insert an ingot of metal, you will then have to type the name you
-wish to write onto the plate then simply extract the finished plate.
+Чтобы скрафтить именующую печать, вам необходимо кликнуть правой кнопкой мыши с помощью режущего ножа, далее в появившейся GUI вам необходимо вставить слиток металла, затем, вам надо написать в строке имя, которое вы хотите видеть на печати и в самом конце просто извлекаете готовую печать.
 
-## Recipes
+## Рецепты
 
 <Row>
   <RecipeFor id="certus_quartz_cutting_knife" />

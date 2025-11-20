@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Patterns
+  title: Шаблоны
   icon: crafting_pattern
   position: 410
 categories:
@@ -14,47 +14,47 @@ item_ids:
 - ae2:stonecutting_pattern
 ---
 
-# Patterns
+# Шаблоны
 
 <ItemImage id="crafting_pattern" scale="4" />
 
-Patterns are made in a <ItemLink id="pattern_encoding_terminal" /> out of blank patterns, and inserted in <ItemLink id="pattern_provider" />s
-or <ItemLink id="molecular_assembler" />s.
+Шаблоны создаются в <ItemLink id="pattern_encoding_terminal" /> из пустых шаблонов и вставляются в <ItemLink id="pattern_provider" />
+или <ItemLink id="molecular_assembler" />.
 
-There are several different types of pattern for different things:
+Существует несколько различных типов шаблонов для разных целей:
 
-*   <ItemLink id="crafting_pattern" />s encode recipes made by a crafting table. They can be put directly in a <ItemLink id="molecular_assembler" /> to make it
-    craft the result whenever given the ingredients, but their main use is in a <ItemLink id="pattern_provider" /> next to a molecular assembler.
-    Pattern providers have special behavior in this case, and will send the relevant pattern along with the ingredients to adjacent assemblers.
-    Since assemblers auto-eject the results of crafts to adjacent inventories, an assembler on a pattern provider is all that is needed to automate crafting patterns.
-
-***
-
-*   <ItemLink id="smithing_table_pattern" />s are very similar to crafting patterns, but they encode smithing table recipes. They are also automated by a pattern
-    provider and molecular assembler, and function in the exact same way. In fact, crafting, smithing, and stonecutting patterns can be
-    used in the same setup.
+*   <ItemLink id="crafting_pattern" /> кодируют рецепты, созданные на верстаке. Их можно поместить прямо в <ItemLink id="molecular_assembler" />, чтобы он
+    создавал готовую продукцию при наличии ингредиентов, но в основном они используются в <ItemLink id="pattern_provider" /> рядом с молекулярным сборщиком.
+    В этом случае поставщики шаблонов ведут себя особым образом и отправляют соответствующий шаблон вместе с ингредиентами в соседние сборщики.
+    Поскольку сборщики автоматически выбрасывают готовую продукцию в соседние инвентари, для автоматизации шаблонов изготовления достаточно одного сборщика на поставщике шаблонов.
 
 ***
 
-*   <ItemLink id="stonecutting_pattern" />s are very similar to crafting patterns, but they encode stonecutter recipes. They are also automated by a pattern
-    provider and molecular assembler, and function in the exact same way. In fact, crafting, smithing, and stonecutting patterns can be
-    used in the same setup.
+*   <ItemLink id="smithing_table_pattern" /> очень похожи на шаблоны изготовления, но они кодируют рецепты кузнечного стола. Они также автоматизированы с помощью поставщика шаблонов
+    и молекулярного сборщика и функционируют точно так же. Фактически, шаблоны изготовления, кузнечного дела и камнерезного станка могут
+    использоваться в одной и той же установке.
 
 ***
 
-*   <ItemLink id="processing_pattern" />s are where a lot of flexibility in autocrafting comes from. They are the most generalized type, simply
-    saying "if a pattern provider pushes these ingredients to adjacent inventories, the ME system will recieve these items at some point in the
-    near or distant future". They are how you will autocraft with almost any modded machine, or furnaces and the like. Because they are so
-    general in use and do not care what happens between pushing ingredients and receiving the result, you can do some really funky stuff, like inputting
-    the ingredients into an entire complex factory production chain which will sort out stuff, take in other ingredients from infinitely-producing
-    farms, print the entirety of the Bee Movie script, the ME system does not care as long as it gets the result the pattern specifies. In fact,
-    it doesn't even care if the ingredients are in any way related to the result. You could tell it "1 cherry wood planks = 1 nether star" and have
-    your wither farm kill a wither upon receiving a cherry wood planks and it would work.
+*   <ItemLink id="stonecutting_pattern" /> очень похожи на шаблоны изготовления, но в них закодированы рецепты камнереза. Они также автоматизированы с помощью поставщика шаблонов
+    и молекулярного сборщика и функционируют точно так же. Фактически, шаблоны изготовления, кузнечного дела и камнерезного станка можно
+    использовать в одной и той же установке.
 
-Multiple <ItemLink id="pattern_provider" />s with identical patterns are supported and work in parallel. Additionally, you can have a pattern say,
-for example, 8 cobblestone = 8 stone instead of 1 cobblestone = 1 stone, and the pattern provider will insert 8 cobblestone into
-your smelting setup every operation instead of one at a time.
+***
 
-## Recipe
+*   <ItemLink id="processing_pattern" /> — это то, что обеспечивает большую гибкость в автоматическом крафте. Они являются наиболее обобщенным типом, просто
+    говоря: "если поставщик шаблонов помещает эти ингредиенты в соседние инвентари, МЭ система получит эти предметы в ближайшем или отдаленном будущем". 
+    Именно с их помощью вы будете автоматически крафтить практически с любой модифицированной машиной, печью и т. п. Поскольку они очень
+    универсальны в использовании и не заботятся о том, что происходит между отправкой ингредиентов и получением результата, вы можете делать действительно необычные вещи, например, вводить
+    ингредиенты в сложную производственную цепочку фабрики, которая будет сортировать вещи, принимать другие ингредиенты из бесконечно производящих
+    ферм, печатать весь сценарий ролика Булджать «Пчелиная война 2" — МЭ системе все равно, пока она получает результат, указанный в шаблоне. Фактически,
+    ей даже не важно, имеют ли ингредиенты какое-либо отношение к результату. Вы можете сказать ей "1 доска из вишневого дерева = 1 звезда нижнего мира" и заставить
+    свою ферму убивать Иссушителей при получении досок из вишневого дерева, и это будет работать.
+
+Несколько <ItemLink id="pattern_provider" /> с одинаковыми шаблонами поддерживаются и могут работать параллельно. Кроме того, вы можете задать шаблон, например,
+8 булыжников = 8 камней вместо 1 булыжника = 1 камень, и поставщик шаблонов будет вставлять 8 булыжников в
+вашу установку для плавки при каждой операции, а не по одному за раз.
+
+## Рецепт
 
 <RecipeFor id="blank_pattern" />

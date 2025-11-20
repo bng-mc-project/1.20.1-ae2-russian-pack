@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: ME Drive
+  title: МЭ-дисковод
   icon: drive
   position: 210
 categories:
@@ -10,42 +10,35 @@ item_ids:
 - ae2:drive
 ---
 
-# The ME Drive
+# МЭ-дисковод
 
 <GameScene zoom="8" background="transparent">
   <ImportStructure src="../assets/blocks/drive.snbt" />
 </GameScene>
 
-The Drive is the [device](../ae2-mechanics/devices.md) you plug your [storage cells](storage_cells.md) into in order to use them for
-[network storage](../ae2-mechanics/import-export-storage.md). It has 10 slots which each accept a cell.
+Дисковод - это [устройство](../ae2-mechanics/devices.md), к которому вы подключаете свои [ячейки хранения](storage_cells.md), чтобы использовать их для
+[сетевого хранилища](../ae2-mechanics/import-export-storage.md). У него есть 10 слотов, каждый из которых принимает ячейку.
 
-If for some reason you want to, you can push and pull the cells from its inventory with any item logistics like hoppers or ae2 busses.
+Если по какой-то причине вам захочется, вы можете закидывать и извлекать ячейки из инвентаря с помощью любых предметов логистики, таких как воронки или шины ae2.
 
-It can be rotated with a <ItemLink id="certus_quartz_wrench" />.
+Его можно поворачивать с помощью  <ItemLink id="certus_quartz_wrench" />.
 
-## Cell Status LEDs
+## Светодиодные индикаторы состояния ячеек
 
-The cells in the drive have an LED on them which shows their status:
+Ячейки на дисководе оснащены светодиодными индикаторами, которые показывают их состояние:
 
-| Color  | Status                                                                           |
-| :----- | :------------------------------------------------------------------------------- |
-| Green  | Empty                                                                            |
-| Blue   | Has some contents                                                                |
-| Orange | [Types](../ae2-mechanics/bytes-and-types.md) full, no new types can be added     |
-| Red    | [Bytes](../ae2-mechanics/bytes-and-types.md) full, no more items can be inserted |
-| Black  | No power or drive has no [channel](../ae2-mechanics/channels.md)                 |
+| Цвет      | Статус                                                                           |
+| :-----    | :------------------------------------------------------------------------------- |
+| Зелёный   | Пусто                                                                            |
+| Синий     | Имеет некоторое содержание                                                                |
+| Оранжевый | [Типы](../ae2-mechanics/bytes-and-types.md) переполнены, новые типы не могут быть добавлены     |
+| Красный   | [Байты](../ae2-mechanics/bytes-and-types.md) переполнены, больше предметы не могут быть вставлены |
+| Чёрный    | Нет питания или дисковод не имеет [канала](../ae2-mechanics/channels.md)                 |
 
-## Priority
+## Приоритет
 
-Priorities can be set by clicking the wrench in the top-right of the GUI.
-Items entering the network will start at the highest priority storage as
-their first destination. In the case of two storages or cells have the same priority,
-if one already contains the item, they will prefer that storage over any
-other. Any [partitioned](cell_workbench.md) cells will be treated as already containing the item
-when in the same priority group as other storages. Items being removed from storage will
-be removed from the storage with the lowest priority. This priority system means as items are inserted and removed
-from network storage, higher priority storages will be filled and lower priority storages will be emptied.
+Приоритеты можно установить, нажав на гаечный ключ в правом верхнем углу графического интерфейса. Предметы, попадающие в сеть, в качестве первого адресата начнут использовать хранилище с наивысшим приоритетом. В случае если два хранилища или ячейки имеют одинаковый приоритет, если одно из них уже содержит предмет, он предпочтет это хранилище любому другому. Любые [разбитые на разделы](cell_workbench.md) ячейки будут рассматриваться как уже содержащие предмет, если они находятся в той же группе приоритетов, что и другие хранилища. Предметы, извлекаемые из хранилища, будут извлекаться из хранилища с наименьшим приоритетом. Такая система приоритетов означает, что по мере вставки и извлечения предметов из сетевого хранилища, хранилища с более высоким приоритетом будут заполняться, а хранилища с более низким приоритетом - опустошаться.
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="drive" />

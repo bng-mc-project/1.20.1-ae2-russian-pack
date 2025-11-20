@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Decorative Sky Stone
+  title: Декоративный небесный камень
   icon: sky_stone_stairs
   position: 010
 categories:
@@ -23,7 +23,7 @@ item_ids:
 - ae2:sky_stone_small_brick_slab
 ---
 
-# Decorative Sky Stone
+# Декоративный небесный камень
 
 <Row>
   <GameScene zoom="3" background="transparent">
@@ -34,9 +34,9 @@ item_ids:
   <BlockImage id="smooth_sky_stone_chest" scale="4" />
 </Row>
 
-<ItemLink id="sky_stone_block" /> blocks can be crafted and stonecut into some decorative building blocks
+<ItemLink id="sky_stone_block" /> может быть преобразован в различные декоративные строительные блоки.
 
-## Recipes
+## Рецепты
 
 <Column gap="5">
   <Row>

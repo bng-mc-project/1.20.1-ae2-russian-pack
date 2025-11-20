@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Wireless Access Point
+  title: Беспроводная точка доступа
   icon: wireless_access_point
   position: 210
 categories:
@@ -11,28 +11,28 @@ item_ids:
 - ae2:wireless_access_point
 ---
 
-# The Wireless Access Point
+# Беспроводная точка доступа
 
 <BlockImage id="wireless_access_point" p:state="has_channel" scale="8" />
 
-Allows wireless access via a <ItemLink id="wireless_terminal" />.
-Range and power usage is determined based on the number of <ItemLink id="wireless_booster" /> installed.
+Обеспечивает беспроводной доступ через <ItemLink id="wireless_terminal" />.
+Дальность действия и энергопотребление определяются количеством установленных <ItemLink id="wireless_booster" />.
 
-A network can have any number of wireless access points with any number
-of <ItemLink id="wireless_booster" /> in each one, allowing you to optimize power usage
-and range by altering your setup.
+Сеть может иметь любое количество точек беспроводного доступа с любым количеством
+<ItemLink id="wireless_booster" /> в каждой из них, что позволяет оптимизировать энергопотребление
+и дальность действия путем изменения установки.
 
-Requires a [channel](../ae2-mechanics/channels.md).
+Требуется [канал](../ae2-mechanics/channels.md).
 
-Also used to bind [wireless terminals](wireless_terminals.md)
+Также используется для подключения [беспроводных терминалов](wireless_terminals.md)
 
-# Wireless Booster
+# Беспроводной усилитель
 
 <ItemImage id="wireless_booster" scale="2" />
 
-Used to increase the range of the wireless access point.
+Используется для увеличения дальности действия беспроводной точки доступа.
 
-## Recipes
+## Рецепты
 
 <RecipeFor id="wireless_access_point" />
 

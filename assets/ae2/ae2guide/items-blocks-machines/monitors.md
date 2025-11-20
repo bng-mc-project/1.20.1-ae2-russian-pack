@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Monitors
+  title: МЭ мониторы
   icon: storage_monitor
   position: 210
 categories:
@@ -11,52 +11,52 @@ item_ids:
 - ae2:conversion_monitor
 ---
 
-# Monitors
+# МЭ мониторы
 
 <GameScene zoom="8" background="transparent">
 <ImportStructure src="../assets/assemblies/monitors.snbt" />
 <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-Monitors allow visualization and interaction with a single item or fluid type, without opening a GUI.
+Мониторы позволяют визуализировать и взаимодействовать с единственным видом предметов или жидкостей, без открытия графического интерфейса.
 
-Monitors will inherit the color of the [cable](cables.md) they are mounted on.
+На мониторе отображается цвет [кабеля](cables.md), на котором он расположен.
 
-If the monitor is on the floor or ceiling, you can rotate it with a <ItemLink id="certus_quartz_wrench" />.
+Если монитор заблокирован, то вы можете его поворачивать с помощью <ItemLink id="certus_quartz_wrench" />.
 
-They are [cable subparts](../ae2-mechanics/cable-subparts.md).
+МЭ мониторы являются [подразделом кабеля](../ae2-mechanics/cable-subparts.md).
 
-# Storage Monitor
+# МЭ монитор хранения
 
-Will show an item or fluid and its quantity. Put them next to your farms or something...
+Показывает выбранный предмет/жидкость и его количество. Поставьте их рядом с вашими фермами или куда-нибудь ещё...
 
-Does *not* require a [channel](../ae2-mechanics/channels.md).
+*Не* требуется [канал](../ae2-mechanics/channels.md).
 
-Keybinds:
+Назначение клавиш:
 
-*   Right-click with an item or double-right-click with a fluid container to set the monitor to that item/fluid.
-*   Right-click with an empty hand to clear the monitor.
-*   Shift-right-click with an empty hand to lock the monitor.
+*   ПКМ с предметом или двойное ПКМ с хранилищем жидкости в руках для настройки монитора на данный предмет/жидкость.
+*   ПКМ с пустой рукой для очистки монитора.
+*   Shift-ПКМ с пустой рукой для блокировки монитора.
 
-## Recipe
+
+## Рецепт
 
 <RecipeFor id="storage_monitor" />
 
-# Conversion Monitor
+# МЭ монитор превращения
 
-The Conversion Monitor is similar to a storage monitor, but allows you to insert or extract its configured item.
+МЭ монитор превращения схож с МЭ монитором хранения, однако позволяет вам вставлять и извлекать выбранный предмет.
 
-If the configured item is [autocraftable](../ae2-mechanics/autocrafting.md) and none are in storage, attemping to take an
-item will instead open a UI to specify the amount to be crafted.
+Если выбранный предмет [может быть изготовлен автоматически](../ae2-mechanics/autocrafting.md) и при этом если его нет в хранилище, то попытка взять предмет вместо этого откроет UI для уточнения количества предметов, которые должны быть изготовлены.
 
-*Does* require a [channel](../ae2-mechanics/channels.md).
+*Требуется* [канал](../ae2-mechanics/channels.md).
 
-Additional keybinds:
+Дополнительные назначения клавиш:
 
-*   Left-click to extract a stack of the configured item, or request craft of that item if none are in storage.
-*   Right-click with any item to insert that item.
-*   Right-click with an empty hand to insert all of the configured item from your inventory.
+*   ЛКМ, для извлечения стака предметов выбранного предмет или для отправки запроса на изготовление выбранного предмета, если его нет в хранилище.
+*   ПКМ с любым предметом в руках для его вставки.
+*   ПКМ с пустой рукой для вставки всех выбранных предметов из вашего инвентаря.
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="conversion_monitor" />

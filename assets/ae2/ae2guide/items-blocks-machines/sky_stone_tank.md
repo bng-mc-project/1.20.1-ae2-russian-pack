@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Sky Stone Tank
+  title: Бак из небесного камня
   icon: sky_stone_tank
   position: 310
 categories:
@@ -10,12 +10,12 @@ item_ids:
 - ae2:sky_stone_tank
 ---
 
-# The Sky Stone Tank
+# Бак из небесного камня
 
 <BlockImage id="sky_stone_tank" scale="8" />
 
-It's a fluid tank that stores 16 buckets of fluid. Does not retain its contents when picked up. Not much else to say.
+Это бак для хранения жидкостей, который может содержать до 16 вёдер жидкости. Не сохраняет содержимое при разрушении. Сказать больше особо нечего.
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="sky_stone_tank" />

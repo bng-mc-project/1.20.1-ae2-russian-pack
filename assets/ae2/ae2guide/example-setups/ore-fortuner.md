@@ -1,64 +1,64 @@
 ---
 navigation:
   parent: example-setups/example-setups-index.md
-  title: Automatic Ore Fortuner
+  title: Авто-добыча руды с удачей
   icon: minecraft:raw_iron
 ---
 
-# Automation of Ore Fortuning
+# Авто-добыча руды с удачей
 
-The <ItemLink id="annihilation_plane" /> can be enchanted with any pickaxe enchantment, including fortune, so an obvious use case is to
-apply fortune to a few, and have <ItemLink id="formation_plane" />s and <ItemLink id="annihilation_plane" />s rapidly place and
-break ores.
+<ItemLink id="annihilation_plane" /> можно зачаровать любым зачарованием кирки, включая удачу, поэтому очевидный вариант использования —
+применить удачу к нескольким, а <ItemLink id="formation_plane" /> и <ItemLink id="annihilation_plane" /> будут поочерёдно размещать и
+разрушать руду.
 
-Note that since <ItemLink id="import_bus" />ses "spin up to speed", the setup will start slow then reach full speed in a few seconds.
+Обратите внимание, что поскольку <ItemLink id="import_bus" /> "раскручивается до скорости", установка начнется медленно, а через несколько секунд достигнет полной скорости.
 
 <GameScene zoom="6" interactive={true}>
   <ImportStructure src="../assets/assemblies/ore_fortuner.snbt" />
 
   <BoxAnnotation color="#dddddd" min="2.7 0 2" max="3 1 3">
-        (1) Import Bus: Has a few Acceleration Cards in it.
+        (1) Шина импорта: в ней есть несколько карт ускорения.
         <ItemImage id="speed_card" scale="2" />
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="0 0 2" max="2 1 2.3">
-        (2) Formation Planes: In their default configuration.
+        (2) Плоскости формирования: настройки по умолчанию.
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="0 0 0.7" max="2 1 1">
-        (3) Annihilation Planes: No GUI to configure, but enchanted with Fortune.
+        (3) Плоскости уничтожения: нет графического интерфейса для настройки, но зачарованы на  удачу.
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="2.7 0 0" max="3 1 1">
-        (4) Storage Bus: In its default configuration.
+        (4) Шина хранения: настройки по умолчанию.
   </BoxAnnotation>
 
 <DiamondAnnotation pos="3.5 0.5 2.5" color="#00ff00">
-        Input
+        Ввод
     </DiamondAnnotation>
 
 <DiamondAnnotation pos="3.5 0.5 0.5" color="#00ff00">
-        Output
+        Ввывод
     </DiamondAnnotation>
 
 <DiamondAnnotation pos="4 0.5 1.5" color="#00ff00">
-        To Main Network
+        В основную сеть
     </DiamondAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-## Configurations
+## Настройки
 
-*   The <ItemLink id="import_bus" /> (1) has a few <ItemLink id="speed_card" />s in it. More are required the more formation planes
-    are in the array, as they make the import bus pull more items at once.
-*   The <ItemLink id="formation_plane" />s (2) are in their default configurations.
-*   The <ItemLink id="annihilation_plane" />s (3) have no GUI and cannot be configured, but are enchanted with fortune.
-*   The <ItemLink id="storage_bus" /> (4) is in its default configuration.
+*   <ItemLink id="import_bus" /> (1) содержит несколько <ItemLink id="speed_card" />. Чем больше плоскостей формирования в массиве,
+    тем больше нужно таких карт, поскольку они позволяют шине импорта забирать больше предметов одновременно.
+*   <ItemLink id="formation_plane" /> (2) находятся в своих настройках по умолчанию.
+*   <ItemLink id="annihilation_plane" /> (3) не имеют графического интерфейса и не могут быть настроены, но обладают чарами удачи.
+*   <ItemLink id="storage_bus" /> (4) находится в своих настройках по умолчанию.
 
-## How It Works
+## Как это работает
 
-1.  The <ItemLink id="import_bus" /> on the green subnet imports blocks from the first barrel into [network storage](../ae2-mechanics/import-export-storage.md)
-2.  The only storage on the green subnet is the <ItemLink id="formation_plane" />, which places the blocks.
-3.  The <ItemLink id="annihilation_plane" /> on the orange subnet breaks the blocks, applying fortune to them.
-4.  The <ItemLink id="storage_bus" /> on the orange subnet stores the results of the breaking in the second barrel.
+1.  <ItemLink id="import_bus" /> в зеленой подсети забирает блоки из первой бочки в [сетевое хранилище](../ae2-mechanics/import-export-storage.md).
+2.  Единственным хранилищем в зеленой подсети является <ItemLink id="formation_plane" />, который размещает блоки.
+3.  <ItemLink id="annihilation_plane" /> в оранжевой подсети разрушает блоки, применяя к ним удачу.
+4.  <ItemLink id="storage_bus" /> в оранжевой подсети сохраняет добытое из руд во второй бочке.

@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Spatial Cells
+  title: Пространственные ячейки
   icon: spatial_storage_cell_128
   position: 410
 categories:
@@ -15,7 +15,7 @@ item_ids:
 - ae2:spatial_cell_component_128
 ---
 
-# Spatial Storage Cells
+# Пространственные ячейки хранения
 
   <Row>
     <ItemImage id="spatial_storage_cell_2" scale="4" />
@@ -25,15 +25,15 @@ item_ids:
     <ItemImage id="spatial_storage_cell_128" scale="4" />
   </Row>
 
-Spatial Storage Cells are used to [store physical volumes of space](../ae2-mechanics/spatial-io.md). 
-They are used in a <ItemLink id="spatial_io_port" />.
+Пространственные ячейки хранения используются для [хранения физическим объёмов пространства](../ae2-mechanics/spatial-io.md). Используются в <ItemLink id="spatial_io_port" />. 
 
-Unlike [Storage Cells](../items-blocks-machines/storage_cells.md), spatial cells cannot be reformatted.
+В отличие от [ячеек хранения](../items-blocks-machines/storage_cells.md), пространственные ячейки не могут быть форматированы.
 
-Again, **YOU CANNOT RESET, REFORMAT, OR RESIZE A SPATIAL CELL AFTER IT HAS BEEN USED.** Make a new cell if you want to use different dimensions.
+Опять же, **ВЫ НЕ МОЖЕТЕ СБРОСИТЬ, ПЕРЕФОРМАТИРОВАТЬ ИЛИ ИЗМЕНИТЬ РАЗМЕР ПРОСТРАНСТВЕННОЙ ЯЧЕЙКИ ПОСЛЕ
+ЕЕ ИСПОЛЬЗОВАНИЯ.** Создайте новую ячейку, если хотите использовать другие размеры. 
 
 
-## Recipes
+## Рецепты
 
   <Row>
     <Recipe id="network/cells/spatial_storage_cell_2_cubed_storage" />
@@ -43,9 +43,9 @@ Again, **YOU CANNOT RESET, REFORMAT, OR RESIZE A SPATIAL CELL AFTER IT HAS BEEN 
     <Recipe id="network/cells/spatial_storage_cell_128_cubed_storage" />
   </Row>
 
-# Housings
+# Корпусы
 
-Cells can be made with a spatial component and a housing or with the housing recipe around a spatial component:
+Ячейки создаются из пространственного компонента и корпуса или рецептом корпуса вокруг пространственного компонента:
 
 <Row>
   <Recipe id="network/cells/spatial_storage_cell_2_cubed" />
@@ -53,14 +53,13 @@ Cells can be made with a spatial component and a housing or with the housing rec
   <Recipe id="network/cells/spatial_storage_cell_2_cubed_storage" />
 </Row>
 
-Housings by themselves are crafted like so:
+Корпуса сами по себе создаются так:
 
   <RecipeFor id="item_cell_housing" />
 
-# Spatial Components
+# Пространственные компоненты
 
-Spatial Components are the core of spatial storage cells. Each tier increases the dimensions of the volume that can be
-stored by factor of 8.
+Пространственные компоненты являются ядром пространственных ячеек хранения. Каждый уровень увеличевает размер объёма, который может храниться в 8 раз.
 
   <Row>
     <RecipeFor id="spatial_cell_component_2" />

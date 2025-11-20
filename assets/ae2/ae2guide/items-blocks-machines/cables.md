@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Cables
+  title: Кабели
   icon: fluix_glass_cable
   position: 110
 categories:
@@ -94,94 +94,78 @@ item_ids:
 - ae2:fluix_smart_dense_cable
 ---
 
-# Cables
+# Кабели
 
 <GameScene zoom="3" background="transparent">
   <ImportStructure src="../assets/assemblies/cables.snbt" />
   <IsometricCamera yaw="180" pitch="30" />
 </GameScene>
 
-While ME networks are also created by adjacent ME-capable machines, cables are the primary way of
-extending an ME network over larger areas.
+Хотя сети ME также создаются соседними машинами, поддерживающими ME, кабели являются основным способом расширения сети ME на большие площади.
 
-Differently colored cables can be used to ensure adjacent cables do not connected to each other,
-allowing [channels](../ae2-mechanics/channels.md) to be distributed more efficiently. They also affect the color of terminals connected to them,
-so you don't have to have all your terminals be purple. Fluix cables connect to every other color.
+Кабели разного цвета можно использовать для того, чтобы соседние кабели не соединялись друг с другом,
+что позволяет более эффективно распределять [каналы](../ae2-mechanics/channels.md). Они также влияют на цвет подключенных к ним терминалов, поэтому вам не нужно, чтобы все ваши терминалы были фиолетовыми. Флюисовые кабели подключаются к любому другому цвету.
 
-Of note, **CHANNELS HAVE NOTHING TO DO WITH CABLE COLOR**
+Обратите внимание, что **КАНАЛЫ НЕ ИМЕЮТ НИКАКОГО ОТНОШЕНИЯ К ЦВЕТУ КАБЕЛЯ**.
 
-## An Important Note
+## Важная заметка
 
-**If you are new to AE2 and unfamiliar with channels, use smart cable and dense smart cable wherever you can.
-It will show how channels are routed through your network, making their behavior more understandable.**
+**Если вы новичок в AE2 и не знакомы с каналами, используйте умный кабель и плотный умный кабель везде, где это возможно. Это покажет, как каналы проходят через вашу сеть, что сделает их поведение более понятным.**
 
-## Another Note
+## Другая заметка
 
-**These are not item or fluid or energy or etc. pipes.** They have no internal inventory, pattern providers and machines do not "push"
-into them, all they do is connect AE2 [devices](../ae2-mechanics/devices.md) together into a network.
+**Это не трубы для предметов, жидкостей, энергии и т. д.** Они не имеют внутреннего инвентаря, поставщики шаблонов и машины не «толкают/перемещают» в них, все, что они делают, — это соединяют AE2 [устройства](../ae2-mechanics/devices.md) в сеть.
 
-## Glass Cable
+## Стеклянный кабель
 
 <GameScene zoom="6" background="transparent">
 <ImportStructure src="../assets/assemblies/fluix_glass_cable.snbt" />
 <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-<ItemLink id="fluix_glass_cable" /> is the simplest cable to make, transfers power
-and up to 8 [channels](../ae2-mechanics/channels.md). It comes in 17 diffrent colors, the default
-being Fluix, and can be dyed any color using any of the 16 dyes.
+<ItemLink id="fluix_glass_cable" /> — это самый простой в изготовлении кабель, который передает энергию и до 8 [каналов](../ae2-mechanics/channels.md). Он доступен в 17 различных цветах, по умолчанию — флюисовый, и может быть окрашен в любой цвет с помощью любого из 16 красителей.
 
-To craft colored cables surround a dye of any type with 8 cables of the same
-type ( color of the cables dosn't matter, but they must be the same type,
-glass, smart, etc ). You can also paint cables with any forge compatible paint
-brush in world.
+Чтобы изготовить цветные кабели, окружите краситель любого типа 8 кабелями одного типа (цвет кабелей не имеет значения, но они должны быть одного типа: стеклянные, умные и т. д.).
 
-You can craft any colored cable with a water bucket to remove the dye.
+Вы можете убрать краситель с кабеля, если поместите покрашенный кабель и ведро с водой в верстаке (или в любой сетке крафта)
 
-You can cover the cable with wool to create <ItemLink id="fluix_covered_cable" />, and craft <ItemLink id="fluix_smart_cable" /> to get a better idea of what is going on with
-your [channels](../ae2-mechanics/channels.md).
+Вы можете покрыть кабель шерстью, чтобы создать <ItemLink id="fluix_covered_cable" />, и изготовить <ItemLink id="fluix_smart_cable" />, чтобы лучше понять, что происходит с вашими [каналами](../ae2-mechanics/channels.md).
 
 <RecipeFor id="fluix_glass_cable" />
 
 <RecipeFor id="blue_glass_cable" />
 
-## Covered Cable
+## Покрытый кабель
 
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/fluix_covered_cable.snbt" />
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-The covered cable variant offers no gameplay benefits over its <ItemLink id="fluix_glass_cable" /> counterpart. It can however be used
-as an alternate aesthetic choice if you prefer the covered look.
+Вариант с покрытым кабелем не дает никаких преимуществ в игровом процессе по сравнению с его аналогом <ItemLink id="fluix_glass_cable" />. Однако его можно использовать в качестве альтернативного эстетического решения, если вам больше нравится покрытый вид.
 
-Can be colored in the same manner as <ItemLink id="fluix_glass_cable" />. Four <ItemLink id="fluix_covered_cable" /> can be crafted with
-redstone and glowstone to make <ItemLink id="fluix_covered_dense_cable" />.
+Может быть окрашен таким же образом, как <ItemLink id="fluix_glass_cable" />. Чтобы изготовить <ItemLink id="fluix_covered_dense_cable" /> необходимо совместить 4 <ItemLink id="fluix_covered_cable" /> с редстоуновой пылью и светокаменной пылью.
 
 <Recipe id="network/cables/covered_fluix" />
 
 <RecipeFor id="blue_covered_cable" />
 
-## Dense Cable
+## Непрозрачный кабель
 
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/fluix_covered_dense_cable.snbt" />
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-Higher Capacity cable, can carry 32 channels unlike standard cable which can only carry 8,
-however it doesn't support buses so you must first step down from dense to a
-smaller cable (such as <ItemLink id="fluix_glass_cable" /> or <ItemLink id="fluix_smart_cable" />) before using buses or
-panels.
+Кабель с более высокой пропускной способностью, может передавать 32 канала, в отличие от стандартного кабеля, который может передавать только 8, однако он не поддерживает шины, поэтому перед использованием шин или панелей необходимо сначала перейти с непрозрачного кабеля на кабель меньшего размера (например, <ItemLink id="fluix_glass_cable" /> или <ItemLink id="fluix_smart_cable" />).
 
-Dense cables slightly override the "shortest path" behavior of channels, channels will take the shortest path to a
-dense cable, and then the shortest path through that dense cable to a controller.
+Непрозрачные кабели слегка перекрывают поведение каналов по принципу «кратчайшего пути»: каналы выбирают кратчайший путь к непрозрачному кабелю, а затем кратчайший путь через этот непрозрачный кабель к контроллеру.
 
 <Recipe id="network/cables/dense_covered_fluix" />
 
 <RecipeFor id="blue_covered_dense_cable" />
 
-## Smart Cable
+## Умный кабель
 
 <Row>
 <GameScene zoom="6" background="transparent">
@@ -194,18 +178,13 @@ dense cable, and then the shortest path through that dense cable to a controller
 </GameScene>
 </Row>
 
-While bearing some similarity to <ItemLink id="fluix_covered_cable" /> in appearance, they
-provide diagnostic function by visualizing the channel usage on the cables,
-the channels appear as lit colored lines that run along the black stripe on
-the cables giving you an understanding of how your channels are being used on
-your network. For regular smart cables, the first four channels show as lines matching the color of the
-cable, the next four show as white lines. For dense smart cable, each stripe represents 4 channels.
+Несмотря на некоторое внешнее сходство с <ItemLink id="fluix_covered_cable" />, они обеспечивают диагностическую функцию, визуализируя использование каналов на кабелях. Каналы отображаются в виде цветных линий, проходящих вдоль черной полосы на кабелях, что позволяет понять, как используются каналы в вашей сети. Для обычных умных кабелей первые четыре канала отображаются в виде линий, соответствующих цвету кабеля, а следующие четыре — в виде белых линий. Для непрозрачных умных кабелей каждая полоса представляет 4 канала.
 
-On networks with a <ItemLink id="controller" />, the lines on the cables show the exact path the channels take.
+В сетях с <ItemLink id="controller" /> линии на кабелях показывают точный путь, по которому проходят каналы.
 
-Smart cables on ad-hoc networks will instead show the number of channels in use network-wide instead of the number of channels flowing through that specific cable.
+Умные кабели в "неполноценных" сетях будут отображать количество каналов, используемых в сети, а не количество каналов, проходящих через конкретный кабель.
 
-These can also be colored in the same manner as <ItemLink id="fluix_glass_cable" />.
+Их также можно раскрасить таким же образом, как <ItemLink id="fluix_glass_cable" />.
 
 <Recipe id="network/cables/smart_fluix" />
 

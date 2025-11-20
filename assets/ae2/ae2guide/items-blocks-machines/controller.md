@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: Controller
+  title: Контроллер МЭ сети
   icon: controller
   position: 110
 categories:
@@ -10,44 +10,41 @@ item_ids:
 - ae2:controller
 ---
 
-# The Controller
+# Контроллер МЭ сети
 
 <BlockImage id="controller" p:state="online" scale="8" />
 
-The controller is the routing hub of a [ME Network](../ae2-mechanics/me-network-connections.md).
-Without it, a network is "ad-hoc" and can only have a max of 8 channel-using [devices](../ae2-mechanics/devices.md) total.
+Контроллер МЭ сети это основопологающая часть [МЭ сети](../ae2-mechanics/me-network-connections.md), можно сказать её сердце.
+Без неё, сеть по сути "не полноценная", у неё всего может быть лишь 8 использующих каналы [устройств](../ae2-mechanics/devices.md).
 
-It is not possible to have 2 controllers in one [ME Network](../ae2-mechanics/me-network-connections.md).
+Невозможно, чтобы было 2 контроллера МЭ сети в одной [МЭ сети](../ae2-mechanics/me-network-connections.md).
 
-The controller provides 32 [Channels](../ae2-mechanics/channels.md) per face.
+Контроллер предоставляет 32 [канала](../ae2-mechanics/channels.md) на каждую грань.
 
-The controller requires 6 AE/t per controller block to
-function. Each controller block can store 8000 AE, so larger networks might require additional
-energy storage. See [energy](../ae2-mechanics/energy.md) for details.
+Контроллер МЭ сети требует 6 AE/t за каждый МЭ-регулятор, чтобы функционировать. Каждый МЭ-регулятор может хранить 8000 AE, так что для больших сетей вам необходимы дополнительный хранилища энегрии. Посмотрите статью ["Энергия"](../ae2-mechanics/energy.md) для уточнения.
 
-Multiblock Controllers can be built in a fairly free form.
+Мультиблочные МЭ-регуляторы могут быть построены в довольно разнообразных формах.
 
 <GameScene zoom="2" background="transparent">
   <ImportStructure src="../assets/assemblies/controllers.snbt" />
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-However, there are a few rules that must be followed:
+Однако, существуют несколько правил, которые должны быть соблюдены:
 
-1.  All controller blocks on a [ME Network](../ae2-mechanics/me-network-connections.md) must be connected; else the blocks will turn red.
-2.  The size of the controller must be within 7x7x7; else it will turn red.
-3.  A controller can have 2 adjacent blocks in at most 1 axis; if a block violates this rule, it will disable and turn red.
+1. Все МЭ-регуляторы в [МЭ сети](../ae2-mechanics/me-network-connections.md) должны быть подключены; иначе блоки будут  красными.
+2.  Размер контроллера МЭ сети должен быть менее 7х7х7; иначе блоки будут красными.
+3.  МЭ-регулятор может иметь 2 смежных блока максимум по 1 оси; если блок нарушает это правило, он отключается и становится красным.
 
 <GameScene zoom="2" background="transparent">
   <ImportStructure src="../assets/assemblies/controller_rules.snbt" />
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-As long as all rules are followed and powered, the controller should glow and
-cycle colors.
+До тех пор пока все правила соблюдены и контроллер МЭ сети запитан, он будет светится и циклично изменять цвета
 
-You can right-click on a controller to get the same GUI as a <ItemLink id="network_tool" />
+Вы можете кликнуть ПКМ по контроллеру МЭ сети, чтобы получить такое же GUI как у <ItemLink id="network_tool" />
 
-## Recipe
+## Рецепт
 
 <RecipeFor id="controller" />
